@@ -12,7 +12,7 @@ const OurSpecialists = () => {
         </h2>
 
         <p className="text-muted mb-5">
-          Dr. Rakesh Singh sounds is accomplished and dedicated pediatric surgeon and urologist. 
+          Dr. Rajeev Singh sounds is accomplished and dedicated pediatric surgeon and urologist. 
           His training in esteemed institutes like King Edward Memorial Hospital in Mumbai and 
           Kalawati Saran Children’s Hospital in New Delhi speaks volumes about his educational background.
         </p>
@@ -30,7 +30,7 @@ const OurSpecialists = () => {
 
           {/* RIGHT CONTENT */}
           <div className="col-md-7">
-            <h3 className="fw-bold text-dark">Dr. Rakesh Singh</h3>
+            <h3 className="fw-bold text-dark">Dr. Rajeev Singh</h3>
 
             <p className="text-primary fw-semibold mb-2">
               Senior Director – Paediatric (Ped) Surgery,
@@ -50,7 +50,7 @@ const OurSpecialists = () => {
             </p>
 
             {/* Signature */}
-            <h4 className="signature">Dr Rakesh Singh</h4>
+            <h4 className="signature">Dr Rajeev Singh</h4>
 
             {/* Buttons */}
             <div className="mt-3">

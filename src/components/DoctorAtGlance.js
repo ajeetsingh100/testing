@@ -20,7 +20,7 @@ const DoctorAtGlance = () => {
           {/* RIGHT CONTENT */}
           <div className="col-md-6">
             <h2 className="fw-bold mb-4" style={{ color: "#0d2c54" }}>
-              Dr. Rakesh Singh – Pediatric Surgery & Pediatric Urology
+              Dr. Rajeev Singh – Pediatric Surgery & Pediatric Urology
             </h2>
 
             <div className="row">
