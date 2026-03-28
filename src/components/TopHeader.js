@@ -8,7 +8,7 @@ const TopHeader = () => {
 
         {/* Logo */}
         <div className="logo">
-          <h4 className="m-0 text-white">Dr. Rajeev Singh</h4>
+          <h4 className="m-0 text-white">Dr. Rajeet Singh</h4>
         </div>
 
         {/* Contact */}
