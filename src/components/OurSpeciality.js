@@ -27,7 +27,7 @@ const OurSpeciality = () => {
   return (
     <section className="py-5 bg-light">
       <div className="container">
-        <h2 className="text-center mb-5 fw-bold">Our Speciality</h2>
+        <h2 className="text-center mb-5 fw-bold">Our <span style={{color: "#792d07"}}>Speciality</span></h2>
 
         <div className="row g-4">
           {data.map((item, index) => (

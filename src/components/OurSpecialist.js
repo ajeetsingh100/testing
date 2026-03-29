@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const OurSpecialists = () => {
   return (
     <section className="specialist-section py-5">
@@ -8,7 +7,7 @@ const OurSpecialists = () => {
         
         {/* Heading */}
         <h2 className="fw-bold mb-3">
-          Our <span className="text-primary">Specialists</span>
+          Our <span style={{color: "#792d07"}}>Specialists</span>
         </h2>
 
         <p className="text-muted mb-5">
@@ -22,7 +21,7 @@ const OurSpecialists = () => {
           {/* LEFT IMAGE */}
           <div className="col-md-5 mb-4 mb-md-0">
             <img
-              src="https://images.unsplash.com/photo-1612349316228-5942a9b489c2?w=600&auto=format&fit=crop"
+             src="https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787112/profile_rauwrd.jpg"
               alt="Doctor"
               className="img-fluid rounded shadow"
             />

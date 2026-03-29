@@ -1,20 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:"Lato", sans-serif;
+  font-weight: 500;
+  font-size:18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,h2,h3,h4,h5{
+ font-family: "Playfair Display", serif;
+  font-weight: 700;
 }
+
 /*======Statistics=============*/
 
 .stats-section {
-  background: linear-gradient(90deg, #1e5f86, #1b6f9b);
+  background: linear-gradient(90deg, #792d07, #943607);
   padding: 30px 0;
   color: #fff;
 }
@@ -28,7 +31,9 @@ code {
   font-weight: 700;
   margin-bottom: 5px;
 }
-
+h1{
+  font-family: var(--font-heading);
+}
 .stat-box p {
   font-size: 12px;
   letter-spacing: 1px;
@@ -72,7 +77,7 @@ code {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 70, 160, 0.5);
+  background: rgba(121, 45, 7, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,7 +206,7 @@ code {
 .parallax-section {
   height: 400px;
 
-  background-image: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1600&auto=format&fit=crop");
+  background-image: url("https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787112/narayan_swaroop_hospital_wdhlkk.webp");
   
   background-size: cover;
   background-position: center;

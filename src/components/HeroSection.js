@@ -1,43 +1,40 @@
 import React from "react";
 
+
+
 const HeroSection = () => {
     const slidesData = [
   {
-    img: "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b",
+    img: "https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787114/img4_r8qe0c.jpg",
     title: "Welcome to Our Clinic",
     desc: "We provide the best healthcare services",
     btn: "Book Appointment",
   },
   {
-    img: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289",
+    img: 'https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787112/img1_enrghm.jpg',
     title: "Expert Doctors",
     desc: "Highly qualified and experienced team",
     btn: "Meet Doctors",
   },
   {
-    img: "https://images.unsplash.com/photo-1582750433449-648ed127bb54", 
+    img: 'https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787113/img3_fxanyq.jpg', 
     title: "Advanced Treatments",
     desc: "Latest technology and modern care",
     btn: "Explore Services",
   },
   {
-    img: "https://images.unsplash.com/photo-1584515933487-779824d29309",
+    img:"https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787112/img2_e5aia9.jpg",
     title: "Patient First Approach",
     desc: "Your health is our priority",
     btn: "Learn More",
   },
   {
-    img: "https://images.unsplash.com/photo-1581595219315-a187dd40c322",
+    img: "https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787112/img5_fabma0.jpg",
     title: "24/7 Support",
     desc: "We are always here for you",
     btn: "Contact Us",
-  },
-  {
-   img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118",
-    title: "Trusted by Thousands",
-    desc: "Happy patients across the city",
-    btn: "View Testimonials",
-  },
+  }
+
 ];
   return (
       <div
@@ -68,7 +65,7 @@ const HeroSection = () => {
           >
             <div className="overlay-container">
               <img
-               src={`${slide.img}?auto=format&fit=crop&w=1200&q=70`}
+               src={`${slide.img}`}
                 className="d-block w-100"
                 alt="slide"
               />
