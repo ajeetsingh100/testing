@@ -5,7 +5,7 @@ import React from "react";
 const HeroSection = () => {
     const slidesData = [
   {
-    img: "https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787114/img4_r8qe0c.jpg",
+    img: "https://res.cloudinary.com/dodhn4tgj/image/upload/w_1200,f_auto,q_auto,c_fill/v1774787114/img4_r8qe0c.jpg",
     title: "Welcome to Our Clinic",
     desc: "We provide the best healthcare services",
     btn: "Book Appointment",
