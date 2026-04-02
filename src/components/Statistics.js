@@ -3,10 +3,10 @@ import React from "react";
 
 const Statistics = () => {
   const data = [
-    { number: "15+", label: "YEARS OF EXPERIENCE" },
-    { number: "4000+", label: "HAPPY PATIENTS" },
-    { number: "15+", label: "AWARDS" },
-    { number: "5000+", label: "SURGERIES" },
+    { number: "25+", label: "YEARS OF EXCELLENCE" },
+    { number: "50,000+", label: "PATIENTS TREATED" },
+    { number: "30+", label: "SKILLED SPECIALISTS" },
+    { number: "5,000+", label: "SUCCESSFUL SURGERIES" },
   ];
 
   return (
