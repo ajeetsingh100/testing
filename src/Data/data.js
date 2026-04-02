@@ -1,4 +1,5 @@
-export default navigation=[
+
+const navigation=[
     {
         navTo:'general-medicine',
         htmlBody:` <section class="bg-primary text-white py-5 text-center">
@@ -917,3 +918,4 @@ Gastroesophageal reflux disease (GERD) and hiatal hernias.GERD, or acid reflux i
 `
 }
 ]
+export default navigation
