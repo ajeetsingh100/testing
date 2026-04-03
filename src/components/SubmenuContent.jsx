@@ -1,33 +1,41 @@
 import React, { useEffect, useState } from 'react'
 import existingData from '../Data/data'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const SubmenuContent = () => {
-  const param=useParams()
-  const [loading,setLoading]=useState(false)
-  const [data,setData]=useState(null)
-  console.log(param)
-  useEffect(()=>{
-    let fetchdata={}
+  const { searchedKeyword } = useParams()
 
-      fetchdata=existingData.filter(data=>data.navTo===param.searchedKeyword)
-      console.log(fetchdata)
-      setData(fetchdata)
-      setLoading(true)
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(false)
 
+  useEffect(() => {
+    setLoading(true)
 
-  },[param.searchedKeyword])
+    const fetchdata = existingData.filter(
+      item => item.navTo === searchedKeyword
+    )
+
+    setData(fetchdata)
+    setLoading(false)
+
+  }, [searchedKeyword])
 
   return (
     <div>
-        {data?.map((item, index) => (
-        <div
-          key={index}
-          dangerouslySetInnerHTML={{ __html: item.htmlBody }}
-        />
-      ))}
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div>
+          {data?.map((item, index) => (
+            <div
+              key={index}
+              dangerouslySetInnerHTML={{ __html: item.htmlBody }}
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
 
-export default SubmenuContent;
+export default SubmenuContent

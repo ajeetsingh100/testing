@@ -4,12 +4,12 @@ import React from "react";
 
 const TopHeader = () => {
   return (
-    <div className="top-header" style={{backgroundColor:"#792d07"}}>
+    <div className="top-header position-sticky" style={{backgroundColor:"#7A0404"}}>
       <div className="container d-flex align-items-center justify-content-between">
 
         {/* Logo */}
         <div className="logo">
-          <img src="https://res.cloudinary.com/dodhn4tgj/image/upload/v1774787111/Director_Narayan_Swaroop_Hospital_dwih4u.png" alt="" width={260}/>
+          <img src="https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775210500/Advance_Laparoscopic_Surgeon_Proctologist_Urologist_Endoscopist_and_gastrologisttt_tcfg5z.png" alt="" width={260}/>
         </div>
 
         {/* Contact */}

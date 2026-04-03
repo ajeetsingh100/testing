@@ -143,7 +143,7 @@ const navigation=[
 </section>
 
 <section class="py-5">
-  <div class="container">
+  <div class="container text-start">
     <h2 class="mb-4">About Laparoscopic Surgery</h2>
     <p>
      Narayan Swaroop Hospital provides advanced laparoscopic surgery, a minimally invasive surgery that offers

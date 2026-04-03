@@ -2,27 +2,28 @@ import React from 'react'
 
 import HeroSection from '../components/HeroSection';
 import DoctorAtGlance from '../components/DoctorAtGlance';
-import OurSpeciality from '../components/OurSpeciality';
-import BookAppointment from '../components/BookAppointment';
+
 import OurSpecialists from '../components/OurSpecialist';
 import Statistics from '../components/Statistics';
 import VideosSection from '../components/VideoSection';
 import Testimonials from '../components/Testimonial';
-import BlogSection from '../components/BlogSection';
-import Footer from '../components/Footer';
+import Footer from '../components/common/Footer';
+import FeaturingServices from '../components/Service/FeaturingServices';
+import FeaturingFreeService from '../components/FreeService/FeaturingFreeService';
+import OurDoctors from '../components/DoctorTeam/OurDoctors';
+
 
 const Homepage = () => {
   return (
     <div>    
-      <HeroSection/>
-      <DoctorAtGlance/>
-      <OurSpeciality/>
-      <BookAppointment/>
+      <HeroSection/>  
       <OurSpecialists/>
-      <Statistics/>
+      <Statistics/> 
+      <FeaturingFreeService/> 
+      <FeaturingServices/>    
+      <OurDoctors/>
       <VideosSection/>
-      <Testimonials/>
-      <BlogSection/>
+      <Testimonials/>    
       <Footer/>
     </div>
   )
