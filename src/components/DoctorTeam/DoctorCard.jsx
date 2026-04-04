@@ -14,7 +14,7 @@ const DoctorCard = ({ doctorName, doctorImage, qualification }) => {
             height: "120px",
             borderRadius: "50%",
             overflow: "hidden",   // 🔥 important
-            display: "flex",
+            display: "d-flex",
             justifyContent: "center",
             alignItems: "center"
           }}
@@ -25,8 +25,8 @@ const DoctorCard = ({ doctorName, doctorImage, qualification }) => {
             style={{
               width: "100%",
               height: "100%",
-              objectFit: "cover",          // 🔥 crop karega
-              objectPosition: "center"     // 🔥 center fix
+              objectFit: "fill",          // 🔥 crop karega
+              objectPosition: ""     // 🔥 center fix
             }}
           />
         </div>

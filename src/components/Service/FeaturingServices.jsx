@@ -1,5 +1,6 @@
 import React from 'react'
 import ServiceSlider from './ServiceSlider'
+import { Link } from 'react-router-dom'
 
 
 const FeaturingServices = () => {
@@ -33,7 +34,7 @@ const FeaturingServices = () => {
         <h6 className='text-secondary mb-5'>We provide comprehensive medical care, including  neurology, oncology, general surgery and more.</h6>
         <ServiceSlider/>
         <div className='d-flex justify-content-end mt-5'>
-          <button className='btn btn-secondary border border-0'>View More Services <i className='bi bi-arrow-right'></i></button>
+         <a href={'surgeries&treatments/general-surgery'}> <button className='btn btn-secondary border border-0'>View More Services <i className='bi bi-arrow-right'></i></button></a>
         </div>
     </div>
   </div>

@@ -4,7 +4,7 @@ import React from "react";
 
 const TopHeader = () => {
   return (
-    <div className="top-header position-sticky" style={{backgroundColor:"#7A0404"}}>
+    <div className="top-header sticky-top" style={{backgroundColor:"#7A0404"}}>
       <div className="container d-flex align-items-center justify-content-between">
 
         {/* Logo */}

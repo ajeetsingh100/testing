@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <div className="container py-5">
+    <div className="container py-5 text-start">
 
       {/* Heading */}
       <p className="text-muted mb-1">Patient Testimonials</p>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const NavigationBar = () => {
   return (
-    <div className='container-fluid bg-light'>
+    <div className='container-fluid  bg-light'>
       
       <nav class="navbar navbar-expand-lg navbar-light bg-light container-lg " >
   <div class="container">
@@ -66,47 +66,47 @@ const NavigationBar = () => {
             <div className='row'>
                 <ul className='col-lg-3 '>
               <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >General Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments/advance-laparscopic-surgery'} class="dropdown-item" >Advance Laparoscopic Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments/urology'} class="dropdown-item" >Urology</Link></li>
-              <li><Link to={'/surgeries&treatments/neuro-surgery'} class="dropdown-item" >Neuro Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments/orthopedia-joint-replacement'} class="dropdown-item" >Orthopedia and Joint Replacement</Link></li>
-              <li><Link to={'/surgeries&treatments/onco-surgery'} class="dropdown-item" >Onco Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments/pediatric-surgery'} class="dropdown-item" >Pediatric Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments/plastic-burn-reconstructive-surgery'} class="dropdown-item" >Plastic & Burn Reconstructive Surgery</Link></li>
+              <li><a href={'/surgeries&treatments/general-surgery'} class="dropdown-item" >General Surgery</a></li>
+              <li><a href={'/surgeries&treatments/advance-laparoscopic-surgery'} class="dropdown-item" >Advance Laparoscopic Surgery</a></li>
+              <li><a href={'/surgeries&treatments/urology'} class="dropdown-item" >Urology</a></li>
+              <li><a href={'/surgeries&treatments/neuro-surgery'} class="dropdown-item" >Neuro Surgery</a></li>
+              <li><a href={'/surgeries&treatments/orthopedia-and-joint-replacement'} class="dropdown-item" >Orthopedia and Joint Replacement</a></li>
+              <li><a href={'/surgeries&treatments/onco-surgery'} class="dropdown-item" >Onco Surgery</a></li>
+              <li><a href={'/surgeries&treatments/pediatric-surgery'} class="dropdown-item" >Pediatric Surgery</a></li>
+              <li><a href={'/surgeries&treatments/plastic-burn-reconstructive-surgery'} class="dropdown-item" >Plastic & Burn Reconstructive Surgery</a></li>
             </ul>
             <ul className='col-3'>
               <li><a class="dropdown-item"  hidden>Another action</a></li>
-              <li><Link to={'/surgeries&treatments/gastro-intestinal-surgery'} class="dropdown-item" >Gastro Intestinal Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Breast Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Thryroid Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >ENT</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Genitourinary</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Colorectal Surgery</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Trauma & Accident Surgery</Link></li>
-               <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Evlt-endovenous Laser Treatment</Link></li>
+              <li><a href={'/surgeries&treatments/gastro-intestinal-surgery'} class="dropdown-item" >Gastro Intestinal Surgery</a></li>
+              <li><a href={'/surgeries&treatments/breast-surgery'} class="dropdown-item" >Breast Surgery</a></li>
+              <li><a href={'/surgeries&treatments/thyroid-surgery'} class="dropdown-item" >Thryroid Surgery</a></li>
+              <li><a href={'/surgeries&treatments/ent'} class="dropdown-item" >ENT</a></li>
+              <li><a href={'/surgeries&treatments/genitourinary'} class="dropdown-item" >Genitourinary</a></li>
+              <li><a href={'/surgeries&treatments/colorectal-surgery'} class="dropdown-item" >Colorectal Surgery</a></li>
+              <li><a href={'/surgeries&treatments/trauma-and-accident-surgery'} class="dropdown-item" >Trauma & Accident Surgery</a></li>
+               <li><a href={'/surgeries&treatments/evlt-endovenous-laser-treatment'} class="dropdown-item" >Evlt-endovenous Laser Treatment</a></li>
             </ul>
             <ul className='col-3'>
               <li><a class="dropdown-item"  hidden>Something else here</a></li>
-              <li><a class="dropdown-item"  >Laser Surgery</a></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Piles</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Medicine Department</Link></li>
-              <li><Link to={'/surgeries&treatements/general-medicine'} class="dropdown-item" >General Medicine</Link></li>
-               <li><Link to={'/surgeries&treatments'} class="dropdown-item" >TB and Chest Respiratory Medicine</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Diabetic Clinic</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Psychiatry</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Cardiology</Link></li>
+              <li><a href={'/surgeries&treatments/laser-surgery'} class="dropdown-item"  >Laser Surgery</a></li>
+              <li><a href={'/surgeries&treatments/piles'} class="dropdown-item" >Piles</a></li>
+              <li><a href={'/surgeries&treatments/'} class="dropdown-item" >Medicine Department</a></li>
+              <li><a href={'/surgeries&treatments/general-medicine'} class="dropdown-item" >General Medicine</a></li>
+               <li><a href={'/surgeries&treatments/tb-and-chest-respiratory-medicine'} class="dropdown-item" >TB and Chest Respiratory Medicine</a></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Diabetic Clinic</a></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Psychiatry</a></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Cardiology</a></li>
             </ul>
             <ul className='col-3'>
               <li><a class="dropdown-item"  hidden>Something else here</a></li>
               <li><a class="dropdown-item"  >Dermatology</a></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Neurology</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Nephrology</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Oncology</Link></li>
-               <li><Link to={'/surgeries&treatments'} class="dropdown-item" >TB and Chest Respiratory Medicine</Link></li>
-              <li><a class="dropdown-item text-wrap" >Anaesthesia, Critical Care & Pain Management</a></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Clinical Nutrition & Diatetics</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Laparoscopic Gynae Surgeries</Link></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Neurology</a></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Nephrology</a></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Oncology</a></li>
+               <li><a href={'/surgeries&treatments'} class="dropdown-item" >TB and Chest Respiratory Medicine</a></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item text-wrap" >Anaesthesia, Critical Care & Pain Management</a></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Clinical Nutrition & Diatetics</a></li>
+              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Laparoscopic Gynae Surgeries</a></li>
             </ul>
 
             </div>
@@ -120,19 +120,22 @@ const NavigationBar = () => {
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <ul>
               <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Our Cases</Link></li>              
+              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Our Cases</Link></li>
+              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Rare Cases</Link></li>               
             </ul>           
           </div>
         </li>
          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            Media
+            Gallary
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <ul>
               <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Print Media</Link></li>
+              <li><a href={'/gallery/certifications'} class="dropdown-item" >Certification</a></li>
+              <li><a href={'/gallery/awards'} class="dropdown-item" >Award</a></li>
+              <li><a href={'/gallery/print-media'} class="dropdown-item" >Print Media</a></li>
             </ul>
           
           </div>

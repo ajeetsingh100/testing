@@ -24,7 +24,6 @@ const Homepage = () => {
       <OurDoctors/>
       <VideosSection/>
       <Testimonials/>    
-      <Footer/>
     </div>
   )
 }
