@@ -15,7 +15,7 @@ const TopHeader = () => {
         {/* Contact */}
         <div className="contact text-white fs-4 fw-bold d-flex gap-3 align-items-baseline">
           <span className="text-danger">For Enquiry</span>      
-          <span className="fs-5">  <i class="bi bi-telephone"></i>+91 987654321</span>
+          <span className="fs-5">  <i class="bi bi-telephone"></i>+91 9450405584</span>
         </div>
 
         {/* Button */}

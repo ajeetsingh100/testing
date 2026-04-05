@@ -121,8 +121,8 @@ const NavigationBar = () => {
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <ul>
               <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Our Cases</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Rare Cases</Link></li>               
+              <li><Link to={'/patient-information/rare-cases'} class="dropdown-item" >Rare Cases</Link></li>
+                          
             </ul>           
           </div>
         </li>
@@ -149,14 +149,14 @@ const NavigationBar = () => {
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <ul>
               <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Video Testimonial</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Written Testimonial</Link></li>
+              <li><a href={'/testimonial/video-testimonial'} class="dropdown-item" >Video Testimonial</a></li>
+             
             </ul>
           </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" >Contact Us</a>
+          <a  href='/contact-us' class="nav-link" >Contact Us</a>
         </li>
       </ul>
       

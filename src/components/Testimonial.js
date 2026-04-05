@@ -5,9 +5,9 @@ const Testimonials = () => {
     <div className="container py-5 text-start">
 
       {/* Heading */}
-      <p className="text-muted mb-1">Patient Testimonials</p>
-      <h2 className="fw-bold mb-4">
-        What do our <span className="text-primary">patients say?</span>
+      <h6 className="fw-bold mb-1">Patient Testimonials</h6>
+      <h2 className=" mb-4">
+        What do our patients say?
       </h2>
 
       {/* Videos */}
@@ -18,7 +18,7 @@ const Testimonials = () => {
           <div className="testimonial-card">
             <div className="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                src="https://www.youtube.com/embed/Qo9xi5OPdd0"
                 title="video"
                 allowFullScreen
               ></iframe>
@@ -31,7 +31,12 @@ const Testimonials = () => {
           <div className="testimonial-card">
             <div className="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/2320566615027069/"
+                width="100%"
+                height="400"
+                style={{ border: "none", overflow: "hidden" }}
+                scrolling="no"
+                frameBorder="0"
                 title="video"
                 allowFullScreen
               ></iframe>
@@ -42,8 +47,16 @@ const Testimonials = () => {
         {/* Card 3 */}
         <div className="col-md-4">
           <div className="testimonial-card">
-            <div className="video-wrapper empty">
-              <span className="play-btn">▶</span>
+            <div className="video-wrapper">
+                <iframe
+                src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1578319249717540/"
+                style={{ border: "none", overflow: "hidden" }}
+                height="100%"
+                scrolling="no"
+                frameBorder="0"
+                title="video"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
@@ -51,20 +64,12 @@ const Testimonials = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="d-flex align-items-center justify-content-between mt-4 flex-wrap gap-3">
+      <div className="d-flex align-items-center justify-content-end mt-4 flex-wrap gap-3">
 
-        <button className="btn btn-primary rounded-pill px-4">
-          READ ALL TESTIMONIALS
-        </button>
-
-        {/* Google Rating */}
-        <div className="google-rating d-flex align-items-center gap-2">
-          <span className="fw-bold">G</span>
-          <div>
-            <small className="text-muted">REVIEW US ON</small><br/>
-            <span className="fw-bold">GOOGLE ⭐⭐⭐⭐⭐</span>
-          </div>
-        </div>
+        <a href="/contact-us">
+        <button className="btn btn-secondary  px-4">
+          View More Testimonial <span className="bi bi-arrow-right"></span>
+        </button>   </a>  
 
       </div>
 

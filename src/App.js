@@ -11,6 +11,9 @@ import Gallery from './components/Gallery/Gallery';
 import Footer from './components/common/Footer';
 import SurgeriesAndTreatment from './components/SurgeriesAndTreatement/SurgeriesAndTreatment';
 import DiseasesWeTreat from './components/DiseasesWeTreat/DiseasesWeTreat';
+import RareCases from './components/Patient Information/RareCases';
+import VideoTestimonial from './components/VideoTestimonial/VideoTestimonial';
+import ContactUs from './components/ContactUs';
 
 
 
@@ -30,6 +33,9 @@ function App() {
           <Route path='/surgeries&treatments/:searchedKeyword' element={<SurgeriesAndTreatment/>}/> 
           <Route path='/gallery/:searchedKeyword' element={<Gallery/>}/>   
           <Route path='/diseases-we-treat/:searchedKeyword1/:searchedKeyword2' element={<DiseasesWeTreat/>}/>   
+          <Route path='/patient-information/:searchedKeyword' element={<RareCases/>}/>
+          <Route path='/testimonial/:searchedKeyword' element={<VideoTestimonial/>}/>
+          <Route path='/contact-us' element={<ContactUs/>}/>
         </Routes>
         <Footer/>
     </div>
