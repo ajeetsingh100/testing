@@ -26,33 +26,34 @@ const NavigationBar = () => {
           <div class="dropdown-menu menu-mega container-row" aria-labelledby="navbarDropdown">
             <div className='row'>
             <ul className='col-6'>
-              <li><Link to={'/surgeries&treatments/gastrointestinal-diseases'} class="dropdown-item"  >Gastrointestinal Diseases</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Gallbladder Stones (Cholelithiasis) </Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Appendicitis</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Hernia (Inguinal, Umbilical, Incisional)</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Acid Reflus (GERD)</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Stomach and Intstical Disorders</Link></li>
+              <li><a href={'/surgeries&treatments/gastrointestinal-diseases/gallbladder-stones'} class="dropdown-item"  >Gastrointestinal Diseases</a></li>
+              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/gallbladder-stones'} class="dropdown-item" >Gallbladder Stones (Cholelithiasis) </a></li>
+              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/appendicitis'} class="dropdown-item" >Appendicitis</a></li>
+              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/hernia'} class="dropdown-item" >Hernia (Inguinal, Umbilical, Incisional)</a></li>
+              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/acid-reflux'} class="dropdown-item" >Acid Reflus (GERD)</a></li>
+              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/stomach-and-intestinal-disorders'} class="dropdown-item" >Stomach and Intstical Disorders</a></li>
             </ul>
             <ul className='col-6'>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Proctology (Ano-Rectal Disorders)</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Piles (Hermorrhoids)</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Anal Fissure</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Fistual-in-Ano</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Pilonidal Sinus</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Rectal Bleding & Pain</Link></li>
+              <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item" >Proctology (Ano-Rectal Disorders)</a></li>
+              <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item" >Piles (Hermorrhoids)</a></li>
+              <li><a href={'/diseases-we-treat/proctology/anal-fissure'} class="dropdown-item" >Anal Fissure</a></li>
+              <li><a href={'/diseases-we-treat/proctology/fistula-in-ano'} class="dropdown-item" >Fistual-in-Ano</a></li>
+              <li><a href={'/diseases-we-treat/proctology/pilonidal-sinus'} class="dropdown-item" >Pilonidal Sinus</a></li>
+              <li><a href={'/diseases-we-treat/proctology/rectal-bleeding'} class="dropdown-item" >Rectal Bleding & Pain</a></li>
             </ul>
             <ul className='col-6'>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Urological Conditions</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Kidney Stones</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Urinary Tract Infections</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Bladder Disorders</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Urinary Obstruction</Link></li>
+              <li><a href={'/diseases-we-treat/urological-conditions/kidney-stones'} class="dropdown-item" >Urological Conditions</a></li>
+              <li><a href={'/diseases-we-treat/urological-conditions/kidney-stones'} class="dropdown-item" >Kidney Stones</a></li>
+              <li><a href={'/diseases-we-treat/urological-conditions/urinary-tract-infections'} class="dropdown-item" >Urinary Tract Infections</a></li>
+              <li><a href={'/diseases-we-treat/urological-conditions/prostate-problems'} class="dropdown-item" >Prostate Problems</a></li>
+              <li><a href={'/diseases-we-treat/urological-conditions/bladder-disorders'} class="dropdown-item" >Bladder Disorders</a></li>
+              <li><a href={'/diseases-we-treat/urological-conditions/urinary-obstruction'} class="dropdown-item" >Urinary Obstruction</a></li>
             </ul>
             <ul className='col-6'>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Endoscopic Procedures & Diagnosis</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Upper GI Endoscopy</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Colonoscopy</Link></li>
-              <li><Link to={'/surgeries&treatments'} class="dropdown-item" >Diagnostic & Therapeutic Endoscopic Procedures</Link></li>    
+              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item" >Endoscopic Procedures & Diagnosis</a></li>
+              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item" >Upper GI Endoscopy</a></li>
+              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/colonoscopy'} class="dropdown-item" >Colonoscopy</a></li>
+              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/diagnostic-therapeutic-endoscopic-procedures'} class="dropdown-item" >Diagnostic & Therapeutic Endoscopic Procedures</a></li>    
             </ul>
             </div>
           </div>

@@ -42,11 +42,10 @@ const OurSpecialists = () => {
           </p>
 
           <p className="text-muted">
-            Dr. Rajeev Singh is an accomplished and dedicated pediatric surgeon and urologist. 
-            He has received advanced training from prestigious institutions such as King Edward 
-            Memorial Hospital, Mumbai and Kalawati Saran Children’s Hospital, New Delhi, 
-            reflecting his strong academic and clinical expertise.
+            Dr. Rajeev Singh is a highly experienced Advanced Laparoscopic Surgeon in India, specializing in minimally invasive surgery, urology, proctology, endoscopy, and gastroenterology. 
+            With an M.S. Gold Medal and advanced fellowships like FIAGES and FMAS, he is known for delivering precise, safe, and effective surgical treatments.
           </p>
+          
           <img src="https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775223761/signature-removebg-preview_s8na50.png"  className='img-fluid 'alt="" />
       
 

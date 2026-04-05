@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import gallery from '../../Data/gallery'
-import { useParams } from 'react-router-dom'
-const Gallery= () => {
+import { Link, useParams } from 'react-router-dom'
+import surgeriesAndtreatments from '../../Data/surgeryAndTreatment'
+import dummyData from '../../Data/dummyData'
+import Content from '../Content'
+
+const SurgeriesAndTreatment = () => {
   const { searchedKeyword } = useParams()
 
-  const [data, setData] = useState([])
+  const [data, setData] = useState()
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setLoading(true)
-    console.log(searchedKeyword)
 
-    const fetchdata = gallery.filter(
+    const fetchdata = dummyData.filter(
       item => item.navTo === searchedKeyword
     )
-    console.log('hello',fetchdata)
+    console.log(fetchdata)
     setData(fetchdata)
     setLoading(false)
 
@@ -23,6 +25,7 @@ const Gallery= () => {
     const result = str.searchedKeyword.toLowerCase().replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())
     return result
   }
+
   return (
     <div className='w-100  d-flex flex-column align-items-center justify-content-center'>
       <div className=' position-relative d-flex justify-content-center  mb-4 w-100 ' style={{height:'200px'}}>
@@ -46,7 +49,7 @@ const Gallery= () => {
           {/* Content */}
           <div className="container position-absolute d-flex justify-content-center align-items-center text-white w-100 h-100">
               <div className=' rounded-2 p-3' style={{backgroundColor:"rgba(182, 176, 176, 0.5)"}}>
-                    Home  | Gallery | <span className='text-warning'> {changeCase({searchedKeyword})}</span>
+                    Home  | Sugeries & Treamtment | <span className='text-warning'> {changeCase({searchedKeyword})}</span>
               </div>
             </div>
 
@@ -58,9 +61,9 @@ const Gallery= () => {
                 <table className=' table text-start table-bordered  table-hover'>
                   <tbody>
                   {
-                    gallery?.map(link=>
+                    surgeriesAndtreatments.map(link=>
                       <tr className=''>
-                       <td className=' bg-light' ><a href={`/gallery/${link.navTo}`} className='text-decoration-none' style={{color:"#7A0404"}}><div>{link.galleryName} </div></a></td>
+                       <td className=' bg-light' ><a href={`/surgeries&treatments/${link.hyperLink}`} className='text-decoration-none' style={{color:"#7A0404"}}><div>{link.linkName} </div></a></td>
                       </tr>
                     )
                   }
@@ -73,34 +76,15 @@ const Gallery= () => {
         
         </div>
         <div className='col-8'>
-          <section className="container text-start">
-      
-      <h2 className=" mb-4 fw-bold">
-            {changeCase({searchedKeyword})}
-      </h2>
-
-       <div className="row g-3 g-md-4">
-      {data[0]?.image?.map((image, index) => (
-
-        <div key={index} className="col-6">
-          <div className="card  shadow h-100">
-            <img
-              src={image}
-              className="card-img-top"
-              alt="certification"
-             
-            />
-          </div>
-        </div>
-
-      ))}
-    </div>
-
-    </section>
+          {
+            data?.map((item)=>(
+              <Content title={item.title} sections={item.sections}/>
+            ))
+          }
         </div>
       </div>
-    </div>    
+    </div>
   )
 }
 
-export default Gallery
+export default SurgeriesAndTreatment

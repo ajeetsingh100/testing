@@ -21,13 +21,19 @@ const gallery=[
         galleryName:'Award',
         navTo:'awards',
         image:[
+            'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775207914/02_el1qsr.jpg',
+            'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775207848/10_zetndx.jpg',
+            'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775207830/22_ed8tak.jpg',
 
         ]
     },
     {
         galleryName:'Print Media',
         navTo:'print-media',
-        image:[]
+        image:[
+            'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775384833/06_yb8mlb.jpg',
+            'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775384833/02_zrgdon.jpg',
+        ]
     },
 ]
 

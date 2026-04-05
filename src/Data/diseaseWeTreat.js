@@ -1,6 +1,7 @@
 const diseaseWeTreat=[
     {
         categoryName:'Gastrointestinal Diseases',
+        navTo:"gastrointestinal-diseases",
         links:[
             {
                 linkName:'Gallbladder Stones (Cholelithiasis)',
@@ -26,6 +27,7 @@ const diseaseWeTreat=[
     },
     {
         categoryName:'Proctology (Ano-Rectal Disorders)',
+        navTo:"proctology",
         links:[
             {
                 linkName:'Piles (Hemorrhoids)',
@@ -51,6 +53,7 @@ const diseaseWeTreat=[
     },
     {
         categoryName:'Urological Conditions ',
+        navTo:'urological-conditions',
         links:[
             {
                 linkName:'Kidney Stones ',
@@ -76,6 +79,7 @@ const diseaseWeTreat=[
     },
      {
         categoryName:'Endoscopic Procedures & Diagnosis',
+        navTo:'endoscopic-procedures&diagnosis',
         links:[
             {
                 linkName:'Upper GI Endoscopy ',
