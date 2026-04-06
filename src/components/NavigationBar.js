@@ -15,7 +15,7 @@ const NavigationBar = () => {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <Link to='/about' class="nav-link active" aria-current="page" >About Dr.</Link>
+            <a href='/about' class="nav-link active" aria-current="page" >About Dr.</a>
           </li>
         
         <li class="nav-item dropdown position-static">
