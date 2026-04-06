@@ -21,7 +21,12 @@ h1,h2,h3,h4,h5{
 .swiperx {
   width: 100%;
   height: 100%;
+
+
 }
+
+
+
 
 .swiper-slidex {
   text-align: center;
@@ -32,6 +37,7 @@ h1,h2,h3,h4,h5{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .swiper-slidex img {
@@ -40,6 +46,15 @@ h1,h2,h3,h4,h5{
   height: 100%;
   object-fit: stretch;
 }
+@media  (max-width: 576px) {
+  .swiper {
+    height: 320px;
+  }
+}
+.our-spc{
+  margin-top: -70px;
+}
+
 /********************Navbar***************************/
 .swiper-wrapper {
   transition-timing-function: linear !important;
@@ -660,6 +675,6 @@ h1,h2,h3,h4,h5{
         }
          @media  only screen and ( max-width: 400px){
           .handleDisease{
-            max-width: 350px;
+            max-width: 100%;
           }
          }
