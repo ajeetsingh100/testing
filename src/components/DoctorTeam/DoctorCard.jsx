@@ -4,7 +4,7 @@ const DoctorCard = ({ doctorName, doctorImage, qualification }) => {
   return (
     <div className="col-md-4 col-sm-6 mb-4">
       <div
-        className="card bg-transparent border shadow  text-dark h-100 d-flex flex-column align-items-center text-center p-3"
+        className="card bg-transparent border shadow card-hover  text-dark h-100 d-flex flex-column align-items-center text-center p-3"
         style={{ width:'15rem ',minHeight: "300px" }}
       >
         {/* Image Wrapper (Center Fix) */}

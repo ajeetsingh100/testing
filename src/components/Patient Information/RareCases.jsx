@@ -52,7 +52,7 @@ const RareCases = () => {
 
       </div>
       <div className=' container  row '>
-        <div className='col-4'>          
+        <div className='col-4 d-none d-md-block'>          
             {loading?(<p>Loading</p>):(
               <div>
                 <table className=' table text-start table-bordered  table-hover'>
@@ -75,7 +75,7 @@ const RareCases = () => {
             }
         
         </div>
-        <div className='col-8'>
+        <div className='col-md-8  col-12'>
           <section className="container text-start">
       
       <h2 className=" mb-4 fw-bold">

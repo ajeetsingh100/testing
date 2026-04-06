@@ -25,7 +25,7 @@ const NavigationBar = () => {
           </a>
           <div class="dropdown-menu menu-mega container-row" aria-labelledby="navbarDropdown">
             <div className='row'>
-            <ul className='col-6'>
+            <ul className='col-12 col-lg-6'>
               <li><a href={'/surgeries&treatments/gastrointestinal-diseases/gallbladder-stones'} class="dropdown-item"  >Gastrointestinal Diseases</a></li>
               <li><a href={'/diseases-we-treat/gastrointestinal-diseases/gallbladder-stones'} class="dropdown-item" >Gallbladder Stones (Cholelithiasis) </a></li>
               <li><a href={'/diseases-we-treat/gastrointestinal-diseases/appendicitis'} class="dropdown-item" >Appendicitis</a></li>
@@ -33,7 +33,7 @@ const NavigationBar = () => {
               <li><a href={'/diseases-we-treat/gastrointestinal-diseases/acid-reflux'} class="dropdown-item" >Acid Reflus (GERD)</a></li>
               <li><a href={'/diseases-we-treat/gastrointestinal-diseases/stomach-and-intestinal-disorders'} class="dropdown-item" >Stomach and Intstical Disorders</a></li>
             </ul>
-            <ul className='col-6'>
+            <ul className='col-12 col-lg-6'>
               <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item" >Proctology (Ano-Rectal Disorders)</a></li>
               <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item" >Piles (Hermorrhoids)</a></li>
               <li><a href={'/diseases-we-treat/proctology/anal-fissure'} class="dropdown-item" >Anal Fissure</a></li>
@@ -41,7 +41,7 @@ const NavigationBar = () => {
               <li><a href={'/diseases-we-treat/proctology/pilonidal-sinus'} class="dropdown-item" >Pilonidal Sinus</a></li>
               <li><a href={'/diseases-we-treat/proctology/rectal-bleeding'} class="dropdown-item" >Rectal Bleding & Pain</a></li>
             </ul>
-            <ul className='col-6'>
+            <ul className='col-12 col-lg-6'>
               <li><a href={'/diseases-we-treat/urological-conditions/kidney-stones'} class="dropdown-item" >Urological Conditions</a></li>
               <li><a href={'/diseases-we-treat/urological-conditions/kidney-stones'} class="dropdown-item" >Kidney Stones</a></li>
               <li><a href={'/diseases-we-treat/urological-conditions/urinary-tract-infections'} class="dropdown-item" >Urinary Tract Infections</a></li>
@@ -49,7 +49,7 @@ const NavigationBar = () => {
               <li><a href={'/diseases-we-treat/urological-conditions/bladder-disorders'} class="dropdown-item" >Bladder Disorders</a></li>
               <li><a href={'/diseases-we-treat/urological-conditions/urinary-obstruction'} class="dropdown-item" >Urinary Obstruction</a></li>
             </ul>
-            <ul className='col-6'>
+            <ul className='col-12 col-lg-6'>
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item" >Endoscopic Procedures & Diagnosis</a></li>
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item" >Upper GI Endoscopy</a></li>
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/colonoscopy'} class="dropdown-item" >Colonoscopy</a></li>
@@ -65,7 +65,7 @@ const NavigationBar = () => {
           </a>
           <div class="dropdown-menu menu-mega " aria-labelledby="navbarDropdown">
             <div className='row'>
-                <ul className='col-lg-3 '>
+                <ul className='col-12 col-md-6 col-lg-3 '>
               <li><a class="dropdown-item"  hidden>Action</a></li>
               <li><a href={'/surgeries&treatments/general-surgery'} class="dropdown-item" >General Surgery</a></li>
               <li><a href={'/surgeries&treatments/advance-laparoscopic-surgery'} class="dropdown-item" >Advance Laparoscopic Surgery</a></li>
@@ -76,7 +76,7 @@ const NavigationBar = () => {
               <li><a href={'/surgeries&treatments/pediatric-surgery'} class="dropdown-item" >Pediatric Surgery</a></li>
               <li><a href={'/surgeries&treatments/plastic-burn-reconstructive-surgery'} class="dropdown-item" >Plastic & Burn Reconstructive Surgery</a></li>
             </ul>
-            <ul className='col-3'>
+            <ul className='col-12 col-md-6 col-lg-3'>
               <li><a class="dropdown-item"  hidden>Another action</a></li>
               <li><a href={'/surgeries&treatments/gastro-intestinal-surgery'} class="dropdown-item" >Gastro Intestinal Surgery</a></li>
               <li><a href={'/surgeries&treatments/breast-surgery'} class="dropdown-item" >Breast Surgery</a></li>
@@ -87,7 +87,7 @@ const NavigationBar = () => {
               <li><a href={'/surgeries&treatments/trauma-and-accident-surgery'} class="dropdown-item" >Trauma & Accident Surgery</a></li>
                <li><a href={'/surgeries&treatments/evlt-endovenous-laser-treatment'} class="dropdown-item" >Evlt-endovenous Laser Treatment</a></li>
             </ul>
-            <ul className='col-3'>
+            <ul className='col-12  col-md-6 col-lg-3'>
               <li><a class="dropdown-item"  hidden>Something else here</a></li>
               <li><a href={'/surgeries&treatments/laser-surgery'} class="dropdown-item"  >Laser Surgery</a></li>
               <li><a href={'/surgeries&treatments/piles'} class="dropdown-item" >Piles</a></li>
@@ -98,7 +98,7 @@ const NavigationBar = () => {
               <li><a href={'/surgeries&treatments'} class="dropdown-item" >Psychiatry</a></li>
               <li><a href={'/surgeries&treatments'} class="dropdown-item" >Cardiology</a></li>
             </ul>
-            <ul className='col-3'>
+            <ul className='col-12  col-md-6 col-lg-3'>
               <li><a class="dropdown-item"  hidden>Something else here</a></li>
               <li><a class="dropdown-item"  >Dermatology</a></li>
               <li><a href={'/surgeries&treatments'} class="dropdown-item" >Neurology</a></li>

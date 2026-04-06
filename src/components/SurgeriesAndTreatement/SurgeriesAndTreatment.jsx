@@ -55,7 +55,7 @@ const SurgeriesAndTreatment = () => {
 
       </div>
       <div className=' container  row '>
-        <div className='col-4'>          
+        <div className='col-4 d-none d-md-block'>          
             {loading?(<p>Loading</p>):(
               <div>
                 <table className=' table text-start table-bordered  table-hover'>
@@ -75,7 +75,7 @@ const SurgeriesAndTreatment = () => {
             }
         
         </div>
-        <div className='col-8'>
+        <div className='col-md-8 col-12'>
           {
             data?.map((item)=>(
               <Content title={item.title} sections={item.sections}/>
