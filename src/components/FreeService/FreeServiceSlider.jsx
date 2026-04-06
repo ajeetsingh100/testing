@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import freeService from '../../Data/freeService'
+import FreeServiceCard from './FreeServiceCard';
 // Import Swiper styles
 import 'swiper/css';
 import SwiperCore from "swiper";
@@ -8,8 +10,6 @@ import { Autoplay ,FreeMode} from "swiper/modules";
 SwiperCore.use([Autoplay]);
 
 
-import freeService from '../../Data/freeService'
-import FreeServiceCard from './FreeServiceCard';
 
 
 const FreeServiceSlider=() => {
