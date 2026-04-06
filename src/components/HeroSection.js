@@ -44,7 +44,7 @@ const HeroSection = () => {
 ];
   return (
     <>
-      <div style={{height:"90vh"}} >
+      <div style={{height:"80vh"}} >
         <Swiper
         spaceBetween={30}        
         effect={'fade'}

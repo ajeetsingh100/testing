@@ -2,7 +2,7 @@ import React from "react";
 
 const OurSpecialists = () => {
   return (
-    <div className="container  our-spc my-md-5 text-start">
+    <div className="container my-5 text-start">
       <h1 className="text-start fw-bold">Our <span style={{color:"#7A0404"}}>Specialist</span></h1>
       <p className="text-secondary  ">Expert in Advance Laparoscopic Surgeon, Proctologist, Urologist , Endoscopist and Gastrologist with years of surgical excellence.
         Committed to advanced treatment techniques ensuring comfort, safety, and quick healing.</p>
