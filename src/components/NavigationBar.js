@@ -53,7 +53,7 @@ const NavigationBar = () => {
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item d-flex text-wrap" >Endoscopic Procedures & Diagnosis</a></li>
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item" >Upper GI Endoscopy</a></li>
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/colonoscopy'} class="dropdown-item" >Colonoscopy</a></li>
-              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/diagnostic-therapeutic-endoscopic-procedures'} class="dropdown-item" >Diagnostic & Therapeutic Endoscopic Procedures</a></li>    
+              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/diagnostic-therapeutic-endoscopic-procedures'} class="dropdown-item d-flex text-wrap" >Diagnostic & Therapeutic Endoscopic Procedures</a></li>    
             </ul>
             </div>
           </div>
