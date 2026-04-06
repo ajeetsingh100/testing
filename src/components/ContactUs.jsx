@@ -38,7 +38,7 @@ const ContactUs = () => {
 
       </div>
       <div className=' container  row '>
-        <div className='col-4'>          
+        <div className='col-4 d-none d-md-block'>          
             <div>
                 <table className=' table text-start table-bordered  table-hover'>
                   <tbody>
@@ -54,7 +54,7 @@ const ContactUs = () => {
               </div>
         
         </div>
-        <div className='col-8'>
+        <div className='col-md-8 col-12'>
           <section className="container text-start">
       
       <h2 className=" mb-4 fw-bold">
@@ -62,7 +62,7 @@ const ContactUs = () => {
       </h2>
 
        <div className="row g-3 g-md-4">
-          <p className='fs-5 text-muted '>
+          <p className='fs-6 text-muted '>
              Address<br/>
              40A, Neem Sarai, Mundera Mandi (opposite: West Gate), Dhoomanganj, Prayagraj, Uttar Pradesh - 211011.<br/>
            +91 - 9450405584, 9005709090

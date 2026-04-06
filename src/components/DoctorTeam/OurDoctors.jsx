@@ -4,7 +4,7 @@ import DoctorSlider from './DoctorSlider'
 const OurDoctors = () => {
   return (
     <div>
-      <div className='text-start container mt-4 mb-4 py-5'>
+      <div className='text-start container mt-5 py-5'>
         <h6 className='fw-bold'>MEET THE TEAM</h6>
         <h2>Our Specialised Doctors</h2>
         <h6 className='text-secondary mb-5'>Meet our team of highly skilled and experienced doctors, committed to delivering exceptional medical care with compassion.

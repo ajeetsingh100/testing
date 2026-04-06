@@ -6,24 +6,24 @@ const NavigationBar = () => {
     <div className='container-fluid  bg-light'>
       
       <nav class="navbar navbar-expand-lg navbar-light bg-light container-lg " >
-  <div class="container">
-    <Link to={'/'} class="navbar-brand" >Home</Link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="container">
+      <Link to={'/'} class="navbar-brand" >Home</Link>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+         </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <Link to='/about' class="nav-link active" aria-current="page" >About Dr.</Link>
-        </li>
+          <li class="nav-item">
+            <Link to='/about' class="nav-link active" aria-current="page" >About Dr.</Link>
+          </li>
         
         <li class="nav-item dropdown position-static">
           <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Disease We Treat
           </a>
-          <div class="dropdown-menu menu-mega container-row" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu menu-mega  handleDisease" aria-labelledby="navbarDropdown">
             <div className='row'>
             <ul className='col-12 col-lg-6'>
               <li><a href={'/surgeries&treatments/gastrointestinal-diseases/gallbladder-stones'} class="dropdown-item"  >Gastrointestinal Diseases</a></li>
@@ -34,7 +34,7 @@ const NavigationBar = () => {
               <li><a href={'/diseases-we-treat/gastrointestinal-diseases/stomach-and-intestinal-disorders'} class="dropdown-item" >Stomach and Intstical Disorders</a></li>
             </ul>
             <ul className='col-12 col-lg-6'>
-              <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item" >Proctology (Ano-Rectal Disorders)</a></li>
+              <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item d-flex text-wrap" >Proctology (Ano-Rectal Disorders)</a></li>
               <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item" >Piles (Hermorrhoids)</a></li>
               <li><a href={'/diseases-we-treat/proctology/anal-fissure'} class="dropdown-item" >Anal Fissure</a></li>
               <li><a href={'/diseases-we-treat/proctology/fistula-in-ano'} class="dropdown-item" >Fistual-in-Ano</a></li>
@@ -50,7 +50,7 @@ const NavigationBar = () => {
               <li><a href={'/diseases-we-treat/urological-conditions/urinary-obstruction'} class="dropdown-item" >Urinary Obstruction</a></li>
             </ul>
             <ul className='col-12 col-lg-6'>
-              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item" >Endoscopic Procedures & Diagnosis</a></li>
+              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item d-flex text-wrap" >Endoscopic Procedures & Diagnosis</a></li>
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item" >Upper GI Endoscopy</a></li>
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/colonoscopy'} class="dropdown-item" >Colonoscopy</a></li>
               <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/diagnostic-therapeutic-endoscopic-procedures'} class="dropdown-item" >Diagnostic & Therapeutic Endoscopic Procedures</a></li>    
