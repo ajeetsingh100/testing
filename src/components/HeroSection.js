@@ -1,15 +1,9 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
- 
+import React from "react";
+
 
 
 const HeroSection = () => {
-  const slidesData = [
+    const slidesData = [
   {
     img: "https://res.cloudinary.com/dodhn4tgj/image/upload/w_1200,f_auto,q_auto,c_fill/v1774787114/img4_r8qe0c.jpg",
     title: "Welcome to Our Clinic",
@@ -43,44 +37,59 @@ const HeroSection = () => {
 
 ];
   return (
-    <>
-      <div style={{height:"80vh"}} >
-        <Swiper
-        spaceBetween={30}        
-        effect={'fade'}
-        speed={2000}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        
-        pagination={{
-          clickable: true,
-        }}
-        modules={[EffectFade, Autoplay, Pagination]}
-        className="swiperx"
-      >
-        {
-          slidesData.map(data=>
-            <SwiperSlide className='swiper-slidex'>
-             <img src={data.img}/>
-          <div className='position-absolute top-0 start-0 w-100 h-100 d-flex flex-column  text-white justify-content-center align-items-center' style={{backgroundColor:"rgb(208, 108, 30,0.4)"}}>
-           <h1>{data.title}</h1>
-           <p>{data.desc}</p>
-           
-           <button className='btn btn-light mt-3'>{data.btn}</button>
-          </div>
-           </SwiperSlide>
-          )
-        }
-        
-        
-         
-       
-      </Swiper>
+      <div
+      id="carouselExampleFade"
+      className="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+      data-bs-pause="false"
+    >
+      {/* Indicators */}
+      <div className="carousel-indicators">
+        {slidesData.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide-to={i}
+            className={i === 0 ? "active" : ""}
+          ></button>
+        ))}
       </div>
-    </>
-  );
-}
 
-export default HeroSection
+      {/* Slides */}
+      <div className="carousel-inner">
+        {slidesData.map((slide, index) => (
+          <div
+            key={index}
+            className={`carousel-item ${index === 0 ? "active" : ""}`}
+          >
+            <div className="overlay-container">
+              <img
+               src={`${slide.img}`}
+                className="d-block w-100"
+                alt="slide"
+              />
+
+              {/* Overlay Content */}
+              <div className="hero-overlay">
+                <div className="overlay-content">
+                  <h1>{slide.title}</h1>
+                  <p>{slide.desc}</p>
+                  <button className="btn btn-light mt-3">
+                    {slide.btn}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Controls */}
+      
+    </div>
+  );
+};
+
+export default HeroSection;
