@@ -43,6 +43,7 @@ const HeroSection = () => {
       data-bs-ride="carousel"
       data-bs-interval="3000"
       data-bs-pause="false"
+      data-bs-touch="true"
     >
       {/* Indicators */}
       <div className="carousel-indicators">
