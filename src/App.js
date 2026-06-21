@@ -15,6 +15,9 @@ import RareCases from './components/Patient Information/RareCases';
 import VideoTestimonial from './components/VideoTestimonial/VideoTestimonial';
 import ContactUs from './components/ContactUs';
 
+import AppointmentModal from './components/AppointmentModal/AppointmentModal';
+import FixedButtons from './components/FixedButton/FixedButtons';
+
 
 
 
@@ -24,6 +27,8 @@ function App() {
   return (
     <div className="App">
      <div className='sticky-top'>
+      <AppointmentModal/>
+      <FixedButtons/>
        <TopHeader/>
       <NavigationBar/>
      </div>

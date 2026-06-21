@@ -11,6 +11,8 @@ import Testimonials from '../components/Testimonial';
 import FeaturingServices from '../components/Service/FeaturingServices';
 import FeaturingFreeService from '../components/FreeService/FeaturingFreeService';
 import OurDoctors from '../components/DoctorTeam/OurDoctors';
+import JourneyTimeline from '../components/TimeLine/JourneyTimeline';
+import WhyChoose from '../components/Why choose us/WhyChoose';
 
 
 
@@ -19,10 +21,12 @@ const Homepage = () => {
     <div>    
       <HeroSection/>  
       <OurSpecialists/>
+      <JourneyTimeline/>
       <Statistics/> 
       <FeaturingFreeService/> 
-      <FeaturingServices/>    
+      <FeaturingServices/>      
       <OurDoctors/>
+      <WhyChoose/>    
       <Testimonials/> 
     </div>
   )

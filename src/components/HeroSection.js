@@ -1,4 +1,5 @@
 import React from "react";
+import { Carousel } from "react-bootstrap";
 
 
 
@@ -37,58 +38,57 @@ const HeroSection = () => {
 
 ];
   return (
-      <div
-      id="carouselExampleFade"
-      className="carousel slide carousel-fade"
-      data-bs-ride="carousel"
-      data-bs-interval="3000"
-      data-bs-pause="false"
-      data-bs-touch="true"
-    >
-      {/* Indicators */}
-      <div className="carousel-indicators">
-        {slidesData.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide-to={i}
-            className={i === 0 ? "active" : ""}
-          ></button>
-        ))}
-      </div>
-
-      {/* Slides */}
-      <div className="carousel-inner">
-        {slidesData.map((slide, index) => (
-          <div
-            key={index}
-            className={`carousel-item ${index === 0 ? "active" : ""}`}
-          >
-            <div className="overlay-container">
-              <img
-               src={`${slide.img}`}
-                className="d-block w-100"
-                alt="slide"
-              />
-
-              {/* Overlay Content */}
-              <div className="hero-overlay">
-                <div className="overlay-content">
-                  <h1>{slide.title}</h1>
-                  <p>{slide.desc}</p>
-                  <button className="btn btn-light mt-3">
-                    {slide.btn}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Controls */}
-      
+    <div>
+      <Carousel fade>
+      <Carousel.Item interval={3000}>
+        <div className='position-relative'>
+             <img src={slidesData[0].img} alt="first image" />
+        </div>
+        <Carousel.Caption className="position-absolute top-0 start-0 d-flex flex-column  justify-content-center align-items-center w-100 h-100" style={{ background: 'rgb(208, 108, 30,0.4)'}}>
+          <h1 className="">Welcome to our clinic</h1>
+          <p>We provide the best healthcare services</p>
+          <button className="btn btn-light fw-semibold">Book appointment</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={3000} >
+         <div className='position-relative'>
+             <img src={slidesData[1].img} alt="first image" />
+        </div>
+        <Carousel.Caption className="position-absolute top-0 start-0 d-flex flex-column  justify-content-center align-items-center w-100 h-100" style={{ background: 'rgb(208, 108, 30,0.4)'}}>
+          <h1>Expert doctors</h1>
+          <p>Highly qualified and experienced team.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+         <div className='position-relative'>
+             <img src={slidesData[2].img} alt="first image" />
+        </div>
+        <Carousel.Caption className="position-absolute top-0 start-0 d-flex flex-column  justify-content-center align-items-center w-100 h-100" style={{ background: 'rgb(208, 108, 30,0.4)'}}>
+          <h1>Advance treatments</h1>
+          <p>Latest technology and modern care</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+         <div className='position-relative'>
+             <img src={slidesData[3].img} alt="first image" />
+        </div>
+        <Carousel.Caption className="position-absolute top-0 start-0 d-flex flex-column  justify-content-center align-items-center w-100 h-100" style={{ background: 'rgb(208, 108, 30,0.4)'}}>
+          <h1>Patient first approach</h1>
+          <p>Your heatlth is our priority</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+         <div className='position-relative'>
+             <img src={slidesData[4].img} alt="first image" />
+        </div>
+        <Carousel.Caption className="position-absolute top-0 start-0 d-flex flex-column  justify-content-center align-items-center w-100 h-100" style={{ background: 'rgb(208, 108, 30,0.4)'}}>
+          <h1>24/7 Support</h1>
+          <p>We are always here for you</p>
+          <button className="btn btn-sm btn-light">Contact us</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+    
     </div>
   );
 };

@@ -29,9 +29,9 @@ const FeaturingServices = () => {
   {/* Content */}
   <div className="position-absolute container top-0 mt-3  text-white ">
     <div className=' mt-4   text-start'>
-        <h6 className='fw-bold'>OUR SERVICES</h6>
+        <h6 className='fw-bold'>Procedures & Specialties</h6>
         <h2>Trusted Healthcare Solutions</h2>
-        <h6 className='text-secondary mb-5'>We provide comprehensive medical care, including  neurology, oncology, general surgery and more.</h6>
+        <h6 className='text-secondary mb-5'>40,000+ surgeries across general, laparoscopic, proctology, urology, and endoscopy — backed by 25 years of practice.</h6>
         <ServiceSlider/>
         <div className='d-flex justify-content-end mt-5'>
          <a href={'surgeries&treatments/general-surgery'}> <button className='btn btn-secondary '>View More Services <i className='bi bi-arrow-right'></i></button></a>

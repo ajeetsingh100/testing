@@ -1,31 +1,39 @@
 const serviceData=[
     {
-        logo:'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775205481/1_vbea8v.png',
-        serviceName:'CT Scan'
+        
+        serviceName:'Laparoscopic Surgery',
+        serviceDescription:'Gallbladder stones, hernia, appendicitis — small holes, faster recovery'
     },
     {
-        logo:'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775205482/2_tvedum.png',
-        serviceName:'X-ray'
+       
+        serviceName:'Laser Proctology',
+        serviceDescription:'Piles, fissure, fistula — painless, 1-2 day discharge, no cutting'
     },
     {
-        logo:'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775208721/fdg_e9ckoj.png',
-        serviceName:'Ultrasound'
+       
+        serviceName:'Urology',
+        serviceDescription:'Kidney stones (PCNL & laser), prostate (TURP), urinary issues'
     },
     {
-        logo:'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775205487/4_udrcdv.png',
-        serviceName:'Urology'
+        
+        serviceName:'Endoscopy',
+        serviceDescription:'Upper GI endoscopy and colonoscopy — diagnostic and therapeutic'
+
     },
     {
-        logo:'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775205482/5_blygil.png',
-        serviceName:'Practology'
+       
+        serviceName:'Hernia Repair',
+        serviceDescription:'Inguinal, umbilical, incisional — laparoscopic with international-grade mesh'
     },
     {
-        logo:'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775205482/3_hms94x.png',
-        serviceName:'General Medicine'
+        
+        serviceName:'Gallbladder Surgery',
+        serviceDescription:'Laparoscopic cholecystectomy — 45-minute procedure, same-day discharge possible'
     },
     {
-        logo:'https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775208026/yuffygu_t2mrgu.png',
-        serviceName:'General Surgery'
+       
+        serviceName:'Gastroenterology',
+        serviceDescription:'GERD, acid reflux, intestinal disorders — medical and surgical management'
     }
 
 ]

@@ -55,11 +55,11 @@ const ServiceSlider = () => {
           },
         }}
       >
-        {serviceData?.map((card, index) => (
+        {serviceData?.map((service, index) => (
           <SwiperSlide key={index}>
             <Card
-              cardName={card.serviceName}
-              cardImg={card.logo}
+              serviceName={service.serviceName}
+              serviceDescription={service.serviceDescription}
             />
           </SwiperSlide>
         ))}
