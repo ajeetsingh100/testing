@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Modal, Button, Form, Container, Row, Col, Card } from "react-bootstrap";
 
 function AppointmentModal() {
-  const [show, setShow] = useState(true); // page load hote hi modal open
+  const [show, setShow] = useState(false); // page load hote hi modal open
 
   const [formData, setFormData] = useState({
     name: "",
@@ -10,7 +10,9 @@ function AppointmentModal() {
   });
 
   const handleClose = () => setShow(false);
-
+useEffect(()=>{
+  setTimeout(()=>setShow(true),3000)
+},[])
 
 
   const handleChange = (e) => {
