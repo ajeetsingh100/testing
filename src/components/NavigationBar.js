@@ -103,10 +103,10 @@ const NavigationBar = () => {
     function handleMenuShow(e){
       let menuType=e.target.innerText.toLowerCase()
       let data=menuData.find(item=>item.menuId===menuType)
-      console.log(data.content)
-      setActiveMenu(data.content)
-      console.log(data.content[0])
-      setSubMenuActive(data.content[0])      
+      console.log(data?.content)
+      setActiveMenu(data?.content)
+      console.log(data?.content[0])
+      setSubMenuActive(data?.content[0])      
       setShow(true)
     }
     function handleMenuHide(){
@@ -128,12 +128,11 @@ const NavigationBar = () => {
           <li class="nav-item p-1">
             <a href='/about' class="nav-link active" aria-current="page" >About Dr.</a>
           </li>
-          <li className="nav-item p-1 " onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Disease We Treat</a></li>
-          <li className="nav-item p-1" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Surgeries & Treatment</a></li>
-          <li className="nav-item p-1"  onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Patient Information</a></li>
-          <li className="nav-item p-1" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Gallery</a></li>
-          <li className="nav-item p-1" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Testimonial</a></li>
-          <li className="nav-item p-1"><a href="" className="nav-link">Contact Us</a></li>
+          <li className="nav-item p-1 d-flex  justify-content-center align-items-center" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Surgeries & Treatment</a></li>
+          <li className="nav-item p-1 d-flex  justify-content-center align-items-center"  onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Patient Information</a><span className='bi bi-caret-down mt-1' style={{fontSize:'13px'}}></span></li>
+          <li className="nav-item p-1 d-flex  justify-content-center align-items-center" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Gallery</a><span className='bi bi-caret-down mt-1' style={{fontSize:'13px'}}></span></li>
+          <li className="nav-item p-1 d-flex  justify-content-center align-items-center" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Testimonial</a><span className='bi bi-caret-down mt-1' style={{fontSize:'13px'}}></span></li>
+          <li className="nav-item p-1 d-flex  justify-content-center align-items-center"><a href="" className="nav-link">Contact Us</a></li>
           </ul>      
     </div>
   </div>
