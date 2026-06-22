@@ -13,6 +13,7 @@ import FeaturingFreeService from '../components/FreeService/FeaturingFreeService
 import OurDoctors from '../components/DoctorTeam/OurDoctors';
 import JourneyTimeline from '../components/TimeLine/JourneyTimeline';
 import WhyChoose from '../components/Why choose us/WhyChoose';
+import ConditionAndSurgeries from '../components/Condition&SurgeriesTreat/ConditionAndSurgeries';
 
 
 
@@ -22,6 +23,7 @@ const Homepage = () => {
       <HeroSection/>  
       <OurSpecialists/>
       <JourneyTimeline/>
+      <ConditionAndSurgeries/>
       <Statistics/> 
       <FeaturingFreeService/> 
       <FeaturingServices/>      

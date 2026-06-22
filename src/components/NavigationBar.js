@@ -1,171 +1,187 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+
+ const menuData = [
+    {
+      menuId:'disease we treat',
+      content:[
+            {
+              id: "gastrointestinal",
+              title: "Gastrointestinal Diseases",
+              links: ["Gallbladder Stones (Choleslithiasis)", "Appendicitis", "Hernia (Inguinal, Umbilical, Incisional)", "Acid Reflux (GERD)","Intestinal Disorders",'Peptic Ulcer','Intestical Obstruction', 'Pancreatitis']
+            },
+            {
+              id: "practology",
+              title: "Proctology (Ano-Rectal)",
+              links: ["Piles (Hemorrhoids)", "Anal Fissure", "Fistula-in-Ano", "Pilonidal Sinus",'Rectal Bleeding & Pain','Rectal Prolapse','Perianal Abscess']
+            },
+            {
+              id: "urological",
+              title: "Urological Conditions",
+              links: ["Kidney Stones", "Urinary Tract Infections", "Prostate Problems (BPH)", "Bladder Disorders",'Urinary Obstruction','Hydrocele','Phimosis','Varicocele','Male Infertility']
+            },
+            {
+              id: "laparoscopic",
+              title: "Laparoscopic Surgery",
+              links: ["Laparoscopic Cholecystectomy", "Laparoscopic Appendicectomy", "Laparoscopic Hernia Repair", "Laparoscopic Nephrectomy",'Diagnostic Laparoscopy']
+            },
+            {
+              id: "varicose",
+              title: "Varicose Veins & Laser",
+              links: ["Varicose Veins (EVLT)", "Laser Piles Surgery"]
+            },
+      ]
+    },
+     {
+      menuId:'surgeries & treatment',
+      content:[
+            {
+              id: "laparscopic",
+              title: "Laparscopic surgeries",
+              links: ["Laparscopic Cholecystemctomy (Gallbladder)", "Laparscopic Appendicectomy", "Laparoscopic Hernia Repair (TEP/TAPP)", "Laparoscopic Nephrectomy","Diagnostic Laparoscopy",'Laparoscopic Adhesiolysis']
+            },
+            {
+              id: "laser",
+              title: "Laser Surgeries",
+              links: ["Laser Piles Surgery", "Laser Fissure Surgery", "Laser Fistula Surgery (FiLaC)", "Laser Pilonidal Sinus Treatment",'EVLT — Varicose Veins Treatment']
+            },
+            {
+              id: "urological",
+              title: "Urological Surgeries",
+              links: ["PCNL (Large Kidney Stones)", "URSL (Ureteral Stones)", "Laser Circumcision", " Hydrocelectomy",'Varicocelectomy','TURP (Prostate Surgery)']
+            },
+            {
+              id: "general",
+              title: "General Surgical Procedures",
+              links: ["Thyroid Surgery", "Breast Surgery", "Trauma & Emergency Surgery", "Colorectal Surgery",'GI Surgery','Onco Surgery (Cancer)']
+            },
+            {
+              id: "endoscopic",
+              title: "Endoscopic Procedures",
+              links: ["Upper GI Endoscopy", "Colonoscopy"]
+            },
+      ]
+    },
+    {
+      menuId:'patient information',
+      content:[
+        {
+          id:'rare',
+          title:'Rare Case',
+          links:['Rare case']
+        }
+      ]
+    },
+     {
+      menuId:'gallery',
+      content:[
+        {
+          id:'gallery',
+          title:'Gallery',
+          links:['Certification','Award','Print Media']
+        }
+      ]
+    },
+     {
+      menuId:'testimonial',
+      content:[
+        {
+          id:'testimonial',
+          title:'Testimonial',
+          links:['Video Testimonial']
+        }
+      ]
+    }
+
+  ];
+
 const NavigationBar = () => {
+    const [show,setShow]=useState(false)
+    const [activeMenu, setActiveMenu] = useState();
+    const [subMenuActive, setSubMenuActive] = useState();
+    function handleMenuShow(e){
+      let menuType=e.target.innerText.toLowerCase()
+      let data=menuData.find(item=>item.menuId===menuType)
+      console.log(data.content)
+      setActiveMenu(data.content)
+      console.log(data.content[0])
+      setSubMenuActive(data.content[0])      
+      setShow(true)
+    }
+    function handleMenuHide(){
+      setShow(false)
+    }
   return (
-    <div className='container-fluid  bg-light'>
+    <div className='container-fluid  bg-light position-relative'>
       
-      <nav class="navbar navbar-expand-lg navbar-light bg-light container-lg " >
+      <nav class="navbar navbar-expand-lg navbar-light bg-light container-lg p-0 " >
+     
       <div class="container">
       <Link to={'/'} class="navbar-brand" >Home</Link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
          </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+      <div class="collapse navbar-collapse  p-0" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+          <li class="nav-item p-1">
             <a href='/about' class="nav-link active" aria-current="page" >About Dr.</a>
           </li>
-        
-        <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Disease We Treat
-          </a>
-          <div class="dropdown-menu menu-mega  handleDisease" aria-labelledby="navbarDropdown">
-            <div className='row'>
-            <ul className='col-12 col-lg-6'>
-              <li><a href={'/surgeries&treatments/gastrointestinal-diseases/gallbladder-stones'} class="dropdown-item"  >Gastrointestinal Diseases</a></li>
-              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/gallbladder-stones'} class="dropdown-item" >Gallbladder Stones (Cholelithiasis) </a></li>
-              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/appendicitis'} class="dropdown-item" >Appendicitis</a></li>
-              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/hernia'} class="dropdown-item" >Hernia (Inguinal, Umbilical, Incisional)</a></li>
-              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/acid-reflux'} class="dropdown-item" >Acid Reflus (GERD)</a></li>
-              <li><a href={'/diseases-we-treat/gastrointestinal-diseases/stomach-and-intestinal-disorders'} class="dropdown-item" >Stomach and Intstical Disorders</a></li>
-            </ul>
-            <ul className='col-12 col-lg-6'>
-              <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item d-flex text-wrap" >Proctology (Ano-Rectal Disorders)</a></li>
-              <li><a href={'/diseases-we-treat/proctology/piles'} class="dropdown-item" >Piles (Hermorrhoids)</a></li>
-              <li><a href={'/diseases-we-treat/proctology/anal-fissure'} class="dropdown-item" >Anal Fissure</a></li>
-              <li><a href={'/diseases-we-treat/proctology/fistula-in-ano'} class="dropdown-item" >Fistual-in-Ano</a></li>
-              <li><a href={'/diseases-we-treat/proctology/pilonidal-sinus'} class="dropdown-item" >Pilonidal Sinus</a></li>
-              <li><a href={'/diseases-we-treat/proctology/rectal-bleeding'} class="dropdown-item" >Rectal Bleding & Pain</a></li>
-            </ul>
-            <ul className='col-12 col-lg-6'>
-              <li><a href={'/diseases-we-treat/urological-conditions/kidney-stones'} class="dropdown-item" >Urological Conditions</a></li>
-              <li><a href={'/diseases-we-treat/urological-conditions/kidney-stones'} class="dropdown-item" >Kidney Stones</a></li>
-              <li><a href={'/diseases-we-treat/urological-conditions/urinary-tract-infections'} class="dropdown-item" >Urinary Tract Infections</a></li>
-              <li><a href={'/diseases-we-treat/urological-conditions/prostate-problems'} class="dropdown-item" >Prostate Problems</a></li>
-              <li><a href={'/diseases-we-treat/urological-conditions/bladder-disorders'} class="dropdown-item" >Bladder Disorders</a></li>
-              <li><a href={'/diseases-we-treat/urological-conditions/urinary-obstruction'} class="dropdown-item" >Urinary Obstruction</a></li>
-            </ul>
-            <ul className='col-12 col-lg-6'>
-              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item d-flex text-wrap" >Endoscopic Procedures & Diagnosis</a></li>
-              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/upper-gi-endoscopy'} class="dropdown-item" >Upper GI Endoscopy</a></li>
-              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/colonoscopy'} class="dropdown-item" >Colonoscopy</a></li>
-              <li><a href={'/diseases-we-treat/endoscopic-procedures&diagnosis/diagnostic-therapeutic-endoscopic-procedures'} class="dropdown-item d-flex text-wrap" >Diagnostic & Therapeutic Endoscopic Procedures</a></li>    
-            </ul>
-            </div>
-          </div>
-        </li>
-         <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Surgeries & Treatments
-          </a>
-          <div class="dropdown-menu menu-mega " aria-labelledby="navbarDropdown">
-            <div className='row'>
-                <ul className='col-12 col-md-6 col-lg-3 '>
-              <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><a href={'/surgeries&treatments/general-surgery'} class="dropdown-item" >General Surgery</a></li>
-              <li><a href={'/surgeries&treatments/advance-laparoscopic-surgery'} class="dropdown-item" >Advance Laparoscopic Surgery</a></li>
-              <li><a href={'/surgeries&treatments/urology'} class="dropdown-item" >Urology</a></li>
-              <li><a href={'/surgeries&treatments/neuro-surgery'} class="dropdown-item" >Neuro Surgery</a></li>
-              <li><a href={'/surgeries&treatments/orthopedia-and-joint-replacement'} class="dropdown-item" >Orthopedia and Joint Replacement</a></li>
-              <li><a href={'/surgeries&treatments/onco-surgery'} class="dropdown-item" >Onco Surgery</a></li>
-              <li><a href={'/surgeries&treatments/pediatric-surgery'} class="dropdown-item" >Pediatric Surgery</a></li>
-              <li><a href={'/surgeries&treatments/plastic-burn-reconstructive-surgery'} class="dropdown-item" >Plastic & Burn Reconstructive Surgery</a></li>
-            </ul>
-            <ul className='col-12 col-md-6 col-lg-3'>
-              <li><a class="dropdown-item"  hidden>Another action</a></li>
-              <li><a href={'/surgeries&treatments/gastro-intestinal-surgery'} class="dropdown-item" >Gastro Intestinal Surgery</a></li>
-              <li><a href={'/surgeries&treatments/breast-surgery'} class="dropdown-item" >Breast Surgery</a></li>
-              <li><a href={'/surgeries&treatments/thyroid-surgery'} class="dropdown-item" >Thryroid Surgery</a></li>
-              <li><a href={'/surgeries&treatments/ent'} class="dropdown-item" >ENT</a></li>
-              <li><a href={'/surgeries&treatments/genitourinary'} class="dropdown-item" >Genitourinary</a></li>
-              <li><a href={'/surgeries&treatments/colorectal-surgery'} class="dropdown-item" >Colorectal Surgery</a></li>
-              <li><a href={'/surgeries&treatments/trauma-and-accident-surgery'} class="dropdown-item" >Trauma & Accident Surgery</a></li>
-               <li><a href={'/surgeries&treatments/evlt-endovenous-laser-treatment'} class="dropdown-item" >Evlt-endovenous Laser Treatment</a></li>
-            </ul>
-            <ul className='col-12  col-md-6 col-lg-3'>
-              <li><a class="dropdown-item"  hidden>Something else here</a></li>
-              <li><a href={'/surgeries&treatments/laser-surgery'} class="dropdown-item"  >Laser Surgery</a></li>
-              <li><a href={'/surgeries&treatments/piles'} class="dropdown-item" >Piles</a></li>
-              <li><a href={'/surgeries&treatments/'} class="dropdown-item" >Medicine Department</a></li>
-              <li><a href={'/surgeries&treatments/general-medicine'} class="dropdown-item" >General Medicine</a></li>
-               <li><a href={'/surgeries&treatments/tb-and-chest-respiratory-medicine'} class="dropdown-item" >TB and Chest Respiratory Medicine</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Diabetic Clinic</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Psychiatry</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Cardiology</a></li>
-            </ul>
-            <ul className='col-12  col-md-6 col-lg-3'>
-              <li><a class="dropdown-item"  hidden>Something else here</a></li>
-              <li><a class="dropdown-item"  >Dermatology</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Neurology</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Nephrology</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Oncology</a></li>
-               <li><a href={'/surgeries&treatments'} class="dropdown-item" >TB and Chest Respiratory Medicine</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item text-wrap" >Anaesthesia, Critical Care & Pain Management</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Clinical Nutrition & Diatetics</a></li>
-              <li><a href={'/surgeries&treatments'} class="dropdown-item" >Laparoscopic Gynae Surgeries</a></li>
-            </ul>
-
-            </div>
-          </div>
-        </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Patient Information
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <ul>
-              <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><Link to={'/patient-information/rare-cases'} class="dropdown-item" >Rare Cases</Link></li>
-                          
-            </ul>           
-          </div>
-        </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Gallary
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <ul>
-              <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><a href={'/gallery/certifications'} class="dropdown-item" >Certification</a></li>
-              <li><a href={'/gallery/awards'} class="dropdown-item" >Award</a></li>
-              <li><a href={'/gallery/print-media'} class="dropdown-item" >Print Media</a></li>
-            </ul>
-          
-          </div>
-        </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Testimonials
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <ul>
-              <li><a class="dropdown-item"  hidden>Action</a></li>
-              <li><a href={'/testimonial/video-testimonial'} class="dropdown-item" >Video Testimonial</a></li>
-             
-            </ul>
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <a  href='/contact-us' class="nav-link" >Contact Us</a>
-        </li>
-      </ul>
-      
+          <li className="nav-item p-1 " onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Disease We Treat</a></li>
+          <li className="nav-item p-1" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Surgeries & Treatment</a></li>
+          <li className="nav-item p-1"  onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Patient Information</a></li>
+          <li className="nav-item p-1" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Gallery</a></li>
+          <li className="nav-item p-1" onMouseEnter={handleMenuShow} onMouseLeave={handleMenuHide}><a href="" className="nav-link">Testimonial</a></li>
+          <li className="nav-item p-1"><a href="" className="nav-link">Contact Us</a></li>
+          </ul>      
     </div>
   </div>
 </nav>
+<div className={`mega-menu-wrapper position-absolute start-0 rounded-0 z-1 p-3 border rounded shadow bg-white w-100  ${show?`d-block`:`d-none`}`} style={{height:'52vh'}} onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}>
+            <div className='d-flex end-0 pe-3 position-absolute' >
+              <button className="btn btn-close btn-sm"onClick={()=>setShow(false)}></button>
+            </div>
+            <div className="row ">
+              {/* Left Sidebar */}
+              <div  className="col-md-3 d-flex flex-column flex-wrap  border-end">
+                {activeMenu?.map((item) => (
+                  
+                  <span
+                    key={item.id}
+                    className={`d-flex flex-row justify-content-between d-flex flex-row  flex-wrap justify-content-between sidebar-item fw-semibold text-start px-3 py-2 rounded  ${
+                      subMenuActive.id === item.id ? " text-primary" : "text-dark"
+                    }`}
+                    onMouseEnter={() => setSubMenuActive(item)}
+                    style={{ cursor: "pointer", transition: "0.3s",fontSize:'14px' }}
+                  >
+                   <span className="">{item.title}</span> <span className="bi bi-chevron-right fs-6"></span>
+                  </span>
+                  
+                  
+                ))}
+                
+              </div>
 
-
-    </div>
+              {/* Right Content */}
+              <div className="col-md-9 d-flex flex-column flex-wrap">
+              
+                <div className="d-flex flex-column flex-wrap align-content-start text-start" style={{fontSize:"14px",height:'47vh',columnGap:"80px"}}>
+                  {subMenuActive?.links.map((link, index) => (
+                    <a
+                      href="/#"
+                      key={index}
+                      className="text-decoration-none text-dark px-2 rounded hover-link  border-dark py-2 "
+                    >
+                      {link}
+                    </a>
+                  ))}
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
   )
 }
 

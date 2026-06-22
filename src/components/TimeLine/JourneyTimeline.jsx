@@ -39,8 +39,8 @@ function JourneyTimeline() {
     <h3 className="mb-5"> A timeline of milestones, achievements, and professional growth</h3>
   <ul className="timeline-with-icons text-start d-flex flex-column gap-4">
     <li className="timeline-item">
-      <span className="timeline-icon ">
-        <i className="bi bi-hospital "></i>
+      <span className="timeline-icon " style={{backgroundColor:'rgba(208, 108, 30,0.4)'}}>
+        <i className="bi bi-hospital " style={{color:'var(--website-primary)'}}></i>
       </span>
 
       <h5 className="fw-bold mb-1">2007 – Present</h5>
@@ -54,8 +54,8 @@ function JourneyTimeline() {
     </li>
 
     <li className="timeline-item">
-      <span className="timeline-icon">
-        <i className="bi bi-journal-medical"></i>
+      <span className="timeline-icon" style={{backgroundColor:'rgba(208, 108, 30,0.4)'}}>
+        <i className="bi bi-journal-medical" style={{color:'var(--website-primary)'}}></i>
       </span>
 
       <h5 className="fw-bold mb-1">Prior to 2007</h5>
@@ -68,8 +68,8 @@ function JourneyTimeline() {
     </li>
 
     <li className="timeline-item">
-      <span className="timeline-icon">
-        <i className="bi bi-award "></i>
+      <span className="timeline-icon" style={{backgroundColor:'rgba(208, 108, 30,0.4)'}}>
+        <i className="bi bi-award " style={{color:'var(--website-primary)'}}></i>
       </span>
 
       <h5 className="fw-bold mb-1">Fellowship Training</h5>

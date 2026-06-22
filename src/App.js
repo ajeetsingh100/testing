@@ -17,6 +17,7 @@ import ContactUs from './components/ContactUs';
 
 import AppointmentModal from './components/AppointmentModal/AppointmentModal';
 import FixedButtons from './components/FixedButton/FixedButtons';
+import MegaNavbar from './components/common/MegaNavbar';
 
 
 
@@ -40,7 +41,7 @@ function App() {
           <Route path='/diseases-we-treat/:searchedKeyword1/:searchedKeyword2' element={<DiseasesWeTreat/>}/>   
           <Route path='/patient-information/:searchedKeyword' element={<RareCases/>}/>
           <Route path='/testimonial/:searchedKeyword' element={<VideoTestimonial/>}/>
-          <Route path='/contact-us' element={<ContactUs/>}/>
+          <Route path='/contact-us' element={<MegaNavbar/>}/>
         </Routes>
         <Footer/>
     </div>

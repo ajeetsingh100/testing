@@ -14,7 +14,8 @@ SwiperCore.use([Autoplay]);
 
 const FreeServiceSlider=() => {
   return (
-    <Swiper
+     <Swiper
+    
   modules={[Autoplay, FreeMode]}
   loop={true}
   
@@ -57,9 +58,8 @@ const FreeServiceSlider=() => {
           </SwiperSlide>
         )
       }
-      
-      
     </Swiper>
+
   );
 };
 

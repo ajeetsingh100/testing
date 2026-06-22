@@ -47,7 +47,7 @@ const HeroSection = () => {
         <Carousel.Caption className="position-absolute top-0 start-0 d-flex flex-column  justify-content-center align-items-center w-100 h-100" style={{ background: 'rgb(208, 108, 30,0.4)'}}>
           <h1 className="">Welcome to our clinic</h1>
           <p>We provide the best healthcare services</p>
-          <button className="btn btn-light fw-semibold">Book appointment</button>
+          <button className="btn btn-outline-light ">Book appointment</button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={3000} >
@@ -84,7 +84,7 @@ const HeroSection = () => {
         <Carousel.Caption className="position-absolute top-0 start-0 d-flex flex-column  justify-content-center align-items-center w-100 h-100" style={{ background: 'rgb(208, 108, 30,0.4)'}}>
           <h1>24/7 Support</h1>
           <p>We are always here for you</p>
-          <button className="btn btn-sm btn-light">Contact us</button>
+          <button className="btn btn-outline-light">Contact us</button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
