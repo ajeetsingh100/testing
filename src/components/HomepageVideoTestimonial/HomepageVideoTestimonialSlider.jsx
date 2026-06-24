@@ -1,29 +1,31 @@
+import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import conditionTreat from '../../Data/conditionTreat';
+import videoTestimonial from '../../Data/videoTestimonial';
 
 // Import Swiper styles
 import 'swiper/css';
 import SwiperCore from "swiper";
 import { Autoplay ,FreeMode} from "swiper/modules";
-import ConditionAndSurgeriesCard from './ConditionAndSurgeriesCard';
+
+import HomepageVideoTestimonialCard from './HomepageVideoTestimonialCard';
 
 SwiperCore.use([Autoplay]);
-
-
-
-
-const ConditionTreatSlider=() => {
+const HomepageVideoTestimonialSlider = () => {
+    const swiperRef = useRef(null);
   return (
-     <Swiper
+    <div>
+         <Swiper
         dir='rtl'
         modules={[Autoplay, FreeMode]}
         loop={true}
-        
-        speed={3000}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        speed={6000}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
+         pauseOnMouseEnter: true,
+          
         }}
         freeMode={{
           enabled: true,
@@ -47,22 +49,22 @@ const ConditionTreatSlider=() => {
             spaceBetween: 25,
           },
           1200: {
-            slidesPerView: 4,
+            slidesPerView: 3.5,
             spaceBetween: 30,
           },
         }}
        
     >
       {
-        conditionTreat?.map(data=>
+        videoTestimonial?.map(data=>
           <SwiperSlide>
-            <ConditionAndSurgeriesCard title={data.title} description={data.description}/>
+            <HomepageVideoTestimonialCard videoId={data} swiperRef={swiperRef}/>
           </SwiperSlide>
         )
       }
     </Swiper>
+    </div>
+  )
+}
 
-  );
-};
-
-export default ConditionTreatSlider;
+export default HomepageVideoTestimonialSlider

@@ -690,261 +690,138 @@ h1,h2,h3,h4,h5{
   font-size: 0.9rem;
   z-index: 999;
 }
-
-/* navbar */
-.apollo-header {
-  position: relative;
-  z-index: 1000;
-  background: #fff;
+.text-website-primary{
+  color:var(--website-primary)
+}.custom-video-modal {
+  max-width: 1002px !important;
+  width: min(1002px, 92vw);
 }
 
-/* NAVBAR */
-.apollo-navbar {
-  background: #ffffff;
-  border-bottom: 1px solid #ececec;
-}
-
-.apollo-logo {
-  text-decoration: none;
-}
-
-.logo-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-mark {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #f6b11a, #f28c00);
-  color: #fff;
-  font-weight: 700;
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.logo-text span {
-  font-size: 24px;
-  font-weight: 700;
-  color: #005b7f;
-}
-
-.logo-text small {
-  font-size: 12px;
-  font-weight: 600;
-  color: #0d6b85;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.apollo-nav-btn {
-  border: none;
+.custom-video-modal .modal-content {
   background: transparent;
-  color: #003b57;
-  font-weight: 700;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 0;
+  border: none;
+  box-shadow: none;
 }
 
-.apollo-nav-btn:hover {
-  color: #005b7f;
-}
-
-.nav-hover-item {
+.video-modal-wrapper {
   position: relative;
 }
 
-/* ACTIONS */
-.apollo-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.video-frame-wrapper {
+  width: 100%;
+  height: min(564px, 80vh);
+  background: #000;
 }
 
-.icon-circle {
-  width: 38px;
-  height: 38px;
-  border: none;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
+.video-frame-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
-.phone-btn {
-  background: #f5c94a;
-}
-
-.search-btn {
-  background: #f29c1f;
-  color: #fff;
-}
-
-.emergency-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1;
-  font-weight: 700;
-  color: #003b57;
-  font-size: 14px;
-}
-
-.small-icon {
-  font-size: 14px;
-  margin-bottom: 2px;
-}
-
-.lang-select {
-  border: 1px solid #d7d7d7;
-  border-radius: 6px;
-  padding: 4px 8px;
-  font-size: 14px;
-  background: #fff;
-}
-
-/* FULL MEGA MENU */
-.apollo-mega-menu {
+/* close button outside video */
+.video-close-btn {
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: #f3ece7;
-  border-top: 1px solid #e4dbd4;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-}
-
-.apollo-mega-inner {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  min-height: 390px;
-}
-
-/* LEFT SIDEBAR */
-.apollo-sidebar {
-  padding: 18px 0;
-  border-right: 1px solid #d8ccc5;
-}
-
-.sidebar-link {
-  width: 100%;
+  top: -14px;
+  right: -40px;   /* video ke bahar */
+  width: 34px;
+  height: 34px;
   border: none;
   background: transparent;
-  padding: 14px 32px;
+  color: white;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+/* common circle */
+.video-play-btn .circle {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 1st circle - 10% opacity */
+.video-play-btn .outer {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 2nd circle - 50% opacity */
+.video-play-btn .middle {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 3rd circle - 100% opacity */
+.video-play-btn .inner {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 1);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  color: #08374a;
-  font-size: 15px;
-  font-weight: 600;
-  text-align: left;
-  transition: 0.2s ease;
+  justify-content: center;
 }
 
-.sidebar-link:hover,
-.sidebar-link.active {
-  background: rgba(255, 255, 255, 0.35);
+/* play icon */
+.video-play-btn .play-icon {
+  font-size: 22px;
+  color: var(--website-primary);
+  margin-left: 3px; /* thoda visually center karne ke liye */
+}
+.video-modal-backdrop.show {
+  opacity: 0.85 !important;
+}
+/* SociableKIT footer / branding hide */
+.sk-ww-google-reviews .tutorial_link.--custom-branding {
+  display: none !important;
+}
+.sk-ww-google-reviews .tutorial_link.--custom-branding,
+.sk-ww-google-reviews a[href*="sociablekit.com/tutorials/embed-google-reviews-website"] {
+  display: none !important;
+}
+.sk-ww-google-reviews a.tutorial_link.--custom-branding {
+  display: none !important;
 }
 
-/* RIGHT CONTENT */
-.apollo-content {
-  padding: 16px 28px 28px;
+.nav,.header {
+  z-index: 1030 !important;
 }
 
-.apollo-content-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+/* SociableKIT popup / overlay ko sabse upar lao */
+.sk-modal,
+.sk-popup,
+.sk-lightbox,
+.sk-ww-google-reviews [role="dialog"] {
+  z-index: 2000 !important;
 }
 
-.close-mega {
-  border: none;
-  background: transparent;
-  color: #08374a;
-  padding: 4px;
+/* backdrop / overlay */
+.sk-modal-backdrop,
+.sk-overlay,
+.sk-popup-overlay {
+  z-index: 1990 !important;
 }
 
-.mega-link-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mega-link-list li {
-  margin-bottom: 20px;
-}
-
-.mega-link-list a {
-  text-decoration: none;
-  color: #08374a;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.45;
-}
-
-.mega-link-list a:hover {
-  color: #005b7f;
-}
-
-.view-all-wrap {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 8px;
-}
-
-.view-all-link {
-  text-decoration: none;
-  color: #08374a;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 991.98px) {
-  .apollo-actions {
-    margin-top: 16px;
-    flex-wrap: wrap;
-  }
-
-  .apollo-mega-menu {
-    position: static;
-    box-shadow: none;
-    border-top: 1px solid #e4dbd4;
-  }
-
-  .apollo-mega-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .apollo-sidebar {
-    border-right: none;
-    border-bottom: 1px solid #d8ccc5;
-  }
-
-  .sidebar-link {
-    padding: 12px 20px;
-  }
-
-  .apollo-content {
-    padding: 20px;
-  }
-
-  .mega-link-list li {
-    margin-bottom: 14px;
-  }
+/* agar popup top se chipak raha ho */
+.sk-modal,
+.sk-popup,
+.sk-lightbox {
+  top: 20px !important;
 }

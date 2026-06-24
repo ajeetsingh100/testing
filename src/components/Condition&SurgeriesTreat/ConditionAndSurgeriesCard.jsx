@@ -2,16 +2,17 @@ import React from 'react'
 
 const ConditionAndSurgeriesCard = ({title,description}) => {
   return (
-    <div>
-        <div>
-            <div className='small rounded-2  rounded-2 px-4  py-2 text-center text-dark w-auto' style={{backgroundColor:'rgba(208, 108, 30, 0.4)'}}>
-              <div className='d-flex flex-column  gap-1' style={{fontSize:'12px'}}>
-                   <div className='fw-semibold text-nowrap'>{title}</div>
-                   <div className='small text-nowrap'>{description}</div>
-              </div>
+    <div>    
+        <div className='small  p-2 text-center text-dark'>
+          <div className='d-flex flex-column px-2 text-start gap-1' style={{fontSize:'12px'}}>
+             <div className='d-flex gap-2'>
+                <span className='bi bi-check-circle' style={{color:'var(--website-primary)'}} ></span>
+                <div className='fw-semibold text-nowrap'>{title}</div>
+             </div>
+              <div className='small text-nowrap ps-3 ms-1'>{description}</div>
           </div>
         </div>
-    </div>
+     </div>
   )
 }
 

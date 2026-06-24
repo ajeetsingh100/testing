@@ -8,6 +8,7 @@ import Content from '../Content'
 
 const DiseasesWeTreat = () => {
   const { searchedKeyword1, searchedKeyword2 } = useParams()
+  console.log(`searchkeyword1: ${searchedKeyword1} searchedKeyword2: ${searchedKeyword2}`)
 
   const [data, setData] = useState()
   const [sidebarData,setSidebarData]=useState([])

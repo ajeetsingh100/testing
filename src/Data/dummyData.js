@@ -1,636 +1,2372 @@
-
+//surgeries and treatmnet
 
 const dummyData = [
     {
-        title: "General Surgery",
-        navTo:'general-surgery',
+        title: "Laparoscopic Cholecystectomy (Gallbladder)",
+        navTo:'laparoscopic-cholecystectomy',
         sections: [
                     {
-                        type:'highligh',
-                        content:'Minimal Access and General Surgery',
+                        type:'heading',
+                        content:'Overview',
                     },
 
                     {
                     type: "paragraph",
-                    content: `The department of Surgery at Narayan Swaroop Hospital provides comprehensive round the clock surgical services.
-                    The department provides all general surgical procedures as well as advanced laparoscopic surgeries.
-                        Dr Rajeev Singh at Narayan Swaroop Hospital is doing general surgeries as well as advanced laparoscopic surgeries for past 15 years in the city of Prayagraj.`
+                    content: `Removal of diseased gallbladder through 3 tiny holes (5-10mm each) using a camera and specialized instruments. Gold-standard technique worldwide — open surgery is now used only in the most complicated cases. Duration: 30-45 minutes.`
                     },
                     {
                     type: "heading",
-                    content: "Scope of Services"
-                    },
-                    {
-                    type: "paragraph",
-                    content: `General Surgeries provided:`
+                    content: "Who Needs This"
                     },
                     {
                     type: "list",
                     items: [
-                        "Laparoscopic Cholecystectomy",
-                        "Laparoscopic Diaphragmatic Hernia repair",
-                        "PCNL (percutaneous nephrolithotomy)",
-                        "TURP (Trans urethral resection of prostate)"
+                        `Gallbladder stones causing pain, nausea, vomiting`,
+                        `Infected/inflamed gallbladder (acute cholecystitis)`,
+                        `Gallbladder polyps >10mm (cancer risk)`,
+                        `Repeated biliary colic attacks`,
+                        `Gallstone pancreatitis`,
+                        `Porcelain gallbladder`,
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                        <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <tr><td> Day	</td><td> Progress</td></tr>
+                               <tr><td> Day 0 </td><td>   Walk within 4-6 hours, sip liquids</td></tr>
+                               <tr><td> Day 1</td>	<td> Soft diet, discharge possible</td></tr>
+                               <tr><td> Day 3-5	</td><td> Light daily activities</td></tr>
+                               <tr><td> Day 7	</td><td> Normal diet, follow-up visit</td></tr>
+                               <tr><td> Day 10-14</td><td> 	Back to office work</td></tr>
+                               <tr><td> Day 21-30</td><td> 	Full physical activity</td></tr>
+                            </tbody>
+                        </table>                   
                     ]
                     },
                     {
-                    type: "heading",
-                    content: "Pre-operative Check-up (PAC"
+                        type:'heading',
+                        content:'Laparoscopic vs Open:'
+                    },
+                    {
+                        type:'table',
+                        content:[
+                             <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                    <th>Factor</th>
+                                    <th>Laparscopic</th>
+                                    <th>Open</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <tr><td> Incision	     </td><td>      3 holes (5-10mm)</td><td>	    15-20cm cut</td></tr>
+                               <tr><td> Pain	         </td><td>    Minimal	        </td><td>        Significant</td></tr>
+                               <tr><td> Hospital Stay	</td><td>     1 day	         </td><td>       5-7 days</td></tr>
+                               <tr><td> Return to Work</td><td>       7-10 days	    </td><td>        4-6 weeks</td></tr>
+                               <tr><td> Scarring	     </td><td>     Nearly invisible</td><td>	    Large scar</td></tr>
+                               <tr><td> Infection Risk</td><td>        Very low	     </td><td>       Higher</td></tr>
+                            </tbody>
+                        </table>                            
+
+                        ]
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
                     },
                     {
                         type:'paragraph',
-                        content:`Consultants of Internal Medicine are involved in preoperative checks in addition to anaesthetists to pick up & manage existing medical problem prior to surgical procedures as well as to take appropriate measures prior to surgeries. 
-                        In some cases, consultants are required to manage co-morbid medical problems with surgical conditions. Super-specialists are also called preoperatively, intra operatively, post operatively or whenever required.`
+                        content:`10,000+ cholecystectomies. 3-port technique (standard is 4 — one less scar). Even difficult/inflamed gallbladders managed laparoscopically. Same-day discharge available.`
 
                     }
                 ]
     },
-    {
-         title: "Advance Laparoscopic Surgery",
-         navTo:'advance-laparoscopic-surgery',
-         sections:[
-            {
-                type:'paragraph',
-                content:`Narayan Swaroop Hospital provides advanced laparoscopic surgery,
-                 a minimally invasive surgery that offers patient a faster recovery. Surgeons use a laparoscope, a thin,
-                lighted tube with a camera that enters the body through a small incision. 
-                Laparoscopy is used in gynecologic procedures, appendectomy and hernia repair as well as other procedures`
-            },
-            {
-                type:"highlight",
-                content:'Less invasive, faster recovery!'
-            },
-            {
-                type:'paragraph',
-                content:`Minimal invasive and advanced laparoscopic surgeries provided:`
-            },
-            {
-                type:'list',
-                items:[
-                        'Laparoscopic Cholecystectomy.',
-                        'Laparoscopic Diaphragmatic Hernia repair',
-                        'Laparoscopic excision of Hepatic hydatid cyst',
-                        'Laparoscopic Appendisectomy',
-                        'Laparoscopic Surgery for Appendicular Perforation',
-                        'Laparoscopic Adhenolysis for Intestinal Obstruction',
-                        'Laparoscopic Ureterolithotomy (for ureteric stone)',
-                        'PCNL (percutaneous nephrolithotomy)',
-                        'Cystolithopexy (Cystolitholapaxy – for urinary bladder stone)',
-                        'TURP (Trans urethral resection of prostate)',
-                        'Stapled Hemorrhoidectomy',
-                        'Minimally Invasive Procedure for Piles & Fissure',
+     {
+        title: "Laparoscopic Appendicectomy",
+        navTo:'laparoscopic-appendicectomy',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Minimally invasive removal of inflamed appendix through 3 small incisions. Has replaced traditional open surgery for all types of appendicitis — simple, complicated, and even ruptured. Duration: 20-40 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Acute appendicitis (emergency)`,
+                        `Recurrent appendicitis (repeated attacks)`,
+                        `Appendicular lump (after initial antibiotics)`,
+                        `Ruptured/perforated appendix`,
+                        `Appendicular abscess`,
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Day</td>
+                                <td>Progress</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Day 0</td>
+                                <td>Walk within 4 hours, clear liquids</td>
+                                </tr>
+                                <tr>
+                                <td>Day 1</td>
+                                <td>Soft diet, discharge (simple cases)</td>
+                                </tr>
+                                <tr>
+                                <td>Day 2-3</td>
+                                <td>Discharge (complicated cases)</td>
+                                </tr>
+                                <tr>
+                                <td>Day 5-7</td>
+                                <td>Back to office/school</td>
+                                </tr>
+                                <tr>
+                                <td>Day 14</td>
+                                <td>Normal activities</td>
+                                </tr>
+                                <tr>
+                                <td>Day 21</td>
+                                <td>Full physical activity</td>
+                                </tr>
+                            </tbody>
+                            </table>                
+                    ]
+                    },
+                                  
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Even ruptured/gangrenous appendix managed laparoscopically. Conversion to open surgery <2%. Complete abdominal washout done through same ports for complicated cases.`
+
+                    }
                 ]
-            }
-         ]
     },
-    {
-        title:'Urology',
-        navTo:'urology',
-        sections:[
-            {
-                type:'paragraph',
-                content:`Department of Urology at Narayan Swaroop Hospital offers comprehensive state-of-the-art medical and surgical care for adults and pediatric urology. 
-                Our team of highly experienced surgeons is supported by the most advanced medical equipment. `
-            },
-            {
-                type:"paragraph",
-                content:`The team has successfully conducted numerous Renal transplants, LASER and Endo-Urological Surgeries and Laparoscopic Urosurgeries. Uro-oncology, Infertility and Andrology are other essential services provided under the same roof.
-                Our team of doctors have been performing successful Renal transplant since 2007.`
-            },
-            {
-                type:"paragraph",
-                content:`We are equipped and very well experienced to conduct all endoscopic surgery including flexible ureteroendoscopy 
-                and laser surgeries (for Prostate) and We offer the most comprehensive service for patients seeking treatment for:`
-            },
-            {
-                type:'list',
-                items:[
-                    'Erectile dysfunction.',
-                    'Bladder & pelvic pain.',
-                    'Prostatitis.',
-                    'Bladder cancer',
-                    'Urological cancer',
+     {
+        title: "Laparoscopic Hernia Repair (TEP/TAPP)",
+        navTo:'laparoscopic-hernia-repair',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Minimally invasive hernia repair where a synthetic mesh is placed behind the abdominal wall through 3 small incisions to reinforce the weak area permanently. Two techniques: TEP (mesh placed outside peritoneum) and TAPP (mesh placed through abdomen). Duration: 45-60 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Inguinal hernia (groin — most common)`,
+                        `Bilateral inguinal hernia (both sides — single sitting)`,
+                        `Recurrent hernia (failed previous open repair)`,
+                        `Umbilical hernia`,
+                        `Incisional hernia (hernia at surgery scar)`,
+                        `Femoral hernia`,
+                        `Sportsman's hernia`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Day</td>
+                                <td>Progress</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Day 0</td>
+                                <td>Walk within 4 hours</td>
+                                </tr>
+                                <tr>
+                                <td>Day 1</td>
+                                <td>Normal diet, discharge</td>
+                                </tr>
+                                <tr>
+                                <td>Day 3-5</td>
+                                <td>Light daily activities</td>
+                                </tr>
+                                <tr>
+                                <td>Day 7-10</td>
+                                <td>Back to office work</td>
+                                </tr>
+                                <tr>
+                                <td>Day 21</td>
+                                <td>Moderate physical activity</td>
+                                </tr>
+                                <tr>
+                                <td>Day 45-60</td>
+                                <td>Heavy lifting allowed</td>
+                                </tr>
+                            </tbody>
+                            </table>               
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Laparoscopic vs Open:'
+                    },
+                    {
+                        type:'table',
+                        content:[
+                             <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Factor</td>
+                                <td>Laparoscopic</td>
+                                <td>Open</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Incision</td>
+                                <td>3 holes (5-10mm)</td>
+                                <td>6-8cm cut</td>
+                                </tr>
+                                <tr>
+                                <td>Pain</td>
+                                <td>Minimal</td>
+                                <td>Moderate-significant</td>
+                                </tr>
+                                <tr>
+                                <td>Return to Work</td>
+                                <td>7-10 days</td>
+                                <td>4-6 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Bilateral Repair</td>
+                                <td>Single sitting</td>
+                                <td>Two separate surgeries</td>
+                                </tr>
+                                <tr>
+                                <td>Recurrence Rate</td>
+                                <td>&lt;1%</td>
+                                <td>5-10%</td>
+                                </tr>
+                                <tr>
+                                <td>Chronic Pain</td>
+                                <td>Rare</td>
+                                <td>10-15% patients</td>
+                                </tr>
+                            </tbody>
+                            </table>                        
+
+                        ]
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Both TEP and TAPP mastered. Bilateral hernias in single sitting (saves patient from second surgery). Lightweight mesh for comfort. Recurrence rate <1%. Experts in complex and recurrent hernia repairs.`
+
+                    }
                 ]
-            },
-            {
-                type:"paragraph",
-                content:`We treat male and female urinary tract and the male reproductive organs.
-                 Although urology is classified as a surgical specialty,
-                 knowledge of internal medicine, pediatrics, gynecology, and other specialties is required by the urologist because of the wide variety of clinical problems encountered.`
-            },
-            {
-                type:'heading',
-                content:'When should you see an urologist?'
-            },
-            {
-                type:'paragraph',
-                content:`We treat male and female urinary tract and the male reproductive organs. 
-                Although urology is classified as a surgical specialty, knowledge of internal medicine, pediatrics, gynecology, and other specialties is required by the urologist because of the wide variety of clinical problems encountered.`
-            }
-        ]
     },
-    {
-        title:"Neuro Surgery",
-        navTo:'neuro-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`Neurosurgery, or neurological surgery, is the medical specialty concerned with the prevention, diagnosis, surgical treatment, and rehabilitation of disorders which affect any portion of the nervous system including the brain, spinal cord, central and peripheral nervous system, and cerebrovascular system. `
-            },
-            {
-                type:'paragraph',
-                content:`At Narayan Swaroop Hospital, department of Neurosurgery offers 24×7 assistance to tackle emergencies with world class ICU/CCU geared up to deal swiftly with emergencies of head & neck trauma patients, stroke including TPA and other neurological emergencies. A physiotherapy and rehabilitation unit offers exceptional neuro-rehabilitation to help the troubled patients overcome their disabilities.`
-            },
-            {
-                type:'heading',
-                content:`Neurosurgery Procedures:`
-            },
-            {
-                type:'list',
-                items:[
-                    'Cerebrovascular – aneurysms and arteriovenous malformations (AVMs), and stroke.',
-                    'Neuro-oncology (braintumors)',
-                    'Spinal neurosurgery.',
-                    'Functional and epilepsy neurosurgery.',
-                    'Functional and epilepsy neurosurgery.',
-                    'Trigeminal neuralgia and nerve compression syndromes.',
-                    'Peripheral nerve injury.'
+
+     {
+        title: "Laparoscopic Nephrectomy (Kidney Removal)",
+        navTo:'laparoscopic-nephrectomy',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Minimally invasive removal of non-functioning or diseased kidney through 3-4 small incisions. Replaces the traditional large flank incision that was extremely painful. Duration: 60-90 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Non-functioning kidney (from chronic obstruction/stones)`,
+                        `Pyonephrosis (infected, pus-filled kidney)`,
+                        `Recurrent kidney infections not responding to treatment`,
+                        `Small kidney tumors (radical nephrectomy)`,
+                        `Severely damaged kidney from trauma`,
+                        `Kidney donation (donor nephrectomy)`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0-1</td>
+                            <td>ICU monitoring, IV fluids</td>
+                            </tr>
+                            <tr>
+                            <td>Day 2</td>
+                            <td>Shift to ward, soft diet</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3-5</td>
+                            <td>Discharge</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Follow-up, light activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 30</td>
+                            <td>Normal activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 45-60</td>
+                            <td>Full physical activity</td>
+                            </tr>
+                        </tbody>
+                        </table>               
+                    ]
+                    },
+                   
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Minimal blood loss. Hospital stay 3-5 days (vs 7-10 for open). Both simple and radical nephrectomy laparoscopically. Careful vessel control for safe kidney removal.`
+
+                    }
                 ]
-            }
-        ]
     },
-    {
-        title:"Orthopaedics & Joint Replacement",
-        navTo:'orthopedia-and-joint-replacement',
-        sections:[
-            {
-                type:'paragraph',
-                content:`Orthopaedic Services at Narayan Swaroop Hospitals takes care of all kinds of trauma and disorders of the musculo-skeletal system.
-                 The 24 hour Emergency department receives and takes care of all major and minor trauma and other orthopaedic emergencies.`
-            },
-            {
-                type:'paragraph',
-                content:`Orthopaedic department is managed by highly accomplished consultant having experience in various fields of orthopedic surgery, treating all kinds of musculo-skeletal problems ranging from arthritis to sports injuries, complex fractures, bone tumors and childhood conditions like CTEV.`
-            },
-            {
-                type:'paragraph',
-                content:`The department specializes in latest techniques and treatments such as minimally invasive surgery, cartilage and bone transplantation, spine surgery and limb sparing surgery.`
-            },
-            {
-                type:'heading',
-                content:'Orthopaedic services include treatment for:'
-            },
-            {
-                type:'list',
-                items:[
-                    'Orthopaedic disorders like Arthritis & Osteoporosis.',
-                    'Fractures & Trauma.',
-                    'HIP & KNEE Replacement.Treatment of Ligament Injuries and Sports Injuries.',
-                    'Infections & Osteomyelitis.',
-                    'Limb Reconstruction & Deformities Correction.',
-                    'Arthroscopy & Arthroplasty.',
-                    'Pediatric Orthopaedics.',
-                    'Rehabilitation & Physiotherapy',
-                    'Sports Medicine.'
+     {
+        title: "Diagnostic Laparoscopy",
+        navTo:'diagnostic-laparoscopy',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `A minimally invasive diagnostic procedure where a camera is inserted through a small incision near the navel to directly visualize all abdominal organs. Used when CT, ultrasound, and blood tests cannot give a definitive diagnosis. Often converts to therapeutic (treatment) laparoscopy in the same sitting. Duration: 20-45 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Unexplained chronic abdominal pain`,
+                        `Staging of abdominal cancers (stomach, liver, ovarian)`,
+                        `Peritoneal tuberculosis diagnosis (biopsy under vision)`,
+                        `Evaluation of liver disease (guided liver biopsy)`,
+                        `Unexplained ascites (fluid in abdomen)`,
+                        `Assessment of abdominal trauma`,
+                        `Female infertility evaluation (tubal patency, endometriosis)`,
+                        `Second-look after cancer treatment`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                        <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0</td>
+                            <td>Walk within 2-3 hours, discharge same day possible</td>
+                            </tr>
+                            <tr>
+                            <td>Day 1</td>
+                            <td>Normal diet, mild discomfort</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3</td>
+                            <td>Resume daily activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7</td>
+                            <td>Follow-up with biopsy results</td>
+                            </tr>
+                        </tbody>
+                        </table>                   
+                    ]
+                    },
+                   
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`"See and treat" approach — if treatable condition found during diagnostic laparoscopy, it is treated immediately in the same sitting (no second surgery needed). Biopsy under direct vision ensures accurate tissue sampling.`
+
+                    }
                 ]
-            }
-        ]
-
     },
-    {
-        title:'Onco Surgery',
-        navTo:'onco-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`The Department of onco-surgery at Narayan Swaroop Hospital has a comprehensive cancer care unit that follows trans-disciplinary and multi-modality approach and provides supportive care through all stages of cancer whenever needed. Complex tumour removals are skillfully performed by our highly trained and motivated surgical oncologists.`
-            },
-            {
-                type:'paragraph',
-                content:`The oncologists collaborate with experts in all other departments to provide coordinated and integrated care to treat people with different kinds of cancers, including:`
-            },
-            {
-                type:'list',
-                items:[
-                    'Brain Tumor',
-                    'Head & Neck Cancer',
-                    'Breast Cancer',
-                    'Lung Cancer',
-                    'Liver Cancer',
-                    'Ovarian Cancer',
-                    'Uterine Cancer',
-                    'Prostate Cancer',
-                    'Kidney Cancer',
-                    'Pancreatic Cancer'
+     {
+        title: "Laparoscopic Adhesiolysis",
+        navTo:'laparoscopic-adhesiolysis',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Laparoscopic cutting and release of adhesions (scar tissue bands) that form inside the abdomen after previous surgeries or infections. These adhesions can cause chronic pain, intestinal obstruction, and infertility. Duration: 30-90 minutes (depends on adhesion severity).`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Chronic abdominal pain after previous surgery`,
+                        `Recurrent intestinal obstruction from adhesions`,
+                        `Infertility caused by pelvic adhesions`,
+                        `Adhesions causing kinking/twisting of intestines`,
+                        `Failed medical management of adhesion-related symptoms`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0-1</td>
+                            <td>Observation for bowel function return</td>
+                            </tr>
+                            <tr>
+                            <td>Day 2-3</td>
+                            <td>Discharge when eating normally</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7-10</td>
+                            <td>Light activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 21</td>
+                            <td>Normal activities</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                 
+                    ]
+                    },
+                   
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Delicate technique to avoid bowel injury. Meticulous adhesion separation preserving organ function. Anti-adhesion barriers used to prevent re-formation.`
+
+                    }
                 ]
-            }
-        ]
     },
-    {
-        title:'Department of Pediatrics and Neonatology',
-        navTo:'pediatric-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`Paediatric surgery is a subspeciality of surgery which involves the treatment and management of diseases occurring throughout infancy and childhood. Some of the conditions that paediatric surgeons at Narayan Swaroop Hospital usually treat are congenital anomalies, solid tumors, cancers, infectious conditions, trauma, and injuries. Narayan Swaroop Hospital offers the best paediatric surgery services with the help of their dedicated team of the top paediatric surgeons. They provide their surgical expertise to children requiring paediatric airway surgery, paediatric reconstructive urology, paediatric minimal access surgery, paediatric hepatobiliary, and pancreatic surgery.`
-            },
-            {
-                type:'paragraph',
-                content:`Narayan Swaroop Hospital provides both the medical and surgical health services for children. There is a separate ward for pediatric patients in case of indoor patients.A neonatal intensive care unit also known as intensive care unit nursery, it is an intensive care unit specializing in the care of ill or premature new born babies. Neonatal period refers to first 28 days of life.`
-            },
-            {
-                type:'heading',
-                content:`NICU care is given:`
-            },
-            {
-                type:'list',
-                items:[
-                    'Pre-mature babies (Babies who are born very early)',
-                    'Babies born with health problems like respiratory distress',
-                    'Babies born with difficult delivery',
-                    'Babies born to mother with meconium stained liquor',
-                    'Service',
-                    'Incubator',
-                    'Phototherapy',
-                    'C-PAP',
-                    'Ventilator',
-                    'Oxygen Hood',
+     {
+        title: "Laser Piles Surgery (Laser Hemorrhoidoplasty)",
+        navTo:'laser-piles-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
 
+                    {
+                    type: "paragraph",
+                    content: `Modern, painless treatment for hemorrhoids using LASER energy. The LASER fiber is inserted directly into the hemorrhoidal tissue, sealing blood vessels and causing the hemorrhoid to shrink — without any cutting, without stitches, without wounds. This is the most advanced piles treatment available today. Duration: 15-30 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Grade 2 piles (prolapsing but self-reducing) not responding to medicines`,
+                        `Grade 3 piles (need manual pushing after bowel movement)`,
+                        `Grade 4 piles (permanently prolapsed)`,
+                        `Bleeding piles causing anemia`,
+                        `Failed rubber band ligation or injection therapy`,
+                        `Patients wanting painless, quick-recovery treatment`,
+                        `Working professionals who cannot take long leave`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                        <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0</td>
+                            <td>Walk out of hospital within 2-3 hours</td>
+                            </tr>
+                            <tr>
+                            <td>Day 1</td>
+                            <td>Normal diet, mild discomfort only</td>
+                            </tr>
+                            <tr>
+                            <td>Day 2-3</td>
+                            <td>Back to office work</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7</td>
+                            <td>Follow-up visit, almost fully recovered</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Complete recovery</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                 
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Laser vs Traditional (Hemorrhoidectomy)'
+                    },
+                    {
+                        type:'table',
+                        content:[
+                             <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Factor</td>
+                                <td>Laser (Dr. Rajeev)</td>
+                                <td>Traditional Open</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Pain</td>
+                                <td>Painless / Minimal</td>
+                                <td>Severe pain 2-3 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Wound</td>
+                                <td>No wound</td>
+                                <td>Open wound requiring dressing</td>
+                                </tr>
+                                <tr>
+                                <td>Bleeding</td>
+                                <td>Almost none</td>
+                                <td>Moderate</td>
+                                </tr>
+                                <tr>
+                                <td>Hospital Stay</td>
+                                <td>Daycare (4-6 hours)</td>
+                                <td>2-3 days</td>
+                                </tr>
+                                <tr>
+                                <td>Return to Work</td>
+                                <td>2-3 days</td>
+                                <td>2-3 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Incontinence Risk</td>
+                                <td>Zero</td>
+                                <td>1-2% risk</td>
+                                </tr>
+                                <tr>
+                                <td>Dressing Needed</td>
+                                <td>No</td>
+                                <td>Daily for 2-3 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Recurrence</td>
+                                <td>&lt;5%</td>
+                                <td>5-8%</td>
+                                </tr>
+                            </tbody>
+                            </table>
+
+                       
+
+                        ]
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Pioneer of LASER Proctology in Prayagraj. Latest generation Diode LASER technology. Thousands of successful painless procedures. Patients from across UP, Bihar, MP come for his LASER expertise.`
+
+                    }
                 ]
-            },
-        ]
     },
-    {
-        title:'Plastic & Burn Reconstructive Surgery',
-        navTo:'plastic-burn-reconstructive-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`If you have a severe wound, such as a burn that has limited your mobility, causes a loss of sensation, plastic surgery at Narayan Swaroop Hospital may be an option. We have the experienced and skilled surgeons to bring you back to your regular life. If your wound is severe, you may have to undergo debriding, which is the removal of dead tissue, prior to reconstructive sugery. Once that is done, there are several types of wound treatments that we may suggest:`
-            },
-            {
-                type:'heading',
-                content:'Skin grafts'
-            },
-            {
-                type:'paragraph',
-                content:`This is often used for burn patients, skin is removed from one area of the body and transplanted to another. There are two types of skin graft: split-thickness grafts in which just a few layers of outer skin are transplanted and full-thickness grafts, which involve all of the dermis. There is usually permanent scarring that is noticeable.`
-            },
-            {
-                type:'paragraph',
-                content:`During a skin graft, a special skin-cutting instrument known as a Dermatome removes the skin from an area (the donor site) usually hidden by clothing such as the buttocks or inner thigh. Once removed, the graft is placed on the area in need of covering and held in place by a dressing and a few stitches. The donor site is also covered with a dressing to prevent infection from occurring. Recovery time from a split-thickness skin graft is generally fairly rapid, often less than three weeks. For full-thickness skin graft patients the recovery time is a few weeks longer. Aside from burn patients, skin grafts can also be used during breast or nose reconstruction, and for extensive areas of trauma, extensive skin loss due to infection, and removal of large skin cancers.`
-            },
-            {
-                type:'heading',
-                content:'Microsurgery'
-            },
-            {
-                type:'paragraph',
-                content:`Have you lost a finger, toe, ear, or even a lip? Microsurgery may allow for those to be re-attached. Simply stated, it is a procedure in which the surgeon uses a microscope for surgical assistance in reconstructive procedures. By using a microscope, the surgeon can actually sew tiny blood vessels or nerves, allowing them to repair damaged nerves and arteries. This may also be a method to relieve facial paralysis or reconstruct breasts. Microsurgery is frequently used with other surgical procedures such as the free flap procedure.`
-            },
-            {
-                type:'heading',
-                content:'Free flap procedure'
-            },
-            {
-                type:'paragraph',
-                content:`A free flap procedure is often performed during breast reconstruction or following surgery to remove head or neck cancer. During the procedure, muscle, skin, or bone is transferred along with the original blood supply from one area of the body (donor site) to the surgical site in order to reconstruct the area. The procedure often involves the use of microsurgery. Healing of the surgical site can be slow and require frequent wound care. Total recovery may take six to eight weeks or longer.`
-            },
-            {
-                type:'heading',
-                content:"Tissue expansion"
-            },
-            {
-                type:'paragraph',
-                content:`Tissue expansion is a medical procedure that enables your body to “grow” extra skin for use in reconstructive procedures. This is accomplished by inserting an instrument known as a “balloon expander” under the skin near the area in need of repair. Over time, this balloon will be gradually filled with saline solution (salt water), slowly causing the skin to stretch and grow, much the same way a woman’s skin stretches during pregnancy`
-            }
 
-        ]
+     {
+        title: "Laser Fissure Surgery (Laser Fissurectomy)",
+        navTo:'laser-fissure-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Painless LASER treatment for chronic anal fissure (non-healing tear) combined with controlled internal sphincterotomy (relaxing the tight muscle). LASER precisely treats the fissure while preserving surrounding healthy tissue. Duration: 15-20 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Chronic fissure not healed with medicines for 6+ weeks`,
+                        `Fissure with sentinel skin tag`,
+                        `Recurrent fissure after medical treatment`,
+                        `Fissure with associated hemorrhoids`,
+                        `Patients wanting painless alternative to conventional surgery`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                             <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Day</td>
+                                <td>Progress</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Day 0</td>
+                                <td>Walk home within 2-3 hours</td>
+                                </tr>
+                                <tr>
+                                <td>Day 1</td>
+                                <td>Mild discomfort, normal diet with fiber</td>
+                                </tr>
+                                <tr>
+                                <td>Day 2-3</td>
+                                <td>Return to work</td>
+                                </tr>
+                                <tr>
+                                <td>Day 7</td>
+                                <td>Follow-up, significant improvement</td>
+                                </tr>
+                                <tr>
+                                <td>Day 14-21</td>
+                                <td>Complete healing</td>
+                                </tr>
+                            </tbody>
+                            </table>
+
+                 
+                    ]
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Precision LASER technique — no tissue cutting. Zero risk of incontinence (vs 1-2% with open surgery). Combined fissure + hemorrhoid treatment in single sitting possible.`
+
+                    }
+                ]
     },
-    {
-        title:'Gastro Intestinal Surgery',
-        navTo:'gastro-intestinal-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`Gastrointestinal surgery is a treatment for diseases of the parts of the body involved in digestion. This includes the esophagus, stomach, small intestine, large intestine, rectum, liver, gallbladder, and pancreas. Narayan Swaroop Hospital has the best team of surgeons and consultants who work closely that assures your recovery after surgery.`
-            },
-            {
-                type:'paragraph',
-                content:`Surgery may be used to remove a cancerous or noncancerous growth or damaged part of the body, such as the intestine. It may also be used to repair a problem like a hernia (a hole or weak spot in the wall of the abdomen). Minor surgical procedures are used to screen and diagnose problems of the digestive system.`
-            },
-            {
-                type:'heading',
-                content:'Benefits'
-            },
-            {
-                type:'paragraph',
-                content:`Surgery to remove a tumor or diseased body part, or repair damage, can be lifesaving. Surgery can also improve the quality of life for someone who has not benefited from other treatments, like medicine or diet changes. Colonoscopy is a minor surgical procedure with big benefits: it can catch colon cancer early enough to cure it. It’s important to get the recommended colon cancer screening`
-            },
-            {
-                type:'heading',
-                content:'How is it done or administered ?'
-            },
-            {
-              type:'paragraph',
-              content:`Most surgery is done by cutting into the body with a scalpel (a small knife) and other tools. Some surgery is done with a scope — a thin tube with a camera and small surgery tools — to remove growths in the colon, for example.`  
-            },
-            {
-                type:'paragraph',
-                content:'Surgery done by cutting into the body can be either open surgery or minimally invasive surgery.'
-            }
-        ]
+     {
+        title: "Laser Fistula Surgery (FiLaC — Fistula Laser Closure)",
+        navTo:'laser-fistula-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `FiLaC (Fistula tract Laser Closure) is a sphincter-sparing LASER technique where a radial-emitting LASER fiber is passed through the fistula tract, destroying the tract lining from inside and causing it to collapse and heal. No cutting of sphincter muscle means zero risk of incontinence. Duration: 20-30 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Simple fistula-in-ano`,
+                        `Complex/high fistula where sphincter preservation is critical`,
+                        `Recurrent fistula (failed previous conventional surgery)`,
+                        `Horseshoe fistula`,
+                        `Patients who fear incontinence from conventional fistula surgery`,
+                        `Patients wanting faster recovery`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0</td>
+                            <td>Discharge same day</td>
+                            </tr>
+                            <tr>
+                            <td>Day 1-2</td>
+                            <td>Mild discharge from wound (normal healing)</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3-5</td>
+                            <td>Return to light work</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7</td>
+                            <td>Follow-up</td>
+                            </tr>
+                            <tr>
+                            <td>Day 30-45</td>
+                            <td>Complete tract healing</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+               
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Laser FiLaC vs Traditional Fistulotomy:'
+                    },
+                    {
+                        type:'table',
+                        content:[
+                             <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Factor</td>
+                                <td>Laser FiLaC</td>
+                                <td>Traditional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Sphincter Cut</td>
+                                <td> No</td>
+                                <td> Yes (partial/full)</td>
+                                </tr>
+                                <tr>
+                                <td>Incontinence Risk</td>
+                                <td>Zero</td>
+                                <td>5-30% (depending on complexity)</td>
+                                </tr>
+                                <tr>
+                                <td>Wound</td>
+                                <td>Tiny/None</td>
+                                <td>Large open wound</td>
+                                </tr>
+                                <tr>
+                                <td>Healing Time</td>
+                                <td>4-6 weeks</td>
+                                <td>8-12 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Pain</td>
+                                <td>Minimal</td>
+                                <td>Significant</td>
+                                </tr>
+                                <tr>
+                                <td>Dressing</td>
+                                <td>Minimal</td>
+                                <td>Daily for weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Recurrence</td>
+                                <td>15-20%</td>
+                                <td>5-10% (but with sphincter damage)</td>
+                                </tr>
+                            </tbody>
+                            </table>
+
+                         
+
+                        ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`For complex fistulas, Dr. Rajeev Singh combines LASER with LIFT procedure or advancement flap for best results. Sphincter preservation is always the priority — protecting patient's quality of life.`
+
+                    }
+                ]
     },
-    {
-        title:'Breast Surgery',
-        navTo:'breast-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`Breast surgery at Narayan Swaroop Hospital typically can be divided into three general categories: augmentation, reduction and reconstruction.`
-            },
-            {
-                type:'heading',
-                content:'Breast augmentation'
-            },
-            {
-                type:'paragraph',
-                content:`Breast augmentation is performed to enhance the appearance, size and contour of a woman’s breasts. Women consider breast augmentation — or augmentation mammoplasty — for different reasons. Some women feel their breasts are too small in relation to their body contour. Some women desire augmentation after size loss associated with pregnancy and lactation. Others desire to correct an asymmetry in breast size.`
-            },
-            {
-                type:'heading',
-                content:'Breast reduction'
+     {
+        title: "Laser Pilonidal Sinus Treatment",
+        navTo:'laser-pilonidal-sinus',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
 
-            },
-            {
-                type:'paragraph',
-                content:`Large, heavy, pendulous breasts can be uncomfortable. The excess weight can cause neck pain, back pain, skin irritation, bra strap indentations, numbness or weakness. Breast reduction is known as reduction mammoplasty. The procedure involves removal of excess skin, fat and glandular tissue.`
-            },
-             {
-                type:'heading',
-                content:'Breast reconstruction'
+                    {
+                    type: "paragraph",
+                    content: `Minimally invasive LASER treatment for pilonidal sinus — the LASER fiber is inserted into the sinus tract, destroying infected tissue and hair debris from inside, causing the tract to collapse and heal. Small incision, minimal wound, fast recovery compared to traditional wide excision surgery. Duration: 20-30 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Recurrent pilonidal sinus infections`,
+                        `Pilonidal abscess (after initial drainage)`,
+                        `Chronic draining sinus at tailbone`,
+                        `Failed previous pilonidal surgery (recurrence)`,
+                        `Patients wanting minimal scarring and fast recovery`,
+                        `Working professionals / students who cannot take long leave`,
 
-            },
-            {
-                type:'paragraph',
-                content:`Breast reconstruction seeks to recreate a breast with the desired appearance, contour and volume. The nipple-areola component also is recreated. Normal breast sensation and the ability to breastfeed are lost when the sensory nerves or milk glands and ducts have been removed or significantly injured.`
-            },
-             {
-                type:'heading',
-                content:'Breast lifts'
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                              <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Day</td>
+                                <td>Progress</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Day 0</td>
+                                <td>Discharge same day</td>
+                                </tr>
+                                <tr>
+                                <td>Day 1-3</td>
+                                <td>Mild discomfort sitting, minimal wound care</td>
+                                </tr>
+                                <tr>
+                                <td>Day 5-7</td>
+                                <td>Return to work (sitting comfortable)</td>
+                                </tr>
+                                <tr>
+                                <td>Day 14</td>
+                                <td>Follow-up, wound almost healed</td>
+                                </tr>
+                                <tr>
+                                <td>Day 21-30</td>
+                                <td>Complete healing</td>
+                                </tr>
+                            </tbody>
+                            </table>
 
-            },
-            {
-                type:'paragraph',
-                content:`In some women, the skin is not strong or resilient enough to support the weight of the breast, causing the breasts to sag. With this condition, called ptosis, there is too much skin compared to breast tissue. To give the breast a lift, or what is known as mastopexy, the excess skin must be removed.`
-            }     
+                
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Laser vs Traditional Wide Excision'
+                    },
+                    {
+                        type:'table',
+                        content:[
+                            <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Factor</td>
+                                <td>Laser</td>
+                                <td>Wide Excision</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Wound Size</td>
+                                <td>Tiny (few mm)</td>
+                                <td>5-10cm open wound</td>
+                                </tr>
+                                <tr>
+                                <td>Healing Time</td>
+                                <td>3-4 weeks</td>
+                                <td>8-12 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Daily Dressing</td>
+                                <td>1 week</td>
+                                <td>6-8 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Return to Work</td>
+                                <td>5-7 days</td>
+                                <td>4-6 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Recurrence</td>
+                                <td>5-10%</td>
+                                <td>15-30%</td>
+                                </tr>
+                                <tr>
+                                <td>Scarring</td>
+                                <td>Minimal</td>
+                                <td>Large scar</td>
+                                </tr>
+                            </tbody>
+                            </table>
 
-        ]
+                           
+
+                        ]
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`For complex/recurrent cases, Dr. Rajeev Singh combines LASER with Limberg Flap or Bascom's procedure for lowest recurrence rates. Personalized treatment plan based on sinus complexity.`
+
+                    }
+                ]
     },
-    {
-        title:'Thyroid Surgery',
-        navTo:'thyroid-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`At Narayan Swaroop Hospital Thyroid surgery is performed for several reasons and can include symptomatic thyroid nodules, recurrent thyroid cysts, goiter, Graves’ disease, and to rule out or treat thyroid cancer. The purpose of thyroid surgery is to remove part or all of the thyroid gland. You will be in the hospital usually one night.`
-            },
-            {
-                type:"heading",
-                content:"Risk"
-            },
-            {
-                type:'paragraph',
-                content:`As with any surgical procedure, there are risks involved. There is a risk of bleeding, but this is very low. The average blood loss is less than an ounce. The risk of infection is so low that antibiotics are not routinely used. There is also a very low risk of injury to important nerves in the neck, called recurrent laryngeal nerves. These nerves control the vocal cords. Injury to these nerves could affect your voice.`
-            },
-            {
-                type:"heading",
-                content:"What will happen in surgery?"
-            },
-            {
-                type:'paragraph',
-                content:`You will be given general anesthesia to put you to sleep. You are positioned with special pillows under your neck to tilt your head back. An incision is made at the base of your neck and is about three to four inches long. Using magnifying lenses, the surgeon locates the thyroid gland and associated structures and all or part of the thyroid is removed. In some cases additional surgery will involve removal of lymph nodes and other structures. The incision is stitched closed and is then covered with steri-strip tapes and a dry gauze dressing. The operation generally lasts from two to three hours. After surgery, you will stay in the recovery room for several hours. You will be monitored closely as you recover from the anesthesia.`
-            },
-            {
-                type:"heading",
-                content:"The Incision"
-            },
-            {
-                type:'paragraph',
-                content:`After the dressing is removed, you will notice that the incision is covered with tapes (steri-strips). These will stay on for about a week. Leave the steri-strips in place. You may shower the day after surgery. Try to keep the neck area as dry as possible and pat dry after showering. The stitches will be removed in about a week and a half after surgery. Infection is extremely rare. If you notice any redness or drainage from the incision contact your surgeon.`
-            },
-            {
-                type:"heading",
-                content:"How will you feel after surgery?"
-            },
-            {
-                type:'paragraph',
-                content:`Everyone is different. You will most likely be tired and a bit sore for a few days. You may have pain not only from your incision, but also from muscle soreness in your upper back and shoulders. This is from the positioning in the operating room during the surgery. You will have liquid pain medicine in the hospital and a prescription for pain pills at home.`
-            }
+     {
+        title: "EVLT — Varicose Veins Treatment",
+        navTo:'evlt-varicose-veins',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `EVLT is a minimally invasive LASER treatment for varicose veins where a thin LASER fiber is inserted into the diseased vein through a needle puncture under ultrasound guidance. LASER energy heats and seals the vein from inside, causing it to close permanently. Blood automatically reroutes through healthy veins. No surgical incision. Duration: 30-45 minutes per leg.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                            `Visible bulging varicose veins on legs`,
+                            `Leg pain, heaviness, and swelling from varicose veins`,
+                            `Skin color changes near ankles (pigmentation)`,
+                            `Venous eczema/dermatitis`,
+                            `Bleeding from varicose veins`,
+                            `Venous leg ulcer (non-healing wound)`,
+                            `Failed compression stockings / medication therapy`,
+                            `Superficial thrombophlebitis (inflamed varicose veins)`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0</td>
+                            <td>Walk out immediately after procedure, go home same day</td>
+                            </tr>
+                            <tr>
+                            <td>Day 1</td>
+                            <td>Normal walking, wear compression stockings</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3-5</td>
+                            <td>Return to work</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7</td>
+                            <td>Follow-up Doppler ultrasound</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Resume all activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 30</td>
+                            <td>Compression stockings can be removed</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                  
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'EVLT vs Traditional Stripping Surgery'
+                    },
+                    {
+                        type:'table',
+                        content:[
+                             <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Factor</td>
+                                <td>EVLT Laser</td>
+                                <td>Vein Stripping</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Anesthesia</td>
+                                <td>Local only</td>
+                                <td>Spinal/General</td>
+                                </tr>
+                                <tr>
+                                <td>Incision</td>
+                                <td>Needle puncture only</td>
+                                <td>Multiple cuts on leg</td>
+                                </tr>
+                                <tr>
+                                <td>Hospital Stay</td>
+                                <td>Walk-in / Walk-out</td>
+                                <td>2-3 days</td>
+                                </tr>
+                                <tr>
+                                <td>Pain</td>
+                                <td>Minimal</td>
+                                <td>Significant</td>
+                                </tr>
+                                <tr>
+                                <td>Bruising</td>
+                                <td>Minimal</td>
+                                <td>Extensive</td>
+                                </tr>
+                                <tr>
+                                <td>Return to Work</td>
+                                <td>3-5 days</td>
+                                <td>2-4 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Recurrence</td>
+                                <td>3-5%</td>
+                                <td>10-25%</td>
+                                </tr>
+                                <tr>
+                                <td>Scarring</td>
+                                <td>No scar</td>
+                                <td>Multiple scars</td>
+                                </tr>
+                            </tbody>
+                            </table>                        
+
+                        ]
+                    },
+                     {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Ultrasound-guided precision for accurate vein closure. Combined EVLT + Sclerotherapy + Phlebectomy for complete treatment in single sitting. Both legs treatable in same session.`
+
+                    }
+                ]
+    },
+     {
+        title: "PCNL (Percutaneous Nephrolithotomy) — Large Kidney Stone Removal",
+        navTo:'pcnl',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `PCNL is a minimally invasive surgery for removing large kidney stones (>2cm) through a small 1cm puncture in the back directly into the kidney. A nephroscope (small camera) and LASER/ultrasonic lithotripter breaks and removes stones. This replaces the old open kidney surgery that required a 15-20cm cut. Duration: 45-90 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Kidney stones >2cm (too large for URSL/ESWL)`,
+                        `Staghorn calculus (large stone filling entire kidney)`,
+                        `Multiple kidney stones`,
+                        `Failed ESWL (shock wave therapy)`,
+                        `Stones in lower pole of kidney (difficult for ESWL)`,
+                        `Stones causing hydronephrosis (kidney swelling)`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                        <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0-1</td>
+                            <td>Bed rest, nephrostomy tube in place</td>
+                            </tr>
+                            <tr>
+                            <td>Day 2</td>
+                            <td>Tube removed if no residual stones</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3-4</td>
+                            <td>Discharge</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7</td>
+                            <td>Follow-up, X-ray to confirm stone clearance</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Light activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 30</td>
+                            <td>Normal activities</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
             
-        ]
-    },
-    {
-        title:'ENT',
-        navTo:'ent',
-        sections:[
-            {
-                type:'paragraph',
-                content:`The ENT Department at Narayan Swaroop Hospital provides diagnosis and treatment of disorders of the head and neck in particular the ear, nose and throat. ENT doctors are also called otolaryngologists.`
-            },
-            {
-                type:"heading",
-                content:"Facilities at Narayan Swaroop Hospital:"
-            },
-            {
-                type:'list',
-                items:[
-                    'Nasal Septoplasty, Septorhinoplasty & Functional Endoscopy sinus Surgery.',
-                    'Non-invasive out-patient examination.',
-                    'Otology Surgeries for discharging ear & facial palsy.',
-                    'Otoscope/auriscope for diagnosis of disorders of ear.',
-                    'Head & neck surgeries.',
-                    'Hearing assessment.',
-                    'Allergy test.'
-                ]
-            },
-            {
-                type:"heading",
-                content:'Pre-operative Check-up (PAC):'
-            },
-            {
-                type:'paragraph',
-                content:`Heart diseases that a cardiologist can help with include:`
-            },
-            {
-                type:'paragraph',
-                content:`Consultants of Internal Medicine are involved in preoperative checks in addition to anaesthetists to pick up & manage existing medical problem prior to surgical procedures as well as to take appropriate measures prior to surgeries. In some cases, consultants are required to manage co-morbid medical problems with surgical conditions. Super-specialists are also called preoperatively, intra operatively, post operatively or whenever required.`
-            },
-        ]
-    },
-    {
-        title:"Genitourinary",
-        navTo:'genitourinary',
-        sections:[
-            {
-                type:'paragraph',
-                content:`At Narayan Swaroop Hospital, genitourinary department provides treatment for all the genitourinary problems like Urethral stricture, Hypospadias, Kidneys stones, Ureteric stones, Bladder stones etc. Most of the genitourinary problems are dealt laparoscopically.`
-            },
-            {
-                type:'paragraph',
-                content:`Genitourinary Surgeries Provided by Laparoscopy :`
-            },
-            {
-                type:'list',
-                items:[
-                    'PCNL (Percutaneous Nephrolithotomy) for Kidney stones.',
-                    'Laparoscopic ureterolithotomy for Upper & Middle Ureteric stones.',
-                    'URSL for Lower Ureteric Stone.',
-                    'Cystolitholapaxy for Urinary Bladder stones.',
-                    'TURP (Trans Urethral Resection of Prostate) for BPH.'
-                ]
-            },
-        ]
-    },
-    {
-        title:"Colorectal Surgery",
-        navTo:'colorectal-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`Our colon and rectal surgeons at Narayan Swaroop Hospital with the experience of 20 years offer the latest medical and surgical treatment of diseases of the colon, rectum and anus. Treatment includes benign and malignant conditions.`
-            },
-            {
-                type:"heading",
-                content:'Colectomy'
-            },
-            {
-                type:'paragraph',
-                content:`A colectomy, or, colon resection, removes all or part of the large intestine.`
-            },
-            {
-                type:"heading",
-                content:'General Surgeries provided'
-            },
-            {
-                type:"list",
-                items:[
-                    'Segmental Colectomies',
-                    'Polypectomy',
-                    'Colectomy'
-                ]
-            },
-             {
-                type:'paragraph',
-                content:`A colostomy is a surgical procedure during which your surgeon creates a hole in your abdominal wall and pulls one end of the colon through the opening. Surgeons perform colostomy procedures to treat a number of colon and rectal conditions. This procedure fundamentally alters how your body excretes waste and fecal matter. The area where the new opening sits is called a stoma. This is where waste matter will exit your body. The colostomy is either temporary or permanent.`
-            },
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'PCNL vs Open Surgery'
+                    },
+                    {
+                        type:'table',
+                        content:[
+                            <table className="table table-striped border mt-4 mb-4">	
+                            <thead>
+                                <tr>
+                                <td>Factor</td>
+                                <td>PCNL (Dr. Rajeev)</td>
+                                <td>Open Surgery</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Incision</td>
+                                <td>1cm puncture</td>
+                                <td>15-20cm cut</td>
+                                </tr>
+                                <tr>
+                                <td>Hospital Stay</td>
+                                <td>3-4 days</td>
+                                <td>7-10 days</td>
+                                </tr>
+                                <tr>
+                                <td>Return to Work</td>
+                                <td>2 weeks</td>
+                                <td>6-8 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Blood Loss</td>
+                                <td>Minimal</td>
+                                <td>Significant</td>
+                                </tr>
+                                <tr>
+                                <td>Stone Clearance</td>
+                                <td>95%+</td>
+                                <td>95%+</td>
+                                </tr>
+                                <tr>
+                                <td>Scarring</td>
+                                <td>Tiny dot</td>
+                                <td>Large flank scar</td>
+                                </tr>
+                            </tbody>
+                            </table>
 
-        ]
-    },
-    {
-        title:"Trauma & Accident Surgery",
-        navTo:'trauma-and-accident-surgery',
-        sections:[
-            {
-                type:'paragraph',
-                content:`Trauma surgery is a specialised field of surgery that deals with the immediate and urgent care of patients who have suffered severe injuries or trauma. Trauma surgeons are responsible for assessing, diagnosing, and treating patients with acute injuries, often in emergencies.`
-            }
-        ]
-    },
-    {
-        title:"Evlt-endovenous Laser Treatment",
-        navTo:'evlt-endovenous-laser-treatment',
-        sections:[
-            {
-                type:"paragraph",
-                content:`EVLT treatment of varicose vein uses lasers that generate high-energy. The produced heat is absorbed by haemoglobin and the surrounding tissue, which then results in the formation of steam bubbles. The bubbles cause blood to boil and induce thermal injuries to the venous endothelium and intima.`
-            }
-        ]
-    },
-    {
-        title:"Laser Surgery",
-        navTo:'laser-surgery',
-        sections:[
-            {
-                type:"paragraph",
-                content:`Laser surgery is a type of surgery that uses special light beams instead of instruments, such as scapels, to perform surgical procedures. There are several different types of lasers, each with characteristics that perform specific functions during surgery.`
-            }
-        ]
-    },
-    {
-        title:"Piles",
-        navTo:'piles',
-        sections:[
-            {
-                type:"paragraph",
-                content:`Piles are inflamed and swollen collections of tissue in the anal area. They can have a range of sizes, and they may be internal or external.`
-            },
-             {
-                type:"paragraph",
-                content:`Internal piles are normally located between 2 and 4 centimeters (cm) above the opening of the anus, and they are the more common type. External piles occur on the outside edge of the anus.`
-            }
-        ]
-    },
-    // {
-    //     title:"Medicine Department",
-    //     navTo:'medicine-department',
-    //     sections:[
-    //         {
-    //             type:"paragraph",
-    //             content:`General Medicine is the branch of medicine that deals with the diagnosis and nonsurgical treatment of diseases of the internal organs. You will find the causes, symptoms, diagnosis and treatment of a huge range of disorders affecting every part of the body.`
-    //         },
-    //          {
-    //             type:"paragraph",
-    //             content:`The aim of General Medicine at Narayan Swaroop Hospital is to provide rapid and reliable source of information on current developments in the field of Clinical Trials.`
-    //         },
-    //          {
-    //             type:"paragraph",
-    //             content:`General medicine patients are often seriously ill or require complex investigations, internists do much of their work in hospitals. Internists often have subspecialty interests in diseases affecting particular organs or organ systems.`
-    //         }
-    //     ]
-    // },
-    {
-        title:"General Medicine",
-        navTo:'general-medicine',
-        sections:[
-            {
-                type:"paragraph",
-                content:`General Medicine is the branch of medicine that deals with the diagnosis and nonsurgical treatment of diseases of the internal organs. You will find the causes, symptoms, diagnosis and treatment of a huge range of disorders affecting every part of the body.`
-            },
-             {
-                type:"paragraph",
-                content:`The aim of General Medicine at Narayan Swaroop Hospital is to provide rapid and reliable source of information on current developments in the field of Clinical Trials.`
-            },
-             {
-                type:"paragraph",
-                content:`General medicine patients are often seriously ill or require complex investigations, internists do much of their work in hospitals. Internists often have subspecialty interests in diseases affecting particular organs or organ systems.`
-            }
-        ]
-    },
-    {
-        title:"TB and Chest Respiratory Medicine",
-        navTo:'tb-and-chest-respiratory-medicine',
-        sections:[
-            {
-                type:"paragraph",
-                content:`Department of TB & Chest at Narayan Swaroop Hospital deals with diseases of the respiratory tract like diseases of the airway (Bronchial Asthma, COPD), interstitial diseases, diseases of alveolar space (ARDS), diseases of ventilatory control, occupational lung diseases, all types of infection related to lungs, diseases of mediastinum and pleura, cancer of lungs & pleura, sleep related disorders (SAS, Narcolepsy, restless leg syndrome, periodic limb movement) and upper airway resistance syndrome.`
-            },
-            {
-                type:"paragraph",
-                content:`Facilities at Narayan Swaroop Hospital include:`
-            },
-            {
-                type:"list",
-                items:[
-                    'Management of Acute & Chronic Lung Disease.',
-                    'Pleural Fluid Aspiration.',
-                    'Intercostal Drainage (ICD) for pleural effusion & Empyema thorax.',
-                    'Management of Traumatic Hemothorax.',
-                    'Management of Pneumothorax.'
+
+                        ]
+                    },
+                     {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Tubeless/Mini-PCNL for smaller puncture and faster recovery. LASER lithotripsy for hardest stones. Both kidneys treatable in single sitting when needed.`
+
+                    }
                 ]
-            }
-        ]
     },
+     {
+        title: "URSL (Ureteroscopic Lithotripsy) — Ureteral Stone Removal",
+        navTo:'ursl',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `URSL is a minimally invasive, scarless procedure for removing stones stuck in the ureter (tube between kidney and bladder). A thin ureteroscope is passed through the urine passage — no incision needed at all. LASER energy (Holmium LASER) fragments the stone into tiny pieces which are flushed out. Duration: 30-60 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Ureteral stones (any location — upper, mid, lower ureter)`,
+                        `Stones not passing naturally after 4-6 weeks`,
+                        `Stones causing severe pain (renal colic)`,
+                        `Stones causing infection with obstruction (emergency)`,
+                        `Failed ESWL`,
+                        `Stones 5-20mm in ureter`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0</td>
+                            <td>Walk within 2-3 hours, discharge same day possible</td>
+                            </tr>
+                            <tr>
+                            <td>Day 1</td>
+                            <td>Normal diet, mild burning during urination (temporary)</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3-5</td>
+                            <td>Return to work</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7-14</td>
+                            <td>DJ stent removal (if placed)</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Fully normal</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                 
+                    ]
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Flexible ureteroscopy available for difficult-to-reach stones. Holmium LASER for even the hardest stones. DJ stent-free technique when possible (less post-op discomfort). Same-day discharge for most patients.`
+
+                    }
+                ]
+    },
+     {
+        title: "Laser Circumcision",
+        navTo:'laser-circumcision',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Modern circumcision using LASER or Stapler technology — painless, bloodless, precise procedure for removing the foreskin. Takes only 15-20 minutes with immediate cosmetic result. Far superior to traditional surgical circumcision in terms of pain, bleeding, and healing. Duration: 15-20 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Phimosis (tight foreskin that cannot retract)`,
+                        `Recurrent balanitis (foreskin infections)`,
+                        `Paraphimosis (emergency — foreskin stuck behind glans)`,
+                        `BXO (Balanitis Xerotica Obliterans — scarring of foreskin)`,
+                        `Religious/cultural circumcision`,
+                        `Elective circumcision for hygiene`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                            <tr>
+                            <td>Day 0</td>
+                            <td>Walk out within 1 hour, minimal dressing</td>
+                            </tr>
+                            <tr>
+                            <td>Day 1-3</td>
+                            <td>Mild swelling (normal), take prescribed medicines</td>
+                            </tr>
+                            <tr>
+                            <td>Day 5-7</td>
+                            <td>Return to work/school</td>
+                            </tr>
+                            <tr>
+                            <td>Day 10-14</td>
+                            <td>Swelling resolves, follow-up</td>
+                            </tr>
+                            <tr>
+                            <td>Day 21-30</td>
+                            <td>Complete healing, excellent cosmetic result</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                  
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Laser/Stapler vs Traditional'
+                    },
+                    {
+                        type:'table',
+                        content:[
+                             <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Factor</td>
+                                <td>Laser/Stapler</td>
+                                <td>Traditional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Duration</td>
+                                <td>15-20 min</td>
+                                <td>45-60 min</td>
+                                </tr>
+                                <tr>
+                                <td>Bleeding</td>
+                                <td>Almost zero</td>
+                                <td>Moderate</td>
+                                </tr>
+                                <tr>
+                                <td>Pain</td>
+                                <td>Minimal</td>
+                                <td>Moderate</td>
+                                </tr>
+                                <tr>
+                                <td>Sutures</td>
+                                <td>Absorbable/None</td>
+                                <td>Manual stitches</td>
+                                </tr>
+                                <tr>
+                                <td>Healing</td>
+                                <td>2-3 weeks</td>
+                                <td>4-6 weeks</td>
+                                </tr>
+                                <tr>
+                                <td>Cosmetic Result</td>
+                                <td>Excellent, even</td>
+                                <td>Variable</td>
+                                </tr>
+                            </tbody>
+                            </table>
+
+
+                        ]
+                    },
+                     {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`100+ circumcisions annually. Both LASER and Stapler techniques available — best method chosen based on patient anatomy. Even complex cases (BXO, paraphimosis) managed expertly.`
+
+                    }
+                ]
+    },
+     {
+        title: "Hydrocelectomy",
+        navTo:'hydrocelectomy',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Surgical drainage and repair of hydrocele (fluid collection around testicle causing scrotal swelling). Done through a small incision on the scrotum. The fluid is drained and the sac is treated to prevent recurrence (eversion or excision technique). Duration: 30-45 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Hydrocele causing discomfort or cosmetic concern`,
+                        `Large hydrocele affecting daily activities`,
+                        `Hydrocele progressively increasing in size`,
+                        `Reactive hydrocele from infection/injury`,
+                        `Hydrocele in adults (does not resolve spontaneously)`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0</td>
+                            <td>Discharge same day, scrotal support/jockstrap</td>
+                            </tr>
+                            <tr>
+                            <td>Day 1-3</td>
+                            <td>Rest, ice application, mild swelling</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7</td>
+                            <td>Follow-up, suture check</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Swelling reducing, light activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 21-30</td>
+                            <td>Complete recovery</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                
+                    ]
+                    },
+                   
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Jaboulay's/Lord's eversion technique for lowest recurrence rate. Always evaluates for underlying causes (tumor, infection) before surgery. Daycare procedure — discharge same day.`
+
+                    }
+                ]
+    },
+     {
+        title: "Varicocelectomy (Varicocele Repair)",
+        navTo:'varicocelectomy',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Surgical ligation (tying off) of enlarged scrotal veins that are causing pain, testicular shrinkage, or infertility. Can be performed laparoscopically or through a small inguinal incision with microscopic magnification. Duration: 30-45 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Varicocele causing pain`,
+                        `Abnormal semen analysis (low count, poor motility)`,
+                        `Couple unable to conceive (male factor infertility)`,
+                        `Testicular atrophy (shrinkage) on affected side`,
+                        `Bilateral varicoceles`,
+                        `Failed conservative management`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0-1</td>
+                            <td>Discharge, scrotal support</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3-5</td>
+                            <td>Return to light work</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Normal activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 30</td>
+                            <td>Full physical activity</td>
+                            </tr>
+                            <tr>
+                            <td>3-6 Months</td>
+                            <td>Semen analysis repeat — improvement expected</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Laparoscopic varicocelectomy — artery-sparing technique. Microscopic precision for lowest recurrence rate. 60-70% patients show significant semen improvement within 6 months.`
+
+                    }
+                ]
+    },
+     {
+        title: "TURP (Transurethral Resection of Prostate)",
+        navTo:'turp',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `TURP is the gold-standard surgery for enlarged prostate (BPH) causing urinary obstruction. A resectoscope is passed through the urine passage (no external incision) to remove the obstructing prostate tissue from inside. Restores normal urine flow immediately. Duration: 45-60 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Enlarged prostate not responding to medications`,
+                        `Acute urinary retention (emergency catheter-dependent)`,
+                        `Recurrent urinary tract infections from prostate`,
+                        `Bladder stones from prostatic obstruction`,
+                        `Kidney damage from chronic obstruction`,
+                        `Gross hematuria (bleeding) from prostate`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                      <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0-1</td>
+                            <td>Catheter in place, continuous bladder irrigation</td>
+                            </tr>
+                            <tr>
+                            <td>Day 2-3</td>
+                            <td>Catheter removed, trial voiding</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3-5</td>
+                            <td>Discharge when voiding well</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7</td>
+                            <td>Follow-up, uroflowmetry</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Light activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 30</td>
+                            <td>Normal activities, significant improvement in flow</td>
+                            </tr>
+                            <tr>
+                            <td>Day 60</td>
+                            <td>Full recovery, maximum improvement</td>
+                            </tr>
+                        </tbody>
+                        </table>                 
+                    ]
+                    },
+                   
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Bipolar TURP for enhanced safety (no TUR syndrome risk). Complete tissue removal for maximum flow improvement. Uroflowmetry available at Narayan Swaroop Hospital for pre/post assessment.`
+
+                    }
+                ]
+    },
+     {
+        title: "Thyroid Surgery (Thyroidectomy)",
+        navTo:'thyroid-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Surgical removal of part (lobectomy) or entire (total thyroidectomy) thyroid gland. Performed for thyroid nodules, goiter, thyroid cancer, and hyperthyroidism not responding to medications. Requires expert surgical precision due to proximity of vocal cord nerves and parathyroid glands. Duration: 60-120 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Thyroid nodules suspicious for cancer (FNAC/Biopsy confirmed)`,
+                        `Confirmed thyroid cancer`,
+                        `Large goiter causing breathing/swallowing difficulty`,
+                        `Multinodular goiter`,
+                        `Toxic goiter (hyperthyroidism not responding to medicines)`,
+                        `Recurrent thyroid cysts`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0</td>
+                            <td>Observation, check voice quality</td>
+                            </tr>
+                            <tr>
+                            <td>Day 1-2</td>
+                            <td>Discharge, soft diet</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7</td>
+                            <td>Suture removal, voice check</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Normal diet and activities</td>
+                            </tr>
+                            <tr>
+                            <td>Day 30</td>
+                            <td>Full recovery, thyroid hormone dose adjusted</td>
+                            </tr>
+                        </tbody>
+                        </table>               
+                    ]
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Nerve monitoring technique to protect vocal cord nerves. Minimal neck scar in natural skin crease. Expert parathyroid preservation (prevents calcium problems post-surgery).`
+
+                    }
+                ]
+    },
+     {
+        title: "Breast Surgery",
+        navTo:'breast-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Surgical procedures for breast lumps, breast cancer, and breast-related conditions. Ranges from simple lump removal (lumpectomy) to modified radical mastectomy for cancer. Early detection and surgical treatment significantly improves survival in breast cancer. Duration: 30-120 minutes (depends on procedure).`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Breast lump (biopsy/excision for diagnosis)`,
+                        `Confirmed breast cancer (lumpectomy or mastectomy)`,
+                        `Breast abscess not responding to antibiotics`,
+                        `Fibroadenoma (benign tumor removal)`,
+                        `Gynecomastia in males (male breast enlargement)`,
+                        `Breast reconstruction after cancer surgery`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                             <table className="table table-striped border mt-4 mb-4">
+                            <thead>
+                                <tr>
+                                <td>Day</td>
+                                <td>Progress</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Lump Excision</td>
+                                <td>Discharge same day, 3-5 days recovery</td>
+                                </tr>
+                                <tr>
+                                <td>Mastectomy Day 0-2</td>
+                                <td>Drain in place, observation</td>
+                                </tr>
+                                <tr>
+                                <td>Mastectomy Day 5-7</td>
+                                <td>Drain removal, discharge</td>
+                                </tr>
+                                <tr>
+                                <td>Day 14</td>
+                                <td>Suture check, histopathology report discussion</td>
+                                </tr>
+                                <tr>
+                                <td>Day 21-30</td>
+                                <td>Oncology consultation if cancer confirmed</td>
+                                </tr>
+                            </tbody>
+                            </table>
+
+                   
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Triple assessment approach (Clinical + Imaging + FNAC) for accurate diagnosis. Oncoplastic techniques for better cosmetic outcome. Multidisciplinary cancer board coordination with oncologist at Narayan Swaroop Hospital.`
+
+                    }
+                ]
+    },
+     {
+        title: "Trauma & Emergency Surgery",
+        navTo:'trauma-emergency-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Emergency surgical management of injuries from road accidents, falls, assaults, and other trauma. Includes emergency exploratory laparotomy, damage control surgery, fracture fixation coordination, and post-trauma reconstruction. Narayan Swaroop Hospital provides 24/7 trauma care with dedicated trauma team. Duration: Variable — depends on injury severity.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Road traffic accident (RTA) victims`,
+                        `Fall from height injuries`,
+                        `Stab/penetrating abdominal injuries`,
+                        `Blunt abdominal trauma (organ damage)`,
+                        `Head injuries (coordinated with neurosurgeon)`,
+                        `Fractures (coordinated with orthopedic surgeon)`,
+                        `Crush injuries`,
+                        `Burns requiring surgical management`,
+                    ]
+                    },
+                    {
+                    type: "heading",
+                    content: "Trauma Facilities at Narayan Swaroop Hospital"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `24/7 Emergency department with trauma-trained staff`,
+                        `Dedicated trauma operation theatre`,
+                        `ICU with ventilator support`,
+                        `Blood bank connectivity`,
+                        `CT scan available round-the-clock`,
+                        `Modular operation theatre`,
+                        `Ambulance service (24 hours)`,
+                    ]
+                    },
+                     
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`As Director of Narayan Swaroop Hospital, Dr. Rajeev Singh has built a complete trauma care ecosystem. Multi-specialty team available 24/7 — surgery, orthopedics, neurosurgery, anesthesia, critical care — all under one roof.`
+
+                    }
+                ]
+    },
+
+     {
+        title: "Colorectal Surgery",
+        navTo:'colorectal-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Surgical treatment of diseases affecting the colon (large intestine) and rectum. Includes surgery for colorectal cancer, inflammatory bowel disease, diverticular disease, rectal prolapse, and colonic polyps. Can be performed laparoscopically for faster recovery. Duration: 60-180 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Colorectal cancer (confirmed or suspected)`,
+                        `Large colonic polyps (not removable by colonoscopy)`,
+                        `Diverticular disease with complications`,
+                        `Rectal prolapse`,
+                        `Inflammatory bowel disease (Ulcerative Colitis, Crohn's) requiring surgery`,
+                        `Intestinal obstruction from tumor`,
+                        `Sigmoid volvulus`,
+                        `Colonic perforation`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "table",
+                    content: [
+                         <table className="table table-striped border mt-4 mb-4">
+                        <thead>
+                            <tr>
+                            <td>Day</td>
+                            <td>Progress</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Day 0-2</td>
+                            <td>ICU/ward, nil by mouth, IV nutrition</td>
+                            </tr>
+                            <tr>
+                            <td>Day 3-4</td>
+                            <td>Clear liquids as bowel function returns</td>
+                            </tr>
+                            <tr>
+                            <td>Day 5-7</td>
+                            <td>Soft diet, discharge planning</td>
+                            </tr>
+                            <tr>
+                            <td>Day 7-10</td>
+                            <td>Discharge, histopathology results</td>
+                            </tr>
+                            <tr>
+                            <td>Day 14</td>
+                            <td>Follow-up, oncology referral if cancer</td>
+                            </tr>
+                            <tr>
+                            <td>Day 30-45</td>
+                            <td>Normal diet and activities</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                 
+                    ]
+                    },
+                   
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`FACRSI (Fellow, Association of Colon and Rectal Surgeons of India) — specialized training in colorectal surgery. Laparoscopic approach for faster recovery. Sphincter-preserving techniques to avoid permanent colostomy whenever possible.`
+
+                    }
+                ]
+    },
+     {
+        title: "Gastrointestinal (GI) Surgery",
+        navTo:'gi-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Surgical treatment of diseases affecting the entire gastrointestinal tract — stomach, small intestine, and large intestine. Includes surgery for perforations, obstructions, tumors, and bleeding. Both emergency and elective procedures. Duration: Variable — 30 minutes to 3 hours.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                            `Peptic ulcer perforation (emergency)`,
+                            `Intestinal obstruction (emergency)`,
+                            `Stomach/GI cancer`,
+                            `GI bleeding not controlled by endoscopy`,
+                            `Mesenteric ischemia (blocked blood supply to intestines)`,
+                            `Small bowel tumors`,
+                            `Meckel's diverticulum`,
+                            `Intestinal tuberculosis requiring surgery`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Recovery"
+                    },
+                    {
+                    type: "paragraph",
+                    content: `Varies by procedure — ranges from 3-5 days for simple perforation repair to 7-14 days for cancer surgery with bowel anastomosis.`
+                    },                   
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`FIAGES (Fellow, Indian Association of Gastrointestinal Endo Surgeons). Specializes in gastrointestinal surgery. Emergency GI surgery available 24/7 at Narayan Swaroop Hospital.`
+
+                    }
+                ]
+    },
+     {
+        title: "Onco Surgery (Cancer Surgery)",
+        navTo:'onco-surgery',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `Surgical treatment and management of various cancers — including biopsy, tumor excision, radical surgery, and palliative procedures. Cancer surgery is often the first and most critical step in cancer treatment, followed by chemotherapy and/or radiation as needed. Duration: Variable.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Confirmed cancer requiring surgical removal`,
+                        `Suspicious lump/mass requiring biopsy`,
+                        `Breast cancer (lumpectomy/mastectomy)`,
+                        `Stomach/GI cancer`,
+                        `Colorectal cancer`,
+                        `Thyroid cancer`,
+                        `Skin cancer`,
+                        `Lymph node biopsy for cancer staging`,
+                        `Palliative surgery (relieving obstruction/pain in advanced cancer)`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Cancer Care Team at Narayan Swaroop Hospital"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Surgical Oncologist (Dr. Rajeev Singh)`,
+                        `Medical Oncologist`,
+                        `Radiologist (CT, MRI, PET-CT coordination)`,
+                        `Pathologist (histopathology, FNAC)`,
+                        `Anesthesiologist`,
+                        `ICU team for post-operative care`,
+                        `Nutritionist`,
+                        `Counselor`,                                    
+                    ]
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`R0 resection (complete tumor removal with clear margins) is always the goal. Laparoscopic cancer surgery for eligible patients (faster recovery). Multi-disciplinary tumor board approach. Compassionate, patient-centered cancer care.`
+
+                    }
+                ]
+    },
+     {
+        title: "Upper GI Endoscopy (Gastroscopy)",
+        navTo:'upper-gi-endoscopy',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `A diagnostic and therapeutic procedure where a thin, flexible tube with a camera (endoscope) is passed through the mouth to directly examine the food pipe (esophagus), stomach, and first part of small intestine (duodenum). Can also take biopsies, stop bleeding, remove polyps, and dilate strictures during the same procedure. Duration: 10-15 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                        `Persistent acidity/heartburn not responding to medicines`,
+                        `Difficulty or painful swallowing`,
+                        `Chronic nausea and vomiting`,
+                        `Unexplained upper abdominal pain`,
+                        `Vomiting blood or coffee-ground material`,
+                        `Unexplained weight loss`,
+                        `Anemia of unknown cause`,
+                        `Screening for Barrett's Esophagus`,
+                        `Follow-up of gastric ulcers`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Before the Procedure"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                       `Empty stomach (6-8 hours fasting)`,
+                        `Throat numbing spray applied`,
+                        `Mild sedation if needed (patient stays awake but relaxed)`,
+                        `Procedure takes only 10-15 minutes`,
+                        `Can eat within 1-2 hours after procedure`,
+                 
+                    ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Recovery'
+                    },
+                    {
+                        type:'paragraph',
+                        content:'Immediate. Go home within 1-2 hours. Resume normal diet same day. Report available same day (biopsy results in 3-5 days).'
+                    },
+                  
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`HD endoscopy for detailed mucosal examination. Therapeutic endoscopy capabilities — biopsy, polypectomy, hemostasis (bleeding control), foreign body removal. Quick, comfortable procedure with expert handling.`
+
+                    }
+                ]
+    },
+
+     {
+        title: "Colonoscopy",
+        navTo:'colonoscopy',
+        sections: [
+                    {
+                        type:'heading',
+                        content:'Overview',
+                    },
+
+                    {
+                    type: "paragraph",
+                    content: `A diagnostic and therapeutic procedure where a long, flexible tube with a camera is passed through the anus to examine the entire large intestine (colon) and the end of the small intestine. Can detect polyps, cancer, inflammation, bleeding sources, and take biopsies. Duration: 20-30 minutes.`
+                    },
+                    {
+                    type: "heading",
+                    content: "Who Needs This"
+                    },
+                    {
+                    type: "list",
+                    items: [
+                            `Rectal bleeding or blood in stool`,
+                            `Change in bowel habits lasting >2 weeks`,
+                            `Chronic diarrhea or constipation`,
+                            `Unexplained abdominal pain`,
+                            `Screening for colorectal cancer (recommended for everyone 45+)`,
+                            `Family history of colon cancer`,
+                            `Follow-up after polyp removal`,
+                            `Unexplained iron deficiency anemia`,
+                            `Inflammatory bowel disease monitoring`,
+
+                    ]
+                    },
+                     {
+                        type: "heading",
+                        content: "Before the Procedure"
+                    },
+                    {
+                        type:"list",
+                        items:[
+                            `Rectal bleeding or blood in stool`,
+                            `Change in bowel habits lasting >2 weeks`,
+                            `Chronic diarrhea or constipation`,
+                            `Unexplained abdominal pain`,
+                            `Screening for colorectal cancer (recommended for everyone 45+)`,
+                            `Family history of colon cancer`,
+                            `Follow-up after polyp removal`,
+                            `Unexplained iron deficiency anemia`,
+                            `Inflammatory bowel disease monitoring`,
+
+                        ]
+                    },
+                    {
+                        type:'heading',
+                        content:'Recovery'
+                    },
+                    {
+                        type:'paragraph',
+                        content:'Rest for 2-3 hours after procedure. Mild bloating/cramping from air (resolves quickly). Normal diet same evening. Results discussed immediately (biopsy in 3-5 days).'
+                    },
+                    
+                    {
+                        type:'heading',
+                        content:'Why Dr. Rajeev Singh:'
+                    },
+                    {
+                        type:'paragraph',
+                        content:`Complete cecal intubation rate >95% (reaches the entire colon). Polypectomy during same procedure (no separate surgery needed). Screening colonoscopy saves lives — Dr. Rajeev Singh advocates routine screening after age 45`
+
+                    }
+                ]
+    }    
+   
 ];
 
 export default dummyData;

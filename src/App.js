@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route index element={<Homepage/>}/>             
           <Route path='/about' element={<AboutDoctor/>}/>
-          <Route path='/surgeries&treatments/:searchedKeyword' element={<SurgeriesAndTreatment/>}/> 
+          <Route path='/surgeries&treatments/:searchedKeyword1/:searchedKeyword2' element={<SurgeriesAndTreatment/>}/> 
           <Route path='/gallery/:searchedKeyword' element={<Gallery/>}/>   
           <Route path='/diseases-we-treat/:searchedKeyword1/:searchedKeyword2' element={<DiseasesWeTreat/>}/>   
           <Route path='/patient-information/:searchedKeyword' element={<RareCases/>}/>

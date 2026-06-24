@@ -29,6 +29,14 @@ const Content = ({title,sections}) => {
                 ))}
               </ul>
             );
+          case "table":
+            return (
+             <div>
+               {section.content.map((item, i) => (
+                  <div key={i}>{item}</div>
+                ))}
+             </div>
+            );
 
           default:
             return null;

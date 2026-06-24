@@ -3,161 +3,352 @@ import { Link } from "react-router-dom";
 
 const menuData = [
   {
-    menuId: "disease we treat",
+    menuId: "diseases-we-treat",
     content: [
       {
-        id: "gastrointestinal",
+        id: "gastrointestinal-diseases",
         title: "Gastrointestinal Diseases",
         links: [
-          "Gallbladder Stones (Choleslithiasis)",
-          "Appendicitis",
-          "Hernia (Inguinal, Umbilical, Incisional)",
-          "Acid Reflux (GERD)",
-          "Intestinal Disorders",
-          "Peptic Ulcer",
-          "Intestical Obstruction",
-          "Pancreatitis",
+            {
+                linkName:'Gallbladder Stones (Cholelithiasis)',
+                hyperLink:'gallbladder-stones'
+            },
+            {
+                linkName:'Appendicitis',
+                hyperLink:'appendicitis'
+            },
+            {
+                linkName:'Hernia (Inguinal, Umbilical, Incisional)',
+                hyperLink:'hernia'
+            },
+            {
+                linkName:'Acid Reflux (GERD)',
+                hyperLink:'acid-reflux'
+            },
+            {
+                linkName:'Intestinal Disorders',
+                hyperLink:'intestinal-disorders'
+            },
+            {
+                linkName:'Peptic Ulcer',
+                hyperLink:'peptic-ulcer'
+            },
+            {
+                linkName:'Intestinal Disorders',
+                hyperLink:'intestinal-disorders'
+            },
+            {
+                linkName:'Pancreatitis',
+                hyperLink:'pancreatitis'
+            },
         ],
       },
       {
-        id: "practology",
+        id: "proctology",
         title: "Proctology (Ano-Rectal)",
         links: [
-          "Piles (Hemorrhoids)",
-          "Anal Fissure",
-          "Fistula-in-Ano",
-          "Pilonidal Sinus",
-          "Rectal Bleeding & Pain",
-          "Rectal Prolapse",
-          "Perianal Abscess",
+          {
+                linkName:'Piles (Hemorrhoids)',
+                hyperLink:'piles'
+            },
+            {
+                linkName:'Anal Fissure',
+                hyperLink:'anal-fissure'
+            },
+            {
+                linkName:'Fistula-in-Ano',
+                hyperLink:'fistula-in-ano'
+            },
+            {
+                linkName:'Pilonidal Sinus',
+                hyperLink:'pilonidal-sinus'
+            },
+            {
+                linkName:'Rectal Bleeding & Pain',
+                hyperLink:'rectal-bleeding'
+            },
+            {
+                linkName:'Rectal Prolapse',
+                hyperLink:'rectal-bleeding'
+            },
+            {
+                linkName:'Perianal Abscess',
+                hyperLink:'perianal-abscess'
+            },
         ],
       },
       {
-        id: "urological",
+        id: "urological-conditions",
         title: "Urological Conditions",
         links: [
-          "Kidney Stones",
-          "Urinary Tract Infections",
-          "Prostate Problems (BPH)",
-          "Bladder Disorders",
-          "Urinary Obstruction",
-          "Hydrocele",
-          "Phimosis",
-          "Varicocele",
-          "Male Infertility",
+            {
+                linkName:'Kidney Stones ',
+                hyperLink:'kidney-stones'
+            },
+            {
+                linkName:'Urinary Tract Infections (UTI)',
+                hyperLink:'urinary-tract-infections'
+            },
+            {
+                linkName:'Prostate Problems (BPH)',
+                hyperLink:'prostate-problems'
+            },
+            {
+                linkName:'Bladder Disorders',
+                hyperLink:'bladder-disorders'
+            },
+            {
+                linkName:'Urinary Obstruction',
+                hyperLink:'urinary-obstruction'
+            },
+            {
+                linkName:'Hydrocele',
+                hyperLink:'hydrocele'
+            },
+            {
+                linkName:'Phimosis',
+                hyperLink:'phimosis'
+            },
+            {   
+                linkName:'Varicocele',
+                hyperLink:'varicocele'
+            },
+             {
+                linkName:'Male Infertility',
+                hyperLink:'male-infertility'
+            },
         ],
       },
       {
-        id: "laparoscopic",
+        id: "laparoscopic-surgery",
         title: "Laparoscopic Surgery",
         links: [
-          "Laparoscopic Cholecystectomy",
-          "Laparoscopic Appendicectomy",
-          "Laparoscopic Hernia Repair",
-          "Laparoscopic Nephrectomy",
-          "Diagnostic Laparoscopy",
+            {
+                linkName:'Kidney Stones ',
+                hyperLink:'kidney-stones'
+            },
+            {
+                linkName:'Urinary Tract Infections (UTI)',
+                hyperLink:'urinary-tract-infections'
+            },
+            {
+                linkName:'Prostate Problems (BPH)',
+                hyperLink:'prostate-problems'
+            },
+            {
+                linkName:'Bladder Disorders',
+                hyperLink:'bladder-disorders'
+            },
+            {
+                linkName:'Urinary Obstruction',
+                hyperLink:'urinary-obstruction'
+            },
+            {
+                linkName:'Hydrocele',
+                hyperLink:'hydrocele'
+            },
+            {
+                linkName:'Phimosis',
+                hyperLink:'phimosis'
+            },
+            {   
+                linkName:'Varicocele',
+                hyperLink:'varicocele'
+            },
+             {
+                linkName:'Male Infertility',
+                hyperLink:'male-infertility'
+            },
         ],
       },
       {
-        id: "varicose",
+        id: "varicose-veins-laser",
         title: "Varicose Veins & Laser",
-        links: ["Varicose Veins (EVLT)", "Laser Piles Surgery"],
+        links: [
+            {
+                linkName:'Varicose Veins ',
+                hyperLink:'varicose-veins'
+            },
+            {
+                linkName:'Laser Piles Surgery',
+                hyperLink:'laser-piles-surgery'
+            },
+        ],
       },
     ],
   },
   {
-    menuId: "surgeries & treatment",
+    menuId: "surgeries&treatments",
     content: [
       {
-        id: "laparscopic",
-        title: "Laparscopic surgeries",
+        id: "laparscopic-surgeries",
+        title: "Laparscopic Surgeries",
         links: [
-          "Laparscopic Cholecystemctomy (Gallbladder)",
-          "Laparscopic Appendicectomy",
-          "Laparoscopic Hernia Repair (TEP/TAPP)",
-          "Laparoscopic Nephrectomy",
-          "Diagnostic Laparoscopy",
-          "Laparoscopic Adhesiolysis",
+          {
+                linkName:'Laparoscopic Cholecystectomy (Gallbladder)',
+                hyperLink:'laparoscopic-cholecystectomy'
+            },
+            {
+                linkName:'Laparoscopic Appendicectomy',
+                hyperLink:'laparoscopic-appendicectomy'
+            },
+            {
+                linkName:'Laparoscopic Hernia Repair (TEP/TAPP)',
+                hyperLink:'laparoscopic-hernia-repair'
+            },
+            {
+                linkName:'Laparoscopic Nephrectomy',
+                hyperLink:'laparoscopic-nephrectomy'
+            },
+            {
+                linkName:'Diagnostic Laparoscopy',
+                hyperLink:'diagnostic-laparoscopy'
+            },
+            {
+                linkName:'Laparoscopic Adhesiolysis',
+                hyperLink:'laparoscopic-adhesiolysis'
+            },
         ],
       },
       {
-        id: "laser",
+        id: "laser-surgeries",
         title: "Laser Surgeries",
         links: [
-          "Laser Piles Surgery",
-          "Laser Fissure Surgery",
-          "Laser Fistula Surgery (FiLaC)",
-          "Laser Pilonidal Sinus Treatment",
-          "EVLT — Varicose Veins Treatment",
+           {
+                linkName:'Laser Piles Surgery',
+                hyperLink:'laser-piles-surgery'
+            },
+            {
+                linkName:'Laser Fissure Surgery',
+                hyperLink:'laser-fissure-surgery'
+            },
+            {
+                linkName:'Laser Fistula Surgery (FiLac)',
+                hyperLink:'laser-fistula-surgery',
+            },
+            {
+                linkName:'Laser Pilonidal Sinus Treatment',
+                hyperLink:'laser-pilonidal-sinus'
+            },
+            {
+                linkName:'EVLT — Varicose Veins Treatment',
+                hyperLink:'evlt-varicose-veins'
+            },
         ],
       },
       {
-        id: "urological",
+        id: "urological-surgeries",
         title: "Urological Surgeries",
         links: [
-          "PCNL (Large Kidney Stones)",
-          "URSL (Ureteral Stones)",
-          "Laser Circumcision",
-          "Hydrocelectomy",
-          "Varicocelectomy",
-          "TURP (Prostate Surgery)",
+          {
+                linkName:'PCNL (Large Kidney Stones)',
+                hyperLink:'pcnl'
+            },
+            {
+                linkName:'URSL (Ureteral Stones)',
+                hyperLink:'ursl'
+            },
+            {
+                linkName:'Laser Circumcision',
+                hyperLink:'laser-circumcision'
+            },
+            {
+                linkName:' Hydrocelectomy',
+                hyperLink:'hydrocelectomy'
+            },
+            {
+                linkName:'Varicocelectomy',
+                hyperLink:'varicocelectomy'
+            },
+            {
+                linkName:'TURP (Prostate Surgery)',
+                hyperLink:'turp'
+            },
         ],
       },
       {
-        id: "general",
+        id: "general-surgical-procedures",
         title: "General Surgical Procedures",
         links: [
-          "Thyroid Surgery",
-          "Breast Surgery",
-          "Trauma & Emergency Surgery",
-          "Colorectal Surgery",
-          "GI Surgery",
-          "Onco Surgery (Cancer)",
+           {
+                linkName:'Thyroid Surgery',
+                hyperLink:'thyroid-surgery'
+            },
+            {
+                linkName:'Breast Surgery',
+                hyperLink:'breast-surgery'
+            },
+            {
+                linkName:'Trauma & Emergency Surgery',
+                hyperLink:'trauma-emergency-surgery'
+            },
+            {
+                linkName:'Colorectal Surgery',
+                hyperLink:'colorectal-surgery'
+            },
+            {
+                linkName:'GI Surgery',
+                hyperLink:'gi-surgery'
+            },
+            {
+                linkName:'Onco Surgery (Cancer)',
+                hyperLink:'onco-surgery'
+            },
         ],
       },
       {
-        id: "endoscopic",
+        id: "endoscopic-procedures",
         title: "Endoscopic Procedures",
-        links: ["Upper GI Endoscopy", "Colonoscopy"],
+        links: [
+            {
+                linkName:'Upper GI Endoscopy',
+                hyperLink:'upper-gi-endoscopy'
+            },
+            {
+                linkName:'Colonoscopy',
+                hyperLink:'colonoscopy'
+            },
+        ],
       },
     ],
   },
-  {
-    menuId: "patient information",
-    content: [
-      {
-        id: "rare",
-        title: "Rare Case",
-        links: ["Rare case"],
-      },
-    ],
-  },
-  {
-    menuId: "gallery",
-    content: [
-      {
-        id: "gallery",
-        title: "Gallery",
-        links: ["Certification", "Award", "Print Media"],
-      },
-    ],
-  },
-  {
-    menuId: "testimonial",
-    content: [
-      {
-        id: "testimonial",
-        title: "Testimonial",
-        links: ["Video Testimonial"],
-      },
-    ],
-  },
+  // {
+  //   menuId: "patient information",
+  //   content: [
+  //     {
+  //       id: "rare",
+  //       title: "Rare Case",
+  //       links: ["Rare case"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   menuId: "gallery",
+  //   content: [
+  //     {
+  //       id: "gallery",
+  //       title: "Gallery",
+  //       links: ["Certification", "Award", "Print Media"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   menuId: "testimonial",
+  //   content: [
+  //     {
+  //       id: "testimonial",
+  //       title: "Testimonial",
+  //       links: ["Video Testimonial"],
+  //     },
+  //   ],
+  // },
 ];
 
 const NavigationBar = () => {
   const [show, setShow] = useState(false);
   const [activeMenu, setActiveMenu] = useState([]);
   const [subMenuActive, setSubMenuActive] = useState(null);
+  const [selectedMainMenu,setSelectedMainMenu]=useState()
 
   function handleMenuShow(menuId) {
     const data = menuData.find((item) => item.menuId === menuId);
@@ -165,11 +356,13 @@ const NavigationBar = () => {
     if (!data || !data.content?.length) {
       setActiveMenu([]);
       setSubMenuActive(null);
+     
       setShow(false);
       return;
     }
 
     setActiveMenu(data.content);
+    setSelectedMainMenu(menuId)
     setSubMenuActive(data.content[0]);
     setShow(true);
   }
@@ -208,19 +401,35 @@ const NavigationBar = () => {
                   About Dr.
                 </a>
               </li>
-
-              <li
+               <li
                 className="nav-item p-1 d-flex justify-content-center align-items-center"
-                onMouseEnter={() => handleMenuShow("surgeries & treatment")}
+                onMouseEnter={() => handleMenuShow("diseases-we-treat")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
-                  Surgeries & Treatment
+                  Disease We Treat
                 </a>
+                 <span
+                  className="bi bi-caret-down mt-1"
+                  style={{ fontSize: "13px" }}
+                ></span>
               </li>
 
               <li
                 className="nav-item p-1 d-flex justify-content-center align-items-center"
-                onMouseEnter={() => handleMenuShow("patient information")}
+                onMouseEnter={() => handleMenuShow("surgeries&treatments")} onMouseLeave={()=>setShow(false)}
+              >
+                <a href="/#" className="nav-link">
+                  Surgeries & Treatment
+                </a>
+                 <span
+                  className="bi bi-caret-down mt-1"
+                  style={{ fontSize: "13px" }}
+                ></span>
+              </li>
+
+              <li
+                className="nav-item p-1 d-flex justify-content-center align-items-center"
+                onMouseEnter={() => handleMenuShow("patient information")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
                   Patient Information
@@ -233,7 +442,7 @@ const NavigationBar = () => {
 
               <li
                 className="nav-item p-1 d-flex justify-content-center align-items-center"
-                onMouseEnter={() => handleMenuShow("gallery")}
+                onMouseEnter={() => handleMenuShow("gallery")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
                   Gallery
@@ -246,7 +455,7 @@ const NavigationBar = () => {
 
               <li
                 className="nav-item p-1 d-flex justify-content-center align-items-center"
-                onMouseEnter={() => handleMenuShow("testimonial")}
+                onMouseEnter={() => handleMenuShow("testimonial")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
                   Testimonial
@@ -289,7 +498,7 @@ const NavigationBar = () => {
               <span
                 key={item.id}
                 className={`d-flex justify-content-between sidebar-item fw-semibold text-start px-3 py-2 rounded ${
-                  subMenuActive?.id === item.id ? "text-primary" : "text-dark"
+                  subMenuActive?.id === item.id ? `text-website-primary` : "text-dark"
                 }`}
                 onMouseEnter={() => setSubMenuActive(item)}
                 style={{ cursor: "pointer", transition: "0.3s", fontSize: "14px" }}
@@ -308,11 +517,11 @@ const NavigationBar = () => {
             >
               {subMenuActive?.links?.map((link, index) => (
                 <a
-                  href="/#"
+                  href={`/${selectedMainMenu}/${subMenuActive.id}/${link.hyperLink}`}
                   key={index}
                   className="text-decoration-none text-dark px-2 rounded hover-link py-2"
                 >
-                  {link}
+                  {link.linkName}
                 </a>
               ))}
             </div>

@@ -9,10 +9,19 @@ function AppointmentModal() {
     contact: "",
   });
 
-  const handleClose = () => setShow(false);
-useEffect(()=>{
-  setTimeout(()=>setShow(true),3000)
-},[])
+    const handleClose = () => setShow(false);
+  useEffect(() => {
+  const shown = sessionStorage.getItem("appointmentModalShown");
+
+  if (!shown) {
+    const timer = setTimeout(() => {
+      setShow(true);
+      sessionStorage.setItem("appointmentModalShown", "true");
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }
+}, []);
 
 
   const handleChange = (e) => {

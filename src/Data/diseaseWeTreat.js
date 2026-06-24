@@ -1,3 +1,4 @@
+//sidebar
 const diseaseWeTreat=[
     {
         categoryName:'Gastrointestinal Diseases',
@@ -20,8 +21,20 @@ const diseaseWeTreat=[
                 hyperLink:'acid-reflux'
             },
             {
-                linkName:'Stomach and Intestinal Disorders',
-                hyperLink:'stomach-and-intestinal-disorders'
+                linkName:'Intestinal Disorders',
+                hyperLink:'intestinal-disorders'
+            },
+            {
+                linkName:'Peptic Ulcer',
+                hyperLink:'peptic-ulcer'
+            },
+            {
+                linkName:'Intestinal Disorders',
+                hyperLink:'intestinal-disorders'
+            },
+            {
+                linkName:'Pancreatitis',
+                hyperLink:'pancreatitis'
             },
         ]
     },
@@ -46,8 +59,16 @@ const diseaseWeTreat=[
                 hyperLink:'pilonidal-sinus'
             },
             {
-                linkName:'Rectal Bleeding & Pain ',
+                linkName:'Rectal Bleeding & Pain',
                 hyperLink:'rectal-bleeding'
+            },
+            {
+                linkName:'Rectal Prolapse',
+                hyperLink:'rectal-prolapse'
+            },
+            {
+                linkName:'Perianal Abscess',
+                hyperLink:'perianal-abscess'
             },
         ]
     },
@@ -64,7 +85,7 @@ const diseaseWeTreat=[
                 hyperLink:'urinary-tract-infections'
             },
             {
-                linkName:'Prostate Problems',
+                linkName:'Prostate Problems (BPH)',
                 hyperLink:'prostate-problems'
             },
             {
@@ -75,25 +96,37 @@ const diseaseWeTreat=[
                 linkName:'Urinary Obstruction',
                 hyperLink:'urinary-obstruction'
             },
+            {
+                linkName:'Hydrocele',
+                hyperLink:'hydrocele'
+            },
+            {
+                linkName:'Phimosis',
+                hyperLink:'phimosis'
+            },
+            {   
+                linkName:'Varicocele',
+                hyperLink:'varicocele'
+            },
+             {
+                linkName:'Male Infertility',
+                hyperLink:'male-infertility'
+            },
         ]
     },
-     {
-        categoryName:'Endoscopic Procedures & Diagnosis',
-        navTo:'endoscopic-procedures&diagnosis',
+    {
+        categoryName:'Varicose Veins & Laser',
+        navTo:'varicose-veins-laser',
         links:[
             {
-                linkName:'Upper GI Endoscopy ',
-                hyperLink:'upper-gi-endoscopy'
+                linkName:'Varicose Veins ',
+                hyperLink:'varicose-veins'
             },
             {
-                linkName:'Colonoscopy  ',
-                hyperLink:'colonoscopy'
+                linkName:'Laser Piles Surgery',
+                hyperLink:'laser-piles-surgery'
             },
-            {
-                linkName:'Diagnostic & Therapeutic Endoscopic Procedures',
-                hyperLink:'diagnostic-therapeutic-endoscopic-procedures'
-            }
-           
+            
         ]
     }
 

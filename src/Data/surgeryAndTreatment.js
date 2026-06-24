@@ -1,130 +1,136 @@
 const surgeryAndTreatment=[
-    {
-        linkName:'General Surgery',
-        hyperLink:'general-surgery'
-    },
-    {
-        linkName:'Advance Laparoscopic Surgery',
-        hyperLink:'advance-laparoscopic-surgery'
-    },
-    {
-        linkName:'Urology',
-        hyperLink:'urology'
-    },
-    {
-        linkName:'Neuro Surgery',
-        hyperLink:'neuro-surgery'
-    },
-    {
-        linkName:'Orthopedia and Joint Replacement',
-        hyperLink:'orthopedia-and-joint-replacement'
-    },
-    {
-        linkName:'Onco Surgery',
-        hyperLink:'onco-surgery'
-    },
-    {
-        linkName:'Pediatric Surgery',
-        hyperLink:'pediatric-surgery'
-    },
-    {
-        linkName:'Plastic & Burn Reconstructive Surgery',
-        hyperLink:'plastic-burn-reconstructive-surgery'
-    },
-    {
-        linkName:'Gastro Intestinal Surgery',
-        hyperLink:'gastro-intestinal-surgery'
-    },
-    {
-        linkName:'Breast Surgery',
-        hyperLink:'breast-surgery'
-    },
-    {
-        linkName:'Thyroid Surgery',
-        hyperLink:'thyroid-surgery'
-    },
-    {
-        linkName:'ENT',
-        hyperLink:'ent'
-    },
-    {
-        linkName:'Genitourinary',
-        hyperLink:'genitourinary'
-    },
-    {
-        linkName:'Colorectal Surgery',
-        hyperLink:'colorectal-surgery'
-    },
-
-    {
-        linkName:'Trauma & Accident Surgery',
-        hyperLink:'trauma-and-accident-surgery'
-    },
-    {
-        linkName:'Evlt-endovenous Laser Treatment',
-        hyperLink:'evlt-endovenous-laser-treatment'
-    },
-    {
-        linkName:'Laser Surgery',
-        hyperLink:'laser-surgery'
-    },
-    {
-        linkName:'Piles',
-        hyperLink:'piles'
-    },
-    {
-        linkName:'Medicine Department',
-        hyperLink:'medicine-department'
-    },
-    {
-        linkName:'General Medicine',
-        hyperLink:'general-medicine'
-    },
-
-    {
-        linkName:'TB and Chest Respiratory Medicine',
-        hyperLink:'tb-and-chest-respiratory-medicine'
-    },
-    {
-        linkName:'Diabetic Clinic',
-        hyperLink:'diabetic-clinic'
-    },
-    {
-        linkName:'Psychiatry',
-        hyperLink:'psychiatry'
-    },
-    {
-        linkName:'Cardiology',
-        hyperLink:'cardiology'
-    },
-    {
-        linkName:'Dermatology',
-        hyperLink:'dermatology'
-    },
-    {
-        linkName:'Neurology',
-        hyperLink:'neurology'
-    },
       {
-        linkName:'Nephrology',
-        hyperLink:'nephrology'
+        categoryName:'Laparoscopic Surgeries ',
+        navTo:"laparscopic-surgeries",
+        links:[
+            {
+                linkName:'Laparoscopic Cholecystectomy (Gallbladder)',
+                hyperLink:'laparoscopic-cholecystectomy'
+            },
+            {
+                linkName:'Laparoscopic Appendicectomy',
+                hyperLink:'laparoscopic-appendicectomy'
+            },
+            {
+                linkName:'Laparoscopic Hernia Repair (TEP/TAPP)',
+                hyperLink:'laparoscopic-hernia-repair'
+            },
+            {
+                linkName:'Laparoscopic Nephrectomy',
+                hyperLink:'laparoscopic-nephrectomy'
+            },
+            {
+                linkName:'Diagnostic Laparoscopy',
+                hyperLink:'diagnostic-laparoscopy'
+            },
+            {
+                linkName:'Laparoscopic Adhesiolysis',
+                hyperLink:'laparoscopic-adhesiolysis'
+            },
+        ]
     },
     {
-        linkName:'Oncology',
-        hyperLink:'oncology'
-    },
-         {
-        linkName:'Anaesthesia, Critical Care & Pain Management',
-        hyperLink:'anaesthesia-critical-care-and-pain-management'
+        categoryName:'Laser Surgeries ',
+        navTo:"laser-surgeries",
+        links:[
+            {
+                linkName:'Laser Piles Surgery',
+                hyperLink:'laser-piles-surgery'
+            },
+            {
+                linkName:'Laser Fissure Surgery',
+                hyperLink:'laser-fissure-surgery'
+            },
+            {
+                linkName:'Laser Fistula Surgery (FiLac)',
+                hyperLink:'laser-fistula-surgery',
+            },
+            {
+                linkName:'Laser Pilonidal Sinus Treatment',
+                hyperLink:'laser-pilonidal-sinus'
+            },
+            {
+                linkName:'EVLT — Varicose Veins Treatment',
+                hyperLink:'evlt-varicose-veins'
+            },
+        
+        ]
     },
     {
-        linkName:'Clinical Nutrition & Diatetics',
-        hyperLink:'clinical-nutrition-and-diatetics'
+        categoryName:'Urological Surgeries',
+        navTo:"urological-surgeries",
+        links:[
+            {
+                linkName:'PCNL (Large Kidney Stones)',
+                hyperLink:'pcnl'
+            },
+            {
+                linkName:'URSL (Ureteral Stones)',
+                hyperLink:'ursl'
+            },
+            {
+                linkName:'Laser Circumcision',
+                hyperLink:'laser-circumcision'
+            },
+            {
+                linkName:' Hydrocelectomy',
+                hyperLink:'hydrocelectomy'
+            },
+            {
+                linkName:'Varicocelectomy',
+                hyperLink:'varicocelectomy'
+            },
+            {
+                linkName:'TURP (Prostate Surgery)',
+                hyperLink:'turp'
+            },
+        ]
     },
     {
-        linkName:'Laparoscopic Gynae Surgeries',
-        hyperLink:'laparoscopic-gynae-surgeries'
-    } 
-
+        categoryName:'General Surgical Procedures',
+        navTo:"general-surgical-procedures",
+        links:[
+            {
+                linkName:'Thyroid Surgery',
+                hyperLink:'thyroid-surgery'
+            },
+            {
+                linkName:'Breast Surgery',
+                hyperLink:'breast-surgery'
+            },
+            {
+                linkName:'Trauma & Emergency Surgery',
+                hyperLink:'trauma-emergency-surgery'
+            },
+            {
+                linkName:'Colorectal Surgery',
+                hyperLink:'colorectal-surgery'
+            },
+            {
+                linkName:'GI Surgery',
+                hyperLink:'gi-surgery'
+            },
+            {
+                linkName:'Onco Surgery (Cancer)',
+                hyperLink:'onco-surgery'
+            },
+        ]
+    },
+    {
+        categoryName:'Endoscopic Procedures',
+        navTo:"endoscopic-procedures",
+        links:[
+            {
+                linkName:'Upper GI Endoscopy',
+                hyperLink:'upper-gi-endoscopy'
+            },
+            {
+                linkName:'Colonoscopy',
+                hyperLink:'colonoscopy'
+            },
+           
+        ]
+    },
+    
 ]
 export default surgeryAndTreatment;
