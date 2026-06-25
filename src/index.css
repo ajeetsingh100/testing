@@ -788,40 +788,84 @@ h1,h2,h3,h4,h5{
 .video-modal-backdrop.show {
   opacity: 0.85 !important;
 }
-/* SociableKIT footer / branding hide */
-.sk-ww-google-reviews .tutorial_link.--custom-branding {
-  display: none !important;
-}
-.sk-ww-google-reviews .tutorial_link.--custom-branding,
-.sk-ww-google-reviews a[href*="sociablekit.com/tutorials/embed-google-reviews-website"] {
-  display: none !important;
-}
-.sk-ww-google-reviews a.tutorial_link.--custom-branding {
-  display: none !important;
+
+[class*="sociablekit"] {
+  z-index: 99999 !important;
 }
 
-.nav,.header {
-  z-index: 1030 !important;
+iframe[src*="sociablekit.com"] {
+  z-index: 99999 !important;
+  position: relative !important;
 }
 
-/* SociableKIT popup / overlay ko sabse upar lao */
-.sk-modal,
-.sk-popup,
-.sk-lightbox,
-.sk-ww-google-reviews [role="dialog"] {
-  z-index: 2000 !important;
+.embla {
+  width: 100%;
 }
 
-/* backdrop / overlay */
-.sk-modal-backdrop,
-.sk-overlay,
-.sk-popup-overlay {
-  z-index: 1990 !important;
+.embla__viewport {
+  overflow: hidden;
 }
 
-/* agar popup top se chipak raha ho */
-.sk-modal,
-.sk-popup,
-.sk-lightbox {
-  top: 20px !important;
+.embla__container {
+  display: flex;
+  align-items: stretch;
+  margin-right: -15px; /* last card extra gap avoid karne ke liye */
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  width: 290px;
+  padding-right: 15px; /* yahi actual spacing hai */
+  min-width: 0;
+}
+
+.video-card {
+  width: 100%;
+  height: 262px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* responsive widths */
+@media (max-width: 575.98px) {
+  .embla__slide {
+    width: 85%;
+    padding-right: 12px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .embla__slide {
+    width: 70%;
+    padding-right: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .embla__slide {
+    width: 48%;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .embla__slide {
+    width: 31%;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .embla__slide {
+    width: 290px;
+    padding-right: 24px;
+  }
 }
