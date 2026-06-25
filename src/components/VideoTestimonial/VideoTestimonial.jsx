@@ -1,9 +1,20 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import videoTestimonial from '../../Data/videoTestimonial'
+import { Modal } from 'react-bootstrap'
 const VideoTestimonial = () => {
     const {searchedKeyword}=useParams()
      const [loading, setLoading] = useState(false)
+     const [show,setShow]=useState(false)
+     const [activeVideo,setActiveVideo]=useState(null)
+     
+     function handleOpen(videoId){
+      setActiveVideo(videoId)
+      setShow(true)
+     }
+     function handleClose(){
+      setShow(false)
+     }
 
     function changeCase(str){
     const result = str.searchedKeyword.toLowerCase().replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())
@@ -71,33 +82,31 @@ const VideoTestimonial = () => {
       </h2>
 
        <div className="row g-3 g-md-4">
-      {videoTestimonial.map((videoLink, index) => {
-        if(videoLink.split('/')[2]==='www.youtube.com'){
+      {videoTestimonial.map((videoId, index) => {
+        
             return(
                 <div key={index} className="col-6">
-          <div className="card shadow h-100">
-            <iframe
-                src={videoLink}
-                title="video"
-                allowFullScreen
-              ></iframe>
-          </div>
+                    <div
+                  className="video-card position-relative overflow-hidden rounded-3"                    
+                  onClick={() => handleOpen(videoId)}
+                  style={{
+                    backgroundImage: `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)`,
+                  }}
+                >
+                  <div className="video-overlay" />
+
+                  <div className="video-play-btn">
+                    <div className="circle outer"></div>
+                    <div className="circle middle"></div>
+                    <div className="circle inner">
+                      <i className="bi bi-play-fill play-icon"></i>
+                    </div>
+                  </div>
+                </div>
         </div>
             )
-        }
-        if(videoLink.split('/')[2]==='www.facebook.com'){
-            return(
-                <div key={index} className="col-6">
-          <div className="card shadow h-100">
-            <iframe
-                src={`https://www.facebook.com/plugins/video.php?href=${videoLink}/`}
-                title="video"
-                allowFullScreen
-              ></iframe>
-          </div>
-        </div>
-            )
-        }
+        
+        
       })}
     </div>
 
@@ -105,6 +114,37 @@ const VideoTestimonial = () => {
         </div>
       </div>
     </div> 
+       <Modal
+        show={show}
+        onHide={handleClose}
+        centered
+        dialogClassName="custom-video-modal"
+        backdrop
+        backdropClassName="video-modal-backdrop"
+      >
+        <div className="video-modal-wrapper position-relative">
+          <button onClick={handleClose} className="video-close-btn">
+            ×
+          </button>
+
+          <Modal.Body className="p-0 bg-black rounded overflow-hidden">
+            <div className="video-frame-wrapper">
+              <iframe
+                width="100%"
+                height="100%"
+                src={
+                  show && activeVideo
+                    ? `https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0`
+                    : ""
+                }
+                title="YouTube video player"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </Modal.Body>
+        </div>
+      </Modal>
     </div>
   )
 }

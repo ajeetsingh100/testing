@@ -23,12 +23,12 @@ const Blog = () => {
     ]
   return (
     <div>
-        <div className="container mt-5 text-start">           
+        <div className="container  text-start">           
             <h2 >Latest Articles</h2>
-            <div className='row mt-4'>
+            <div className='row gy-3 mt-4'>
                {
                   cards.map(card=>
-                    <div className='col-md-4'>
+                    <div className='col-md-6 col-lg-4'>
                       <div class="card" >
                         <img src={card.img} class="card-img-thu" alt="..."/>
                         <div class="card-body">

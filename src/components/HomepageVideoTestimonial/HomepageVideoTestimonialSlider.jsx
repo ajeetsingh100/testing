@@ -53,7 +53,7 @@ const HomepageVideoTestimonialSlider = () => {
   };
 
   return (
-    <div className="video-slider-section">
+    <div className="video-slider-section ">
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">

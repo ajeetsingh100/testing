@@ -187,7 +187,7 @@ const menuData = [
           {
                 linkName:'Laparoscopic Cholecystectomy (Gallbladder)',
                 hyperLink:'laparoscopic-cholecystectomy'
-            },
+          },
             {
                 linkName:'Laparoscopic Appendicectomy',
                 hyperLink:'laparoscopic-appendicectomy'
@@ -312,36 +312,59 @@ const menuData = [
       },
     ],
   },
-  // {
-  //   menuId: "patient information",
-  //   content: [
-  //     {
-  //       id: "rare",
-  //       title: "Rare Case",
-  //       links: ["Rare case"],
-  //     },
-  //   ],
-  // },
-  // {
-  //   menuId: "gallery",
-  //   content: [
-  //     {
-  //       id: "gallery",
-  //       title: "Gallery",
-  //       links: ["Certification", "Award", "Print Media"],
-  //     },
-  //   ],
-  // },
-  // {
-  //   menuId: "testimonial",
-  //   content: [
-  //     {
-  //       id: "testimonial",
-  //       title: "Testimonial",
-  //       links: ["Video Testimonial"],
-  //     },
-  //   ],
-  // },
+  {
+    menuId: "patient-information",
+    content: [
+      {
+        id: "rare-case",
+        title: "Rare Case",
+        links: [
+          {
+            linkName:"Rare case",
+            hyperLink:'rare-cases'
+          }
+        ],
+      },
+    ],
+  },
+  {
+    menuId: "gallery",
+    content: [
+      {
+        id: "gallery",
+        title: "Gallery",
+        links: [
+          {
+            linkName:'Certifications',
+            hyperLink:'certifications'
+          },
+          {
+            linkName:'Award',
+            hyperLink:'awards'
+          },
+          {
+            linkName:'Print Media',
+            hyperLink:'print-media'
+          }
+        ],
+      },
+    ],
+  },
+  {
+    menuId: "testimonial",
+    content: [
+      {
+        id: "testimonial",
+        title: "Testimonial",
+        links: [
+          {
+            linkName:'Video Testimonial',
+            hyperLink:'video-testimonial'
+          }
+        ],
+      },
+    ],
+  },
 ];
 
 const NavigationBar = () => {
@@ -429,7 +452,7 @@ const NavigationBar = () => {
 
               <li
                 className="nav-item p-1 d-flex justify-content-center align-items-center"
-                onMouseEnter={() => handleMenuShow("patient information")} onMouseLeave={()=>setShow(false)}
+                onMouseEnter={() => handleMenuShow("patient-information")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
                   Patient Information
@@ -467,7 +490,7 @@ const NavigationBar = () => {
               </li>
 
               <li className="nav-item p-1 d-flex justify-content-center align-items-center">
-                <a href="/#" className="nav-link">
+                <a href="/contact-us" className="nav-link">
                   Contact Us
                 </a>
               </li>
@@ -516,13 +539,22 @@ const NavigationBar = () => {
               style={{ fontSize: "14px", height: "47vh", columnGap: "80px" }}
             >
               {subMenuActive?.links?.map((link, index) => (
+                (selectedMainMenu!=='patient-information'&&selectedMainMenu!=='gallery'&&selectedMainMenu!=='testimonial')?
                 <a
                   href={`/${selectedMainMenu}/${subMenuActive.id}/${link.hyperLink}`}
                   key={index}
                   className="text-decoration-none text-dark px-2 rounded hover-link py-2"
                 >
                   {link.linkName}
+                </a>:
+                <a
+                  href={`/${selectedMainMenu}/${link.hyperLink}`}
+                  key={index}
+                  className="text-decoration-none text-dark px-2 rounded hover-link py-2"
+                >
+                  {link.linkName}
                 </a>
+
               ))}
             </div>
           </div>

@@ -41,7 +41,7 @@ function App() {
           <Route path='/diseases-we-treat/:searchedKeyword1/:searchedKeyword2' element={<DiseasesWeTreat/>}/>   
           <Route path='/patient-information/:searchedKeyword' element={<RareCases/>}/>
           <Route path='/testimonial/:searchedKeyword' element={<VideoTestimonial/>}/>
-          <Route path='/contact-us' element={<MegaNavbar/>}/>
+          <Route path='/contact-us' element={<ContactUs/>}/>
         </Routes>
         <Footer/>
     </div>
