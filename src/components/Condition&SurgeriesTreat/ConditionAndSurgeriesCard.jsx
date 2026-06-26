@@ -9,7 +9,9 @@ const ConditionAndSurgeriesCard = ({title,description}) => {
                 <span className='bi bi-check-circle' style={{color:'var(--website-primary)'}} ></span>
                 <div className='fw-semibold'>{title}</div>
              </div>
-              <div className='small  ps-3 ms-1'>{description}</div>
+            <div className="text-wrap ps-3 ms-1 custom-width">
+                {description}
+            </div>
           </div>
         </div>
      </div>
