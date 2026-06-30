@@ -1,377 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const menuData = [
-  {
-    menuId: "diseases-we-treat",
-    content: [
-      {
-        id: "gastrointestinal-diseases",
-        title: "Gastrointestinal Diseases",
-        links: [
-            {
-                linkName:'Gallbladder Stones (Cholelithiasis)',
-                hyperLink:'gallbladder-stones'
-            },
-            {
-                linkName:'Appendicitis',
-                hyperLink:'appendicitis'
-            },
-            {
-                linkName:'Hernia (Inguinal, Umbilical, Incisional)',
-                hyperLink:'hernia'
-            },
-            {
-                linkName:'Acid Reflux (GERD)',
-                hyperLink:'acid-reflux'
-            },
-            {
-                linkName:'Intestinal Disorders',
-                hyperLink:'intestinal-disorders'
-            },
-            {
-                linkName:'Peptic Ulcer',
-                hyperLink:'peptic-ulcer'
-            },
-            {
-                linkName:'Intestinal Disorders',
-                hyperLink:'intestinal-disorders'
-            },
-            {
-                linkName:'Pancreatitis',
-                hyperLink:'pancreatitis'
-            },
-        ],
-      },
-      {
-        id: "proctology",
-        title: "Proctology (Ano-Rectal)",
-        links: [
-          {
-                linkName:'Piles (Hemorrhoids)',
-                hyperLink:'piles'
-            },
-            {
-                linkName:'Anal Fissure',
-                hyperLink:'anal-fissure'
-            },
-            {
-                linkName:'Fistula-in-Ano',
-                hyperLink:'fistula-in-ano'
-            },
-            {
-                linkName:'Pilonidal Sinus',
-                hyperLink:'pilonidal-sinus'
-            },
-            {
-                linkName:'Rectal Bleeding & Pain',
-                hyperLink:'rectal-bleeding'
-            },
-            {
-                linkName:'Rectal Prolapse',
-                hyperLink:'rectal-bleeding'
-            },
-            {
-                linkName:'Perianal Abscess',
-                hyperLink:'perianal-abscess'
-            },
-        ],
-      },
-      {
-        id: "urological-conditions",
-        title: "Urological Conditions",
-        links: [
-            {
-                linkName:'Kidney Stones ',
-                hyperLink:'kidney-stones'
-            },
-            {
-                linkName:'Urinary Tract Infections (UTI)',
-                hyperLink:'urinary-tract-infections'
-            },
-            {
-                linkName:'Prostate Problems (BPH)',
-                hyperLink:'prostate-problems'
-            },
-            {
-                linkName:'Bladder Disorders',
-                hyperLink:'bladder-disorders'
-            },
-            {
-                linkName:'Urinary Obstruction',
-                hyperLink:'urinary-obstruction'
-            },
-            {
-                linkName:'Hydrocele',
-                hyperLink:'hydrocele'
-            },
-            {
-                linkName:'Phimosis',
-                hyperLink:'phimosis'
-            },
-            {   
-                linkName:'Varicocele',
-                hyperLink:'varicocele'
-            },
-             {
-                linkName:'Male Infertility',
-                hyperLink:'male-infertility'
-            },
-        ],
-      },
-      {
-        id: "laparoscopic-surgery",
-        title: "Laparoscopic Surgery",
-        links: [
-            {
-                linkName:'Kidney Stones ',
-                hyperLink:'kidney-stones'
-            },
-            {
-                linkName:'Urinary Tract Infections (UTI)',
-                hyperLink:'urinary-tract-infections'
-            },
-            {
-                linkName:'Prostate Problems (BPH)',
-                hyperLink:'prostate-problems'
-            },
-            {
-                linkName:'Bladder Disorders',
-                hyperLink:'bladder-disorders'
-            },
-            {
-                linkName:'Urinary Obstruction',
-                hyperLink:'urinary-obstruction'
-            },
-            {
-                linkName:'Hydrocele',
-                hyperLink:'hydrocele'
-            },
-            {
-                linkName:'Phimosis',
-                hyperLink:'phimosis'
-            },
-            {   
-                linkName:'Varicocele',
-                hyperLink:'varicocele'
-            },
-             {
-                linkName:'Male Infertility',
-                hyperLink:'male-infertility'
-            },
-        ],
-      },
-      {
-        id: "varicose-veins-laser",
-        title: "Varicose Veins & Laser",
-        links: [
-            {
-                linkName:'Varicose Veins ',
-                hyperLink:'varicose-veins'
-            },
-            {
-                linkName:'Laser Piles Surgery',
-                hyperLink:'laser-piles-surgery'
-            },
-        ],
-      },
-    ],
-  },
-  {
-    menuId: "surgeries&treatments",
-    content: [
-      {
-        id: "laparscopic-surgeries",
-        title: "Laparscopic Surgeries",
-        links: [
-          {
-                linkName:'Laparoscopic Cholecystectomy (Gallbladder)',
-                hyperLink:'laparoscopic-cholecystectomy'
-          },
-            {
-                linkName:'Laparoscopic Appendicectomy',
-                hyperLink:'laparoscopic-appendicectomy'
-            },
-            {
-                linkName:'Laparoscopic Hernia Repair (TEP/TAPP)',
-                hyperLink:'laparoscopic-hernia-repair'
-            },
-            {
-                linkName:'Laparoscopic Nephrectomy',
-                hyperLink:'laparoscopic-nephrectomy'
-            },
-            {
-                linkName:'Diagnostic Laparoscopy',
-                hyperLink:'diagnostic-laparoscopy'
-            },
-            {
-                linkName:'Laparoscopic Adhesiolysis',
-                hyperLink:'laparoscopic-adhesiolysis'
-            },
-        ],
-      },
-      {
-        id: "laser-surgeries",
-        title: "Laser Surgeries",
-        links: [
-           {
-                linkName:'Laser Piles Surgery',
-                hyperLink:'laser-piles-surgery'
-            },
-            {
-                linkName:'Laser Fissure Surgery',
-                hyperLink:'laser-fissure-surgery'
-            },
-            {
-                linkName:'Laser Fistula Surgery (FiLac)',
-                hyperLink:'laser-fistula-surgery',
-            },
-            {
-                linkName:'Laser Pilonidal Sinus Treatment',
-                hyperLink:'laser-pilonidal-sinus'
-            },
-            {
-                linkName:'EVLT — Varicose Veins Treatment',
-                hyperLink:'evlt-varicose-veins'
-            },
-        ],
-      },
-      {
-        id: "urological-surgeries",
-        title: "Urological Surgeries",
-        links: [
-          {
-                linkName:'PCNL (Large Kidney Stones)',
-                hyperLink:'pcnl'
-            },
-            {
-                linkName:'URSL (Ureteral Stones)',
-                hyperLink:'ursl'
-            },
-            {
-                linkName:'Laser Circumcision',
-                hyperLink:'laser-circumcision'
-            },
-            {
-                linkName:' Hydrocelectomy',
-                hyperLink:'hydrocelectomy'
-            },
-            {
-                linkName:'Varicocelectomy',
-                hyperLink:'varicocelectomy'
-            },
-            {
-                linkName:'TURP (Prostate Surgery)',
-                hyperLink:'turp'
-            },
-        ],
-      },
-      {
-        id: "general-surgical-procedures",
-        title: "General Surgical Procedures",
-        links: [
-           {
-                linkName:'Thyroid Surgery',
-                hyperLink:'thyroid-surgery'
-            },
-            {
-                linkName:'Breast Surgery',
-                hyperLink:'breast-surgery'
-            },
-            {
-                linkName:'Trauma & Emergency Surgery',
-                hyperLink:'trauma-emergency-surgery'
-            },
-            {
-                linkName:'Colorectal Surgery',
-                hyperLink:'colorectal-surgery'
-            },
-            {
-                linkName:'GI Surgery',
-                hyperLink:'gi-surgery'
-            },
-            {
-                linkName:'Onco Surgery (Cancer)',
-                hyperLink:'onco-surgery'
-            },
-        ],
-      },
-      {
-        id: "endoscopic-procedures",
-        title: "Endoscopic Procedures",
-        links: [
-            {
-                linkName:'Upper GI Endoscopy',
-                hyperLink:'upper-gi-endoscopy'
-            },
-            {
-                linkName:'Colonoscopy',
-                hyperLink:'colonoscopy'
-            },
-        ],
-      },
-    ],
-  },
-  {
-    menuId: "patient-information",
-    content: [
-      {
-        id: "rare-case",
-        title: "Rare Case",
-        links: [
-          {
-            linkName:"Rare case",
-            hyperLink:'rare-cases'
-          }
-        ],
-      },
-    ],
-  },
-  {
-    menuId: "gallery",
-    content: [
-      {
-        id: "gallery",
-        title: "Gallery",
-        links: [
-          {
-            linkName:'Certifications',
-            hyperLink:'certifications'
-          },
-          {
-            linkName:'Award',
-            hyperLink:'awards'
-          },
-          {
-            linkName:'Print Media',
-            hyperLink:'print-media'
-          }
-        ],
-      },
-    ],
-  },
-  {
-    menuId: "testimonial",
-    content: [
-      {
-        id: "testimonial",
-        title: "Testimonial",
-        links: [
-          {
-            linkName:'Video Testimonial',
-            hyperLink:'video-testimonial'
-          }
-        ],
-      },
-    ],
-  },
-];
+import menuData from "../Data/menuData";
+import { Offcanvas } from "react-bootstrap";
 
 const NavigationBar = () => {
   const [show, setShow] = useState(false);
   const [activeMenu, setActiveMenu] = useState([]);
   const [subMenuActive, setSubMenuActive] = useState(null);
   const [selectedMainMenu,setSelectedMainMenu]=useState()
+  // OFFCANVAS SETUP
+  const [showMainMenu,setShowMainMenu]=useState(false)
+  const [showSubMenu,setShowSubMenu]=useState(false)
+  const [subMenu,setSubMenu]=useState({})
+  const [showActiveMenuOffcanvas,setShowActiveMenuOffcanvas]=useState(false)
+  const [activeMenuOffcanvas,setActiveMenuOffcanvas]=useState([])
 
   function handleMenuShow(menuId) {
     const data = menuData.find((item) => item.menuId === menuId);
@@ -394,22 +37,44 @@ const NavigationBar = () => {
     setShow(false);
   }
 
+  //OFFCANVAS FUNCTION
+  function handleMainMenu(selectedMenuId){
+        console.log(selectedMenuId)
+        const subMenu=menuData.find(menu=>menu.menuId===selectedMenuId)
+        console.log(subMenu)
+        setSubMenu(subMenu)
+    }
+    function handleActiveMenu(links){
+        setActiveMenuOffcanvas(links)
+    }
+    function handleMainMenuClose(){
+        setShowMainMenu(false)
+    }
+    function handleSubMenuClose(){
+        setShowSubMenu(false)
+    }
+    function handleActiveMenuClose(){
+        setShowActiveMenuOffcanvas(false)
+    }
+
+    function changeCase(title){
+        const splittedWord=title.split('-')
+        const casedWord=splittedWord.map(word=>word[0].toUpperCase()+word.slice(1,))
+        console.log(casedWord.join(' '))
+        return casedWord.join(' ')
+    }
+
   return (
     <div className="container-fluid bg-light position-relative">
       <nav className="navbar navbar-expand-lg navbar-light bg-light container-lg p-0">
         <div className="container">
-          <Link to="/" className="navbar-brand">
-            Home
-          </Link>
-
+          <a  href='/' className="fw-bold text-decoration-none text-dark">
+              Home
+          </a>
           <button
-            className="navbar-toggler"
+            className="btn btn-light border border-1 d-block d-lg-none"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            onClick={()=>setShowMainMenu(true)}                     
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -418,14 +83,14 @@ const NavigationBar = () => {
             className="collapse navbar-collapse p-0"
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item p-1">
-                <a href="/about" className="nav-link active" aria-current="page">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0  ">
+              <li className="nav-item ">
+                <a href="/about" className="nav-link active py-2" aria-current="page">
                   About Dr.
                 </a>
               </li>
                <li
-                className="nav-item p-1 d-flex justify-content-center align-items-center"
+                className="nav-item  d-flex justify-content-center align-items-center"
                 onMouseEnter={() => handleMenuShow("diseases-we-treat")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
@@ -438,7 +103,7 @@ const NavigationBar = () => {
               </li>
 
               <li
-                className="nav-item p-1 d-flex justify-content-center align-items-center"
+                className="nav-item d-flex justify-content-center align-items-center"
                 onMouseEnter={() => handleMenuShow("surgeries&treatments")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
@@ -451,7 +116,7 @@ const NavigationBar = () => {
               </li>
 
               <li
-                className="nav-item p-1 d-flex justify-content-center align-items-center"
+                className="nav-item  d-flex justify-content-center align-items-center"
                 onMouseEnter={() => handleMenuShow("patient-information")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
@@ -464,7 +129,7 @@ const NavigationBar = () => {
               </li>
 
               <li
-                className="nav-item p-1 d-flex justify-content-center align-items-center"
+                className="nav-item  d-flex justify-content-center align-items-center"
                 onMouseEnter={() => handleMenuShow("gallery")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
@@ -477,7 +142,7 @@ const NavigationBar = () => {
               </li>
 
               <li
-                className="nav-item p-1 d-flex justify-content-center align-items-center"
+                className="nav-item  d-flex justify-content-center align-items-center"
                 onMouseEnter={() => handleMenuShow("testimonial")} onMouseLeave={()=>setShow(false)}
               >
                 <a href="/#" className="nav-link">
@@ -489,7 +154,7 @@ const NavigationBar = () => {
                 ></span>
               </li>
 
-              <li className="nav-item p-1 d-flex justify-content-center align-items-center">
+              <li className="nav-item  d-flex justify-content-center align-items-center">
                 <a href="/contact-us" className="nav-link">
                   Contact Us
                 </a>
@@ -560,6 +225,72 @@ const NavigationBar = () => {
           </div>
         </div>
       </div>
+      {/* OFFCANVAS SETUP */}
+      {/* main menu  */}
+               <Offcanvas show={showMainMenu} onHide={handleMainMenuClose}>
+               <Offcanvas.Header  style={{backgroundColor:'var(--website-primary)'}} closeButton >
+                  <img src="https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775210500/Advance_Laparoscopic_Surgeon_Proctologist_Urologist_Endoscopist_and_gastrologisttt_tcfg5z.png" alt="" width={200}/>
+                 
+               </Offcanvas.Header>
+               <Offcanvas.Body className='p-0'>
+                      {
+                          menuData.map(menu=>
+                              <div className='d-flex justify-content-between px-4 py-2'  onClick={()=>{handleMainMenu(menu.menuId);setShowSubMenu(true);setShowMainMenu(false)}}>
+                                  <div className='text-start'>{changeCase(menu.title)}</div>
+                                  <span className='bi bi-chevron-right '></span>
+                              </div>
+                          )
+                      }    
+              </Offcanvas.Body>
+            </Offcanvas>      
+            {/* sub menu */}
+            <Offcanvas show={showSubMenu} onHide={handleSubMenuClose}>
+                  <Offcanvas.Header  style={{backgroundColor:'var(--website-primary)'}} closeButton >
+                      <img src="https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775210500/Advance_Laparoscopic_Surgeon_Proctologist_Urologist_Endoscopist_and_gastrologisttt_tcfg5z.png" alt="" width={200}/>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body className='p-0'>
+                      <div className='d-flex px-4 py-2' onClick={()=>{setShowSubMenu(false);setShowMainMenu(true)}}>
+                          <span className='bi bi-arrow-left-circle me-2'></span>
+                          <div>
+                              Back to previous
+                          </div>
+                        
+                      </div>
+                      {
+                          subMenu?.content?.map(menu=>
+                              <div className='d-flex justify-content-between px-4 py-2'  onClick={()=>{handleActiveMenu(menu);setShowActiveMenuOffcanvas(true)}}>
+                                  <div className='text-start'>{menu.title.split('-').join(' ')}</div>
+                                  <span className='bi bi-chevron-right '></span>
+                              </div>
+                          )
+                      }    
+                  </Offcanvas.Body>
+            </Offcanvas>
+            {/* active menu */}
+             <Offcanvas show={showActiveMenuOffcanvas} onHide={handleActiveMenuClose}>
+                  <Offcanvas.Header  style={{backgroundColor:'var(--website-primary)'}} closeButton >
+                      <img src="https://res.cloudinary.com/dodhn4tgj/image/upload/q_auto/f_auto/v1775210500/Advance_Laparoscopic_Surgeon_Proctologist_Urologist_Endoscopist_and_gastrologisttt_tcfg5z.png" alt="" width={200}/>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body className='p-0'>
+                      <div className='d-flex px-4 py-2' onClick={()=>{setShowActiveMenuOffcanvas(false);setShowSubMenu(true)}}>
+                          <span className='bi bi-arrow-left-circle me-2'></span>
+                          <div>
+                              Back to previous
+                          </div>                  
+                      </div>
+                      {
+                          activeMenuOffcanvas?.links?.map(link=>
+                               subMenu.menuId!=='patient-information'&&subMenu.menuId!=='gallery'&&subMenu.menuId!=='testimonial'?
+                                <div className='d-flex justify-content-between px-4 py-2'>
+                                    <a className='text-start text-decoration-none text-dark' href={`/${subMenu.menuId}/${activeMenuOffcanvas.id}/${link.hyperLink}`}>{link.linkName}</a>    
+                                </div>:
+                                <div className='d-flex justify-content-between px-4 py-2'>
+                                    <a className='text-start text-decoration-none text-dark' href={`/${subMenu.menuId}/${link.hyperLink}`}>{link.linkName}</a>    
+                                </div>
+                          )
+                      }    
+                  </Offcanvas.Body>
+            </Offcanvas>
     </div>
   );
 };

@@ -20,7 +20,7 @@ const TopHeader = () => {
 
         {/* Button */}
         <div>
-          <button className="btn btn-light fw-bold">
+          <button className="btn btn-light fw-bold ">
             Book an Appointment
           </button>
         </div>

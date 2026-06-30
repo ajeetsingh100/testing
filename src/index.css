@@ -671,7 +671,7 @@ h1,h2,h3,h4,h5{
 
 .timeline-item:last-child {
   padding-bottom: 0;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .timeline-icon {
@@ -688,7 +688,7 @@ h1,h2,h3,h4,h5{
   border: 2px solid #fff;
   box-shadow: 0 0 0 3px rgba(236, 196, 165,0.6);
   font-size: 0.9rem;
-  z-index: 999;
+  z-index: 99999;
 }
 .text-website-primary{
   color:var(--website-primary)

@@ -18,6 +18,8 @@ import ContactUs from './components/ContactUs';
 import AppointmentModal from './components/AppointmentModal/AppointmentModal';
 import FixedButtons from './components/FixedButton/FixedButtons';
 import MegaNavbar from './components/common/MegaNavbar';
+import OffcanvasMenu from './components/OffcanvasMenu/OffcanvasMenu';
+import BlogEditor from './components/BlogEditor/BlogEditor';
 
 
 
@@ -42,6 +44,8 @@ function App() {
           <Route path='/patient-information/:searchedKeyword' element={<RareCases/>}/>
           <Route path='/testimonial/:searchedKeyword' element={<VideoTestimonial/>}/>
           <Route path='/contact-us' element={<ContactUs/>}/>
+          <Route path='/editor' element={<BlogEditor/>}/>
+          <Route path='/offcanvas' element={<OffcanvasMenu/>}/>
         </Routes>
         <Footer/>
     </div>

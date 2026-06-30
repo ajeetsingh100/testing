@@ -10,7 +10,7 @@ const VideoTestimonial = () => {
       <h2 className=" mb-4">
         What do our patients say?
       </h2>
-      T
+      
     </div>
     </div>
   )
