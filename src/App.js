@@ -14,15 +14,11 @@ import DiseasesWeTreat from './components/DiseasesWeTreat/DiseasesWeTreat';
 import RareCases from './components/Patient Information/RareCases';
 import VideoTestimonial from './components/VideoTestimonial/VideoTestimonial';
 import ContactUs from './components/ContactUs';
-
 import AppointmentModal from './components/AppointmentModal/AppointmentModal';
 import FixedButtons from './components/FixedButton/FixedButtons';
 import MegaNavbar from './components/common/MegaNavbar';
 import OffcanvasMenu from './components/OffcanvasMenu/OffcanvasMenu';
-import BlogEditor from './components/BlogEditor/BlogEditor';
-
-
-
+import ViewBlog from './pages/ViewBlog';
 
 
 
@@ -44,8 +40,7 @@ function App() {
           <Route path='/patient-information/:searchedKeyword' element={<RareCases/>}/>
           <Route path='/testimonial/:searchedKeyword' element={<VideoTestimonial/>}/>
           <Route path='/contact-us' element={<ContactUs/>}/>
-          <Route path='/editor' element={<BlogEditor/>}/>
-          <Route path='/offcanvas' element={<OffcanvasMenu/>}/>
+          <Route path='/view-blog/:blogId' element={<ViewBlog/>}/>
         </Routes>
         <Footer/>
     </div>

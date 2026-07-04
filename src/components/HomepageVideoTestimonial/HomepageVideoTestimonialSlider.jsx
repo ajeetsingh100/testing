@@ -1,13 +1,21 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { Modal } from "react-bootstrap";
 import videoTestimonial from "../../Data/videoTestimonial";
+import { apiconnector } from "../../services/apiconnector";
+import { SERVER_API } from "../../services/api";
 
 
 const HomepageVideoTestimonialSlider = () => {
   const [show, setShow] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
+  const [videoTestimonial,setVideoTestimonial]=useState([])
+   
+  async function loadVideoTestimonial(){
+    const response=await apiconnector('get',`${SERVER_API.MAIN_SERVER}/api/v1/testimonial/get-all-testimonial`)
+    setVideoTestimonial(response.data.allTestimonial)
+  }
 
   const autoScroll = useMemo(
     () =>
@@ -51,13 +59,14 @@ const HomepageVideoTestimonialSlider = () => {
     setActiveVideo(null);
     startAutoplay(); // modal close -> resume
   };
+  useEffect(()=>{loadVideoTestimonial()},[])
 
   return (
     <div className="video-slider-section ">
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
-            {videoTestimonial?.map((videoId, index) => (
+            {videoTestimonial?.map((video, index) => (
               <div className="embla__slide" key={index}>
                 <div
                   className="video-card position-relative overflow-hidden rounded-3"
@@ -65,9 +74,9 @@ const HomepageVideoTestimonialSlider = () => {
                   onMouseLeave={() => {
                     if (!show) startAutoplay();
                   }}
-                  onClick={() => handleOpen(videoId)}
+                  onClick={() => handleOpen(video.videoId)}
                   style={{
-                    backgroundImage: `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)`,
+                    backgroundImage: `url(https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg)`,
                   }}
                 >
                   <div className="video-overlay" />
